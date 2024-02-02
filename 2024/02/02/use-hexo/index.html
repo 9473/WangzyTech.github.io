@@ -121,9 +121,7 @@
 <p>对于hexo创建一个 ~ blog的文件夹，那么blog默认为根目录，所谓的在根目录底下执行，就是在blog这个文件夹底下执行.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd .../blog</span><br></pre></td></tr></table></figure>
 
-
-
-<p>新建一篇博客</p>
+<h4 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h4><p>新建一篇博客</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;name&quot;</span><br></pre></td></tr></table></figure>
 
 <p>在根目录的 source 文件夹底下 _posts 中会出现你创建的 blog.md</p>
@@ -147,14 +145,12 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>将网址点开可以预览.</p>
-<p>插入图片的问题</p>
-<p>之前我们已经安装了插件，在 _posts 文件夹中会出现和文章名字相同的文件夹，将想要插入的图片复制到该文件夹中</p>
+<h4 id="插入图片的问题"><a href="#插入图片的问题" class="headerlink" title="插入图片的问题"></a>插入图片的问题</h4><p>之前我们已经安装了插件，在 _posts 文件夹中会出现和文章名字相同的文件夹，将想要插入的图片复制到该文件夹中</p>
 <p>然后在Markdown环境下插入图片格式为：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Fig x</span>](<span class="link"> ./picture.png</span>)</span><br></pre></td></tr></table></figure>
 
 <p>注意，前面的 <code> ./</code> 一定不能省略，点前面有一个空格</p>
-<p>公式显示的问题</p>
-<p>目前找到的一个解决方式是使用 <a target="_blank" rel="noopener" href="https://www.latexlive.com/">https://www.latexlive.com</a> 网站转出为 MathML 的格式（Typora也可以转，但是会有很多换行而识别得破破烂烂）</p>
+<h4 id="公式显示的问题"><a href="#公式显示的问题" class="headerlink" title="公式显示的问题"></a>公式显示的问题</h4><p>目前找到的一个解决方式是使用 <a target="_blank" rel="noopener" href="https://www.latexlive.com/">https://www.latexlive.com</a> 网站转出为 MathML 的格式（Typora也可以转，但是会有很多换行而识别得破破烂烂）</p>
 <p>默认转出格式是另起一行居中</p>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">  <mi>a</mi>  <mo>+</mo>  <mi>b</mi>  <mo>+</mo>  <mi>c</mi></math></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;  &lt;mi&gt;a&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;b&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;c&lt;/mi&gt;&lt;/math&gt;</span><br></pre></td></tr></table></figure>

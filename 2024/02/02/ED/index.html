@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  
+  <title>ED - Wan Take</title>
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="ED - Wan Take" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="http://example.com/2024/02/02/ED/index.html" />
+  
+  <meta property="og:image" content="/favicon.png" />
+  
+  <meta property="og:article:published_time" content="2024-02-02T12:16:59.000Z" />
+  
+  <meta property="og:article:author" content="Wang Zhiyan" />
+  
+  
+
+  
+<link rel="stylesheet" href="/css/var.css">
+
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+<link rel="stylesheet" href="/css/typography.css">
+
+  
+<link rel="stylesheet" href="/css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="/css/components.css">
+
+  
+<link rel="stylesheet" href="/css/nav.css">
+
+  
+<link rel="stylesheet" href="/css/paginator.css">
+
+  
+<link rel="stylesheet" href="/css/footer.css">
+
+  
+<link rel="stylesheet" href="/css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="/css/rainbow-banner.css">
+
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Wantake</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="/note">Note</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+<article class="post">
+    <div class="meta">
+        
+
+        
+
+        <h2 class="title">ED</h2>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="content">
+        <p>For exact diagonalization (ED) studies, the foundational approach involves delving into several fundamental models for beginners. Examples include the lattice fermion Hubbard Model and quantum spin models such as the Ising Model and the XXZ Model (Heisenberg Model). </p>
+<p>Our emphasis here is to introduce how to construct the Hamiltonian, commencing with the Heisenberg standard model and extending towards the XXZ model. The Ising Model assumes a more simplified form due to its absence of off-diagonal interaction terms.</p>
+<p>[TOC]</p>
+<h1 id="1D-Heisenberg-chain"><a href="#1D-Heisenberg-chain" class="headerlink" title="1D Heisenberg chain"></a>1D Heisenberg chain</h1><p>the Hamiltonian gives:<br><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true"><mlabeledtr><mtd id="mjx-eqn:1"><mtext>(1)</mtext></mtd><mtd><mtable rowspacing=".5em" columnspacing="1em" displaystyle="true"><mtr><mtd><mtext mathcolor="red">\u</mtext><mn>32</mn><mi>E</mi><mi>H</mi><mo>&#x3D;</mo><mi>J</mi><munder><mo data-mjx-texclass="OP">&#x2211;</mo><mrow data-mjx-texclass="ORD"><mo>&lt;</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo>&gt;</mo></mrow></munder><msub><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">S</mi></mrow><mi>i</mi></msub><mo>&#x22C5;</mo><msub><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">S</mi></mrow> <mi>j</mi></msub></mtd></mtr><mtr><mtd><mo accent="false" stretchy="false">&#x2192;</mo><mtext>&#xA0;</mtext><mi>H</mi><mo>&#x3D;</mo><mi>J</mi><munder><mo data-mjx-texclass="OP">&#x2211;</mo><mrow data-mjx-texclass="ORD"><mo fence="false" stretchy="false">&#x27E8;</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo fence="false" stretchy="false">&#x27E9;</mo></mrow></munder><mo stretchy="false">(</mo><msubsup><mi>S</mi><mi>i</mi><mi>x</mi></msubsup><msubsup><mi>S</mi><mi>j</mi><mi>x</mi></msubsup><mo>+</mo><msubsup><mi>S</mi><mi>i</mi><mi>y</mi></msubsup><msubsup><mi>S</mi><mi>j</mi><mi>y</mi></msubsup><mo>+</mo><msubsup><mi>S</mi><mi>i</mi><mi>z</mi></msubsup><msubsup><mi>S</mi><mi>j</mi><mi>z</mi></msubsup><mo stretchy="false">)</mo></mtd></mtr></mtable></mtd></mlabeledtr></mtable></math></p>
+<p>According to the relationships:<br><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><br><mtable displaystyle="true"><mlabeledtr><mtd id="mjx-eqn:2"><mtext>(2)</mtext></mtd><mtd><mtext mathcolor="red">\u</mtext><mn>32</mn><mi>E</mi><msup><mi>S</mi><mi>x</mi></msup><mo>&#x3D;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">(</mo><msup><mi>S</mi><mo>+</mo></msup><mo>+</mo><msup><mi>S</mi><mo>&#x2212;</mo></msup><mo stretchy="false">)</mo><mo>,</mo><msup><mi>S</mi><mi>y</mi></msup><mo>&#x3D;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>i</mi></mrow></mfrac><mo stretchy="false">(</mo><msup><mi>S</mi><mo>+</mo></msup><mo>&#x2212;</mo><msup><mi>S</mi><mo>&#x2212;</mo></msup><mo stretchy="false">)</mo></mtd></mlabeledtr></mtable></math><br>By expressing the Hamiltonian in terms of the <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>S</mi><mo>+</mo></msup><mo>,</mo><msup><mi>S</mi><mo>&#x2212;</mo></msup></math>: </p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+<mtable displaystyle="true"><mlabeledtr><mtd id="mjx-eqn:4"><mtext>(4)</mtext></mtd><mtd><mtext mathcolor="red">\u</mtext><mn>32</mn><mi>E</mi><mi>H</mi><mo>=</mo><mrow data-mjx-texclass="INNER"><mo data-mjx-texclass="OPEN">[</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">(</mo><msubsup><mi>S</mi><mi>i</mi><mo>+</mo></msubsup><msubsup><mi>S</mi><mi>j</mi><mo>&#x2212;</mo></msubsup><mo>+</mo><msubsup><mi>S</mi><mi>i</mi><mo>&#x2212;</mo></msubsup><msubsup><mi>S</mi><mi>j</mi><mo>+</mo></msubsup><mo stretchy="false">)</mo><mo>+</mo><msubsup><mi>S</mi><mi>i</mi><mi>z</mi></msubsup><msubsup><mi>S</mi><mi>j</mi><mi>z</mi></msubsup><mo data-mjx-texclass="CLOSE">]</mo></mrow></mtd></mlabeledtr></mtable></math>
+Given the presence of **two sites** representing spins, the size of the Hilbert space is determined by <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>=</mo><mn>2</mn><mo stretchy="false">(</mo><mtext>Two spin orientations.</mtext><msup><mo stretchy="false">)</mo><mrow data-mjx-texclass="ORD"><mn>2</mn><mo stretchy="false">(</mo><mtext>Two sites</mtext><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mn>4</mn></math>. Consequently, the Hamiltonian matrix for the system is a 4x4 matrix. Describing the two sites is straightforward, and we typically represent the Hamiltonian solely in operator form. From a matrix perspective, the interactions between operators are connected through tensor products to link matrices.
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true"><mlabeledtr><mtd id="mjx-eqn:5"><mtext>(5)</mtext></mtd><mtd><mtext mathcolor="red">\u</mtext><mn>32</mn><mi>E</mi><mtext>matrix representing:&#xA0;</mtext><mi>H</mi><mo>=</mo><mrow data-mjx-texclass="INNER"><mo data-mjx-texclass="OPEN">[</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">(</mo><msubsup><mi>S</mi><mn>1</mn><mo>+</mo></msubsup><mo>&#x2297;</mo><msubsup><mi>S</mi><mn>2</mn><mo>&#x2212;</mo></msubsup><mo>+</mo><msubsup><mi>S</mi><mn>1</mn><mo>&#x2212;</mo></msubsup><mo>&#x2297;</mo><msubsup><mi>S</mi><mn>2</mn><mo>+</mo></msubsup><mo stretchy="false">)</mo><mo>+</mo><msubsup><mi>S</mi><mn>1</mn><mi>z</mi></msubsup><mo>&#x2297;</mo><msubsup><mi>S</mi><mn>2</mn><mi>z</mi></msubsup><mo data-mjx-texclass="CLOSE">]</mo></mrow></mtd></mlabeledtr></mtable></math>
+
+<p>The fundamental idea behind Exact Diagonalization (ED) is as follows: After obtaining the matrix representation of the Hamiltonian, numerical diagonalization is performed on the Hamiltonian matrix. In theory, this process allows us to obtain all the eigenvalues and eigenvectors associated with the Hamiltonian, providing a comprehensive description of the system.</p>
+<p>The method we are about to introduce below is the simplest and most foundational, relying on intuitive understanding, without involving the treatment of larger system sizes.</p>
+
+    </div>
+
+
+    
+        
+        
+    
+</article>
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h2 class="title">Home</h2>
+                
+                <a href="/note" class="item">Note</a>
+                
+            </div>
+            
+            <div class="group">
+                <h2 class="title">Contact</h2>
+                
+                <a href="mailto:wangzhiyan@westlake.edu.cn" class="item">Email</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2024 Powered by <a href="http://hexo.io/" target="_blank">Hexo-cupertino</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="/js/main.js"></script>
+
+        
+        
+        
+
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            window.addEventListener('load', () => {
+                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
+                ScrollReveal().reveal('.post-list-item .cover-img img')
+                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
+            })
+        </script>
+        
+    </body>
+</html>

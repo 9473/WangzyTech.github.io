@@ -117,7 +117,23 @@
     <div class="divider"></div>
 
     <div class="content">
-        <p>这里简单介绍一些hexo使用指令，前提是hexo环境配置已完成</p>
+        <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p>安装了home-brew之后，安装 Hexo 所需要的 Git 和 Node.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install git</span><br><span class="line">$ brew install node</span><br></pre></td></tr></table></figure>
+
+<p>检查是否安装成功:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br><span class="line">$ node -v</span><br><span class="line">$ git --version</span><br></pre></td></tr></table></figure>
+
+
+
+<p>安装 Hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>为Hexo创建一个初始源文件夹</p>
+<p>Cd in 想要的路径中, 执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>这里简单介绍一些hexo使用指令</p>
 <p>对于hexo创建一个 ~ blog的文件夹，那么blog默认为根目录，所谓的在根目录底下执行，就是在blog这个文件夹底下执行.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd .../blog</span><br></pre></td></tr></table></figure>
 

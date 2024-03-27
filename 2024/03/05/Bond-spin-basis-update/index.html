@@ -7,7 +7,7 @@
   
   <title>Bond-spin basis update - Wan Take</title>
   
-    <link rel="shortcut icon" href="/9473/favicon.png">
+    <link rel="shortcut icon" href="/favicon.png">
   
   
     <link rel='manifest' href='/manifest.json'>
@@ -20,58 +20,58 @@
   
   <meta property="og:type" content="article" />
   
-  <meta property="og:url" content="https://github.com/9473/2024/03/05/Bond-spin-basis-update/index.html" />
+  <meta property="og:url" content="http://example.com/2024/03/05/Bond-spin-basis-update/index.html" />
   
   <meta property="og:image" content="/favicon.png" />
   
   <meta property="og:article:published_time" content="2024-03-05T07:30:51.000Z" />
   
-  <meta property="og:article:author" content="Wantake" />
+  <meta property="og:article:author" content="Wang Zhiyan" />
   
   
 
   
-<link rel="stylesheet" href="/9473/css/var.css">
+<link rel="stylesheet" href="/css/var.css">
 
   
-<link rel="stylesheet" href="/9473/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
   
-<link rel="stylesheet" href="/9473/css/typography.css">
+<link rel="stylesheet" href="/css/typography.css">
 
   
-<link rel="stylesheet" href="/9473/css/code-highlighting.css">
+<link rel="stylesheet" href="/css/code-highlighting.css">
 
   
-<link rel="stylesheet" href="/9473/css/components.css">
+<link rel="stylesheet" href="/css/components.css">
 
   
-<link rel="stylesheet" href="/9473/css/nav.css">
+<link rel="stylesheet" href="/css/nav.css">
 
   
-<link rel="stylesheet" href="/9473/css/paginator.css">
+<link rel="stylesheet" href="/css/paginator.css">
 
   
-<link rel="stylesheet" href="/9473/css/footer.css">
+<link rel="stylesheet" href="/css/footer.css">
 
   
-<link rel="stylesheet" href="/9473/css/post-list.css">
-
-  
-  
-<link rel="stylesheet" href="/9473/css/rainbow-banner.css">
+<link rel="stylesheet" href="/css/post-list.css">
 
   
   
-  
-<link rel="stylesheet" href="/9473/css/toc.css">
+<link rel="stylesheet" href="/css/rainbow-banner.css">
 
   
   
   
+<link rel="stylesheet" href="/css/toc.css">
+
   
   
-<link rel="stylesheet" href="/9473/css/post.css">
+  
+  
+  
+<link rel="stylesheet" href="/css/post.css">
 
   
   
@@ -90,7 +90,7 @@
         data-rainbow-banner-month="6"
         data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
         
-        data-config-root="/9473/"
+        data-config-root="/"
         
         data-toc="true"
         data-toc-max-depth="2"
@@ -99,13 +99,13 @@
     >
         <nav id="theme-nav">
     <div class="inner">
-        <a class="title" href="/9473/">Wantake</a>
+        <a class="title" href="/">Wantake</a>
         <div class="nav-arrow"></div>
         <div class="nav-items">
-            <a class="nav-item nav-item-home" href="/9473/">Home</a>
+            <a class="nav-item nav-item-home" href="/">Home</a>
             
             
-            <a class="nav-item" href="/9473/note">Note</a>
+            <a class="nav-item" href="/note">Note</a>
             
             
             
@@ -129,12 +129,12 @@
 
     <div class="content">
         <p>两个VBS态如图所示.</p>
-<p><img src="/9473/9473/2024/03/05/Bond-spin-basis-update/image-20240305153630797-1.png" alt="Fig 1"></p>
+<p><img src="/2024/03/05/Bond-spin-basis-update/image-20240305153630797-1.png" alt="Fig 1"></p>
 <p>所有的“bond”只是两两链接，因此一个态上全是singlet，且只有singlet. 一个singlet就是自旋单重态：<br><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true"><mlabeledtr><mtd id="mjx-eqn:2"><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false">(</mo><mrow data-mjx-texclass="INNER"> <mo data-mjx-texclass="OPEN">|</mo><mrow data-mjx-texclass="ORD"> <mo stretchy="false">&#x2191;&#x2193;</mo></mrow> <mo data-mjx-texclass="CLOSE">&#x27E9;</mo></mrow><mo>&#x2212;</mo><mrow data-mjx-texclass="INNER"> <mo data-mjx-texclass="OPEN">|</mo><mrow data-mjx-texclass="ORD"><mo stretchy="false">&#x2193;&#x2191;</mo></mrow><mo data-mjx-texclass="CLOSE">&#x27E9;</mo></mrow><mo stretchy="false">)</mo></mtd></mlabeledtr></mtable></math><br>对于这样的两个VBS态做内积，一些“bond”将会连成loop.</p>
-<p><img src="/9473/9473/2024/03/05/Bond-spin-basis-update/image-20240305161832755-1.png" alt="Fig 2"></p>
+<p><img src="/2024/03/05/Bond-spin-basis-update/image-20240305161832755-1.png" alt="Fig 2"></p>
 <p>然而，VBS basis的内积结果将与能形成的Loop有关，与<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>S</mi><mi>z</mi></msub></math>表象下自旋朝向的兼容度也有关，因此VBS basis是不正交的，任意两个VBS态内积给出不同的值。</p>
 <p>为了避免这一点，将VBS basis看作是bond-spin basis，我们采用分步更新的方式</p>
-<p><img src="/9473/9473/2024/03/05/Bond-spin-basis-update/image-20240305161718549-1.png" alt="Fig 3"></p>
+<p><img src="/2024/03/05/Bond-spin-basis-update/image-20240305161718549-1.png" alt="Fig 3"></p>
 <p>Swap operator将两种态的A进行互换，环境<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mover><mi>A</mi><mo stretchy="false">&#xAF;</mo></mover></mrow></math>不变。在切的边界上，一些互换就会“藕断丝连”，因此可以看成是一种双层结构。</p>
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><strong><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2402.17211"> arXiv:2402.17211</a></strong></p>
 
@@ -215,7 +215,7 @@
 
 
         
-<script src="/9473/js/main.js"></script>
+<script src="/js/main.js"></script>
 
         
         

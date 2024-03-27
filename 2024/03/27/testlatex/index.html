@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   
-  <title>Archives: 2024/3 - Wan Take</title>
+  <title>testlatex - Wan Take</title>
   
     <link rel="shortcut icon" href="/favicon.png">
   
@@ -16,13 +16,17 @@
   
   
   
-  <meta property="og:title" content="Archives: 2024/3 - Wan Take" />
+  <meta property="og:title" content="testlatex - Wan Take" />
   
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   
-  <meta property="og:url" content="http://example.com/archives/2024/03/index.html" />
+  <meta property="og:url" content="http://example.com/2024/03/27/testlatex/index.html" />
   
   <meta property="og:image" content="/favicon.png" />
+  
+  <meta property="og:article:published_time" content="2024-03-27T03:56:22.000Z" />
+  
+  <meta property="og:article:author" content="Wang Zhiyan" />
   
   
 
@@ -68,10 +72,6 @@
   
   
   
-<link rel="stylesheet" href="/css/archive.css">
-
-  
-  
   
   
 
@@ -104,96 +104,62 @@
         </div>
     </div>
 </nav>
-        <div class="container">
+        
+<article class="post">
     <div class="meta">
-        <div class="type">
-            
-            
-        </div>
+        
 
-        <h2 class="title">Archives</h2>
+        
+
+        <h2 class="title">testlatex</h2>
     </div>
 
     <div class="divider"></div>
 
-    <div class="post-list archives">
-        
-        <article class="post-list-item">
-            <a href="/2024/03/27/testlatex/">
-                
-                <div class="content">
-                    
-                    <div class="title">
-                        testlatex
-                    </div>
-                    
-                    <div class="time">
-                        <span>March</span>
-                        <span>&nbsp;27,&nbsp;</span>
-                        <span>2024</span>
-                    </div>
-                </div>
-            </a>
-        </article>
-        
-        <article class="post-list-item">
-            <a href="/2024/03/27/testpdf/">
-                
-                <div class="content">
-                    
-                    <div class="title">
-                        testpdf
-                    </div>
-                    
-                    <div class="time">
-                        <span>March</span>
-                        <span>&nbsp;27,&nbsp;</span>
-                        <span>2024</span>
-                    </div>
-                </div>
-            </a>
-        </article>
-        
-        <article class="post-list-item">
-            <a href="/2024/03/05/Bond-spin-basis-update/">
-                
-                <div class="content">
-                    
-                    <div class="title">
-                        Bond-spin basis update
-                    </div>
-                    
-                    <div class="time">
-                        <span>March</span>
-                        <span>&nbsp;5,&nbsp;</span>
-                        <span>2024</span>
-                    </div>
-                </div>
-            </a>
-        </article>
-        
-        <article class="post-list-item">
-            <a href="/2024/03/02/use-anaconda/">
-                
-                <div class="content">
-                    
-                    <div class="title">
-                        use anaconda
-                    </div>
-                    
-                    <div class="time">
-                        <span>March</span>
-                        <span>&nbsp;2,&nbsp;</span>
-                        <span>2024</span>
-                    </div>
-                </div>
-            </a>
-        </article>
-        
+    <div class="content">
+        <p>$$<br>-\ln \langle  \frac{g(t_m)}{g(t_i)} \rangle_{\text{each rank}} \<br>$$</p>
+<p>$$<br>\sum_{\text{rank 0}}^{50} -\ln  \langle \frac{g(t_m)}{g(t_i)} \rangle &#x3D; -\ln \langle \frac{g(t_m)}{g(t_i)} \rangle_{\text{each bin}}<br>$$</p>
+<p>Finally, we will get 10 bin data.</p>
+<p>ZJR old MPI:<br>$$<br>\text{each rank } \prod_t \lang \frac{g(t+\delta)}{g(t)} \rang \ \ -\text{enrg1} \<br>\text{all rank } \prod_r \lang \frac{g(t+\delta)}{g(t)} \rang<br>$$</p>
+<hr>
+<p>Benchmark from Jiarui Zhao.</p>
+<p>Two dimensional $L\times L&#x2F;2$ Heisenberg model, region A is chosen to be $L&#x2F;2 \times L&#x2F;2$ without corners. The temperatures are chosen to be $1&#x2F;T &#x3D; L$.</p>
+<p>The fitting result is:<br>$$<br>\color{yellow}S^2(A) &#x3D; 0.092 L + 1.00\ln L -1.63<br>$$<br>gives &#x3D;&#x3D;<strong>2.6145</strong>&#x3D;&#x3D; for $8 \times 16$ Lattice and &#x3D;&#x3D;<strong>1.18544</strong>&#x3D;&#x3D; for $4 \times 8$ Lattice.</p>
+
     </div>
 
+
+
     
-</div>
+        
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+    
+
+
+    
+        
+        
+    
+</article>
+
+
         <footer>
     <div class="inner">
         <div class="links">

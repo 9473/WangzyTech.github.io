@@ -130,27 +130,27 @@
     <div class="content">
         <p>这里默认已经在电脑上下载了Anaconda (for Mac M1&#x2F;M2)</p>
 <p>先将anaconda配置到系统路径</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$echo &#x27;export PATH=&quot;~/anaconda3/bin:$PATH&quot;&#x27; &gt;&gt; ~/.bashrc</span><br><span class="line">$source ~/.bashrc</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=&quot;~/anaconda3/bin:$PATH&quot;&#x27;</span> &gt;&gt; ~/.bashrc</span><br><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">source</span> ~/.bashrc</span><br></code></pre></td></tr></table></figure></div>
 
 <p>这里假设安装的是anaconda3版本</p>
 <p>通过</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda -v</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="GAMS"><figure class="iseeu highlight /gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-meta"><span class="hljs-keyword">$conda</span> -v</span><br></code></pre></td></tr></table></figure></div>
 
 <p>查看安装结果、安装版本号</p>
 <hr>
 <p>题外话</p>
 <p>自从安装了zsh之后一直没用iTerm使用conda指令，昨天用conda指令突然发现</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zsh: command not found: conda</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="AVRASM"><figure class="iseeu highlight /avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">zsh:</span> command not found: conda<br></code></pre></td></tr></table></figure></div>
 
 
 
 <p>在网上查找解决方法，似乎是因为zsh里没有加入conda的path。</p>
 <p>解决方法有几种。</p>
 <p>第一种，在zsh中增加conda的path</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$vim ~/.zshrc</span><br><span class="line"></span><br><span class="line">按i进入编辑模式，在文件末尾添加:</span><br><span class="line">$export PATH=/Users/[your name]/anaconda3/bin:$PATH</span><br><span class="line"></span><br><span class="line">按Esc退出编辑模式, :wq 来退出</span><br><span class="line"></span><br><span class="line">$source ~/.zshrc</span><br><span class="line"></span><br><span class="line">重启zsh</span><br><span class="line">$exec /bin/zsh</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$</span><span class="language-bash">vim ~/.zshrc</span><br><br>按i进入编辑模式，在文件末尾添加:<br><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">export</span> PATH=/Users/[your name]/anaconda3/bin:<span class="hljs-variable">$PATH</span></span><br><br>按Esc退出编辑模式, :wq 来退出<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">source</span> ~/.zshrc</span><br><br>重启zsh<br><span class="hljs-meta prompt_">$</span><span class="language-bash"><span class="hljs-built_in">exec</span> /bin/zsh</span><br></code></pre></td></tr></table></figure></div>
 
 <p>我发现并没有操作成功，zsh仍然显示not found，可能我之后会知道原因。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/用户名/.zshrc:113: ... not found</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/Users/用户名/.zshrc:113: ... not found<br></code></pre></td></tr></table></figure></div>
 
 <p>第二种，是在系统自带的终端中设置</p>
 <p>设置 &#x3D;&gt; 通用 &#x3D;&gt; shell的打开方式：</p>
@@ -169,43 +169,43 @@
 <hr>
 <h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><p>自路径配置成功之后，用户名前面会多一个(base)的字样，表明现在在conda的base环境下。在该环境下避免下载一些乱七八糟的东西以至于臃肿。</p>
 <p>新配置一个环境</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda create --name &lt;env_name&gt; &lt;package_names&gt;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="XQUERY"><figure class="iseeu highlight /xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xquery"><span class="hljs-variable">$conda</span> create --name <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">env_name</span>&gt;</span> </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">package_names</span>&gt;</span></span><br></code></pre></td></tr></table></figure></div>
 
 <p>比如说新建一个房间叫test，并且安装python3，可以有：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda create -n test python=3.11  numpy pandas</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ROUTEROS"><figure class="iseeu highlight /routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-variable">$conda</span> create -n test <span class="hljs-attribute">python</span>=3.11  numpy pandas<br></code></pre></td></tr></table></figure></div>
 
 <p>在这后面的表明同时把 numpy pandas 给装上了。</p>
 <p>在base下查看现在有哪些环境：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda info -e</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ROUTEROS"><figure class="iseeu highlight /routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-variable">$conda</span> <span class="hljs-built_in">info</span> -e<br></code></pre></td></tr></table></figure></div>
 
 <p>正常情况下可以看到一个base，和刚才新建好的test</p>
 <p>在base下删除一个环境：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda remove -n &lt;env_name&gt; --all</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ROUTEROS"><figure class="iseeu highlight /routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-variable">$conda</span> <span class="hljs-built_in">remove</span> -n &lt;env_name&gt; --all<br></code></pre></td></tr></table></figure></div>
 
 <p>就可以“一键删除”</p>
 <p>如何进入到test的环境，conda采用激活的命令</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda activate test</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-variable">$conda</span> activate <span class="hljs-built_in">test</span><br></code></pre></td></tr></table></figure></div>
 
 <p>用户名前面的(base)变成(test)说明进入环境成功了</p>
 <p>查看该环境下有哪些安装包：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda list</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="GAMS"><figure class="iseeu highlight /gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-meta"><span class="hljs-keyword">$conda</span> list</span><br></code></pre></td></tr></table></figure></div>
 
 <p>在该环境下安装新的包：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda install &lt;package_name&gt;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="GAMS"><figure class="iseeu highlight /gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-meta"><span class="hljs-keyword">$conda</span> install &lt;package_name&gt;</span><br></code></pre></td></tr></table></figure></div>
 
 <p>或者用pip:</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$pip3 install &lt;package_name&gt;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="GAMS"><figure class="iseeu highlight /gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-meta"><span class="hljs-keyword">$pip3</span> install &lt;package_name&gt;</span><br></code></pre></td></tr></table></figure></div>
 
 <p>​	给指定环境安装包只能用conda：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda install -n &lt;env_name&gt; &lt;package_name&gt;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="XQUERY"><figure class="iseeu highlight /xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xquery"><span class="hljs-variable">$conda</span> install -n <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">env_name</span>&gt;</span> </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">package_name</span>&gt;</span></span><br></code></pre></td></tr></table></figure></div>
 
 <p>卸载安装包：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$conda remove --name &lt;env_name&gt; &lt;package_name&gt;</span><br><span class="line">or</span><br><span class="line">$conda remove &lt;package_name&gt;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ROUTEROS"><figure class="iseeu highlight /routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-variable">$conda</span> <span class="hljs-built_in">remove</span> --name &lt;env_name&gt; &lt;package_name&gt;<br><span class="hljs-keyword">or</span><br><span class="hljs-variable">$conda</span> <span class="hljs-built_in">remove</span> &lt;package_name&gt;<br></code></pre></td></tr></table></figure></div>
 
 
 
 <p>最后，退出该房间，回到base</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda deactivate</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="GAMS"><figure class="iseeu highlight /gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-meta"><span class="hljs-keyword">$conda</span> deactivate</span><br></code></pre></td></tr></table></figure></div>
 
 <p>不用加后缀名.</p>
 <p>参考教程：</p>

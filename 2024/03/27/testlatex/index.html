@@ -117,14 +117,22 @@
     <div class="divider"></div>
 
     <div class="content">
-        <p>$$<br>-\ln \langle  \frac{g(t_m)}{g(t_i)} \rangle_{\text{each rank}} \<br>$$</p>
+        <p>在themes里配置好 mathjax 的环境之后，最好在 博客.md 的顶部追加：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章标题</span><br><span class="line"><span class="built_in">date</span>: 2020-09-02 20:11:42</span><br><span class="line">mathjax: <span class="literal">true</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>现在无论是居中公式:</p>
+<p>$$</p>
+<p>-\ln \langle  \frac{g(t_m)}{g(t_i)} \rangle_{\text{each rank}} \<br>$$</p>
 <p>$$<br>\sum_{\text{rank 0}}^{50} -\ln  \langle \frac{g(t_m)}{g(t_i)} \rangle &#x3D; -\ln \langle \frac{g(t_m)}{g(t_i)} \rangle_{\text{each bin}}<br>$$</p>
 <p>Finally, we will get 10 bin data.</p>
 <p>ZJR old MPI:<br>$$<br>\text{each rank } \prod_t \langle \frac{g(t+\delta)}{g(t)} \rangle \ \ -\text{enrg1} \<br>\text{all rank } \prod_r \langle \frac{g(t+\delta)}{g(t)} \rangle<br>$$</p>
 <hr>
-<p>Benchmark from Jiarui Zhao.</p>
+<p>Benchmark from…</p>
+<p>还是行内公式 都可以正常识别了.</p>
 <p>Two dimensional $L\times L&#x2F;2$ Heisenberg model, region A is chosen to be $L&#x2F;2 \times L&#x2F;2$ without corners. The temperatures are chosen to be $1&#x2F;T &#x3D; L$.</p>
 <p>The fitting result is:<br>$$<br>\color{yellow }{S^2(A) &#x3D; 0.092 L + 1.00\ln L -1.63}<br>$$<br>gives &#x3D;&#x3D;<strong>2.6145</strong>&#x3D;&#x3D; for $8 \times 16$ Lattice and &#x3D;&#x3D;<strong>1.18544</strong>&#x3D;&#x3D; for $4 \times 8$ Lattice.</p>
+<p>Reference:</p>
+<p><a target="_blank" rel="noopener" href="https://blog.xiangfa.org/2020/09/let-hexo-support-latex-formulas/">https://blog.xiangfa.org/2020/09/let-hexo-support-latex-formulas/</a></p>
 
     </div>
 

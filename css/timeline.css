@@ -1,0 +1,77 @@
+$color-types = 'blue' 'pink' 'red' 'purple' 'orange' 'green'
+$tagsP-blue-color = #428bca
+$tagsP-pink-color = #FF69B4
+$tagsP-red-color = #FF0000
+$tagsP-orange-color = #FF8C00
+$tagsP-purple-color = #6f42c1
+$tagsP-green-color = #5cb85c
+$timeline-color = #555555
+$hover-color = #FF7242
+
+.timeline
+  margin: 0 0 20px 10px
+  padding: 14px 20px 5px
+  border-left: 2px solid var(--timeline-color, $timeline-color)
+
+  for $type in $color-types
+    &.{$type}
+      --timeline-color: lookup('$tagsP-' + $type + '-color')
+      --timeline-bg: s('rgba(%s,%s,%s, 0.2)', red(lookup('$tagsP-' + $type + '-color')), green(lookup('$tagsP-' + $type + '-color')), blue(lookup('$tagsP-' + $type + '-color')))
+
+  .timeline-item
+    margin: 0 0 15px
+
+    &:hover
+      .item-circle
+        &:before
+          border-color: var(--timeline-color, $timeline-color)
+
+    &.headline
+      .timeline-item-title
+        .item-circle
+          > p
+            font-weight: 600
+            font-size: 1.2em
+
+          &:before
+            left: -28px
+            border: 4px solid var(--timeline-color, $timeline-color)
+
+      &:hover
+        .item-circle
+          &:before
+            border-color: var(--pseudo-hover, $hover-color)
+
+    .timeline-item-title
+      position: relative
+
+    .item-circle
+      &:before
+        position: absolute
+        top: 50%
+        left: -27px
+        width: 6px
+        height: 6px
+        border: 3px solid var(--pseudo-hover, $hover-color)
+        border-radius: 50%
+        background: #FFFFFF
+        content: ''
+        transition: all .3s
+        transform: translate(0, -50%)
+
+      > p
+        margin: 0 0 8px
+        font-weight: 500
+
+    .timeline-item-content
+      position: relative
+      padding: 12px 15px
+      border-radius: 8px
+      background: var(--timeline-bg, lighten($timeline-color, 85%))
+      font-size: .83em
+
+      & > :last-child
+        margin-bottom: 0
+
+  & + .timeline
+    margin-top: -20px

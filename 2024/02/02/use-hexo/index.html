@@ -125,62 +125,62 @@
 
     <div class="content">
         <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p>安装了home-brew之后，安装 Hexo 所需要的 Git 和 Node.js</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install git</span><br><span class="line">$ brew install node</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install git</span><br><span class="line">$ brew install node</span><br></pre></td></tr></table></figure>
 
 <p>检查是否安装成功:</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br><span class="line">$ node -v</span><br><span class="line">$ git --version</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br><span class="line">$ node -v</span><br><span class="line">$ git --version</span><br></pre></td></tr></table></figure>
 
 
 
 <p>安装 Hexo</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <p>为Hexo创建一个初始源文件夹</p>
 <p>Cd in 想要的路径中, 执行：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
 
 <hr>
 <p>这里简单介绍一些hexo使用指令</p>
 <p>对于hexo创建一个 ~ blog的文件夹，那么blog默认为根目录，所谓的在根目录底下执行，就是在blog这个文件夹底下执行.</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd .../blog</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd .../blog</span><br></pre></td></tr></table></figure>
 
 <h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><p>新建一篇博客</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo n &quot;name&quot;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo n &quot;name&quot;</span><br></pre></td></tr></table></figure>
 
 <p>在根目录的 source 文件夹底下 _posts 中会出现你创建的 blog.md</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">❯ hexo n <span class="string">&quot;use anaconda&quot;</span></span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: ~/.../blog/source/_posts/use-anaconda.md</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">❯ hexo n <span class="string">&quot;use anaconda&quot;</span></span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: ~/.../blog/source/_posts/use-anaconda.md</span><br></pre></td></tr></table></figure>
 
 
 
 <p>我们在根目录下预安装能够<u>加载本地图片</u>的插件</p>
 <p>在根目录下执行:</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$npm install https://github.com/xcodebuild/hexo-asset-image.git --save</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$npm install https://github.com/xcodebuild/hexo-asset-image.git --save</span><br></pre></td></tr></table></figure>
 
 
 
 <p>在这个 .md文件中写完内容之后，保存，执行：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo g</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo g</span><br></pre></td></tr></table></figure>
 
 
 
 <p>然后部署：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo d</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo d</span><br></pre></td></tr></table></figure>
 
 
 
 <p>可以在本地进行预览：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo s</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo s</span><br></pre></td></tr></table></figure>
 
 <p>将网址点开可以预览.</p>
 <h4 id="插入图片的问题"><a href="#插入图片的问题" class="headerlink" title="插入图片的问题"></a>插入图片的问题</h4><p>之前我们已经安装了插件，在 _posts 文件夹中会出现和文章名字相同的文件夹，将想要插入的图片复制到该文件夹中</p>
 <p>然后在Markdown环境下插入图片格式为：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="MARKDOWN"><figure class="iseeu highlight /markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Fig x</span>](<span class="link"> ./picture.png</span>)</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Fig x</span>](<span class="link"> ./picture.png</span>)</span><br></pre></td></tr></table></figure>
 
 <p>注意，前面的 <code> ./</code> 一定不能省略，点前面有一个空格</p>
 <h4 id="公式显示的问题"><a href="#公式显示的问题" class="headerlink" title="公式显示的问题"></a>公式显示的问题</h4><p>目前找到的一个解决方式是使用 <a target="_blank" rel="noopener" href="https://www.latexlive.com/">https://www.latexlive.com</a> 网站转出为 MathML 的格式（Typora也可以转，但是会有很多换行而识别得破破烂烂）</p>
 <p>默认转出格式是另起一行居中</p>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">  <mi>a</mi>  <mo>+</mo>  <mi>b</mi>  <mo>+</mo>  <mi>c</mi></math></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;  &lt;mi&gt;a&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;b&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;c&lt;/mi&gt;&lt;/math&gt;</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;  &lt;mi&gt;a&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;b&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;c&lt;/mi&gt;&lt;/math&gt;</span><br></pre></td></tr></table></figure>
 
 <p>如果不想要居中，而是行间公式，把 <code> display=&quot;block&quot;</code> 删掉即可</p>
 <p>最后最好用Typora源代码模式检查一遍</p>

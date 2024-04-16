@@ -141,8 +141,7 @@
     <div class="divider"></div>
 
     <div class="content">
-        <h1 id="幼儿园式使用MPI-in-Fortran-90"><a href="#幼儿园式使用MPI-in-Fortran-90" class="headerlink" title="幼儿园式使用MPI in Fortran 90"></a>幼儿园式使用MPI in Fortran 90</h1><p>[TOC]</p>
-<h4 id="初步在程序中加入MPI"><a href="#初步在程序中加入MPI" class="headerlink" title="初步在程序中加入MPI"></a>初步在程序中加入MPI</h4><p>在你的 .f90 文件中，在主程序的开头，除了use module之后，引入MPI库  </p>
+        <h1 id="幼儿园式使用MPI-in-Fortran-90"><a href="#幼儿园式使用MPI-in-Fortran-90" class="headerlink" title="幼儿园式使用MPI in Fortran 90"></a>幼儿园式使用MPI in Fortran 90</h1><h4 id="初步在程序中加入MPI"><a href="#初步在程序中加入MPI" class="headerlink" title="初步在程序中加入MPI"></a>初步在程序中加入MPI</h4><p>在你的 .f90 文件中，在主程序的开头，除了use module之后，引入MPI库  </p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="FORTRAN"><figure class="iseeu highlight /fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span> <span class="string">&#x27;mpif.h&#x27;</span></span><br><span class="line"><span class="keyword">integer</span>:: processor_number, my_rank, ierr <span class="comment">!定义变量</span></span><br></pre></td></tr></table></figure></div>
 
 <p>一定要定义这些变量，这些变量除了可以定义在这里也可以<strong>预先定义在全局变量的module中</strong>。 </p>

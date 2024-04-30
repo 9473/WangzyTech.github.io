@@ -38,6 +38,16 @@ code {
     background-color: var(--white-1);
     padding: 2px 4px;
     border-radius: 4px;
+    
+    background: #fc625d;
+    border-radius: 50%;
+    box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+    content: ' ';
+    height: 12px;
+    left: 12px;
+    margin-top: -20px;
+    position: absolute;
+    width: 12px;
 }
 
 .md-fences {

@@ -4,28 +4,28 @@
 }
 
 @font-face {
-	font-family: 'courier';
+	font-family: 'baskerville';
 	font-style: normal;
 	font-weight: normal;
 	src: url('./paper/cmunrm.ttf');
 }
 
 @font-face {
-	font-family: 'courier';
+	font-family: 'baskerville';
 	font-style: italic;
 	font-weight: normal;
 	src: url('./paper/cmunti.ttf');
 }
 
 @font-face {
-	font-family: 'courier';
+	font-family: 'baskerville';
 	font-style: normal;
 	font-weight: bold;
 	src: url('./paper/cmunbx.ttf');
 }
 
 @font-face {
-	font-family: 'courier';
+	font-family: 'baskerville';
 	font-style: italic;
 	font-weight: bold;
 	src: url('./paper/cmunbi.ttf');
@@ -36,12 +36,12 @@
 }
 
 html, body, #write {
-	font-family: 'courier';
+	font-family: 'baskerville';
     background-color: #f3f2ee;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'courier';
+	font-family: 'Courier';
 }
 
 h1 {
@@ -50,8 +50,9 @@ h1 {
 }
 
 h2 {
-	font-size: 1.8rem;
-	text-align: center;
+/*	font-size: 1.8rem;*/
+/*	text-align: center;*/
+    font-size: 30px;
 }
 
 h3 {

@@ -27,7 +27,7 @@ blockquote {
 
 
 
-pre, code {
+pre, codeblock {
     font-family: 'Courier New','JetBrains Mono',  Courier, monospace;
 /*    border-radius: 8px;*/
 }

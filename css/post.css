@@ -162,7 +162,7 @@ hr,
   padding: 20px 24px;
 }
 
-.content > pre > codeblock {
+.content > pre > code {
   background-color: #F5F5F5;
 }
 

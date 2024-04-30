@@ -36,9 +36,9 @@ pre {
 code {
     font-size: 16px;
     background-color: var(--white-1);
-    padding: 2px 4px;*/
+/*    padding: 2px 4px;*/
+    padding-top: 30px
     border-radius: 8px;
-    box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
 
 }
 

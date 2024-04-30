@@ -29,7 +29,9 @@ blockquote {
 /* 代码块 */
 pre, code {
     font-family: 'Courier New','JetBrains Mono',  Courier, monospace;
-    background: #fc625d;
+    color: #88908a;
+    background-color: #F5F5F5;
+    /* background: #fc625d; */
     border-radius: 50%;
     box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
     content: ' ';
@@ -51,8 +53,7 @@ code {
 /*    padding: 2px 4px;*/
     padding-top: 30px
     border-radius: 8px;
-
-}
+ }
 
 .md-fences {*/
  color: #88908a;

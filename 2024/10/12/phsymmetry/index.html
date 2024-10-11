@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="index, follow"><title>Particle-hole symmetry, K-symmetry • Zhiyan</title><meta name="description" content="Particle-hole symmetry, K-symmetry - Zhiyan Wang"><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="https://unpkg.com/nanoreset@3.0.1/nanoreset.min.css"><link rel="stylesheet" href="/css/theme.css"><link rel="search" type="application/opensearchdescription+xml" href="/atom.xml" title="Zhiyan"><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Zhiyan" type="application/atom+xml">
+</head><body><div class="wrap" id="barba-wrapper"><header><h1 class="branding"><a href="/" title="Zhiyan">Zhiyan</a></h1><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link no-barba" href="/pub" target="_self">PUBLICATIONS</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/Aboutme" target="_self">ABOUT ME</a></li><li class="nav-list-item"><a class="nav-list-link no-barba" href="/archives" target="_self">OPEN NOTES</a></li><li class="nav-list-item"></ul></header><div class="barba-container"><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Particle-hole symmetry, K-symmetry</h1><div class="post-info"><a></a>2024-10-12</div><div class="post-content"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+// customised options
+// • auto-render specific keys, e.g.:
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '$', right: '$', display: false},
+{left: '\(', right: '\)', display: false},
+{left: '\[', right: '\]', display: true}
+],
+// • rendering keys, e.g.:
+throwOnError : false
+});
+});
+</script>",
+
+<p>写在前面.</p>
+<p>这是一个一直困惑我的问题，这几天也在了解调研。因为的确，我在了解费米液体时涉及到这种对称性；打破Luttinger定理涉及到打破这个对称性；（半满）Hubbard 模型具有这样的对称性，大部分超导体有这样的对称性。我们总是直接谈论这样的对称性，但我对它的形式理论却完全不了解，也并不知道它如何为我们带来更多.</p>
+<p>刚开始看这篇讲义（文章）[<a target="_blank" rel="noopener" href="https://www.thp.uni-koeln.de/zirn/011_Website_Martin_Zirnbauer/1_M_Zirnbauer/PH-Symmetries.pdf">Martin R. Zirnbauer, 2015</a>]，看起来似乎可以解答我很多疑惑，因此本文行文过程中可能有多数是阅读这篇文章留意的问题，或者被解答之后写下的笔记.</p>
+<p>因为网上中文资料似乎比较少，因此这篇用中文写.</p>
+<h1 id="Particle-hole-symmetry"><a href="#Particle-hole-symmetry" class="headerlink" title="Particle-hole symmetry"></a>Particle-hole symmetry</h1><p>一句话描述粒子-空穴对称的特质：</p>
+<blockquote>
+<p>Particle-hole symmetries for electrons in condensed matter are to be defined as complex antilinear operations that commute with the true quantum Hamiltonian.</p>
+</blockquote>
+<ol>
+<li>antilinear.      2. complex.      3. commute with Hamiltonian</li>
+</ol>
+<ul>
+<li>Definition. [mentioned on page 8]</li>
+</ul>
+<p>A Hamiltonian has the particle-hole symmetry if $KHK^{-1} &#x3D; -H$.  但我们后面会发现，既有 $KHK^{-1} &#x3D; -H$ 的，也有 $KHK^{-1} &#x3D; H$ 的.</p>
+<h2 id="What-is-K-in-physically-speaking"><a href="#What-is-K-in-physically-speaking" class="headerlink" title="What is $K$ in physically speaking?"></a>What is $K$ in physically speaking?</h2><p>[page 7-8]</p>
+<span>
+$$
+K{\color{pink}\text{create}(\ket{j})}K^{-1} = {\color{red}\text{create}(\bra{l})}, \\
+K{\color{pink}\text{annihilation}(\ket{l})}K^{-1} = {\color{red}\text{annihilation}(\bra{j})}
+$$
+</span>
+
+<p>其中, $\ket{j} &gt;0 \in V_+, \ket{l} &lt;0 \in V_-,$  以及对偶空间 $\bra{j} \in V^*_+, \bra{l}\in V^*_-$.</p>
+<p>这个式子的物理意义是：在能量高的空间中 $V_+$ 激发一个粒子，约等于在对偶能量低空间中激发一个粒子（我们称之为空穴）。在低能量空间 $V_-$ 湮灭一个particle，这等同于在对偶高能量空间湮灭一个hole。因此明确对偶空间干了什么事，可以直接简单粗暴的理解对偶空间描述的是空穴.   比如 $a_j \ket{vac} &#x3D; 0, a^\dagger_l \ket{vac}&#x3D;0$. </p>
+<p>On Fock space, 二次量子化后的哈密顿量，涉及到产生湮灭算符，因此允许 $a_j \leftrightarrow a_i^\dagger$ 进行互换以代替这样的对偶操作，我们替换掉了“对偶”、“空穴”这样的语言，而是换成产生-湮灭算符作用于占据态的语言。</p>
+<p>即</p>
+<span>
+$$
+{\color{pink}\text{create}(\ket{j})} \to {\color{pink}\text{create a particle on site }j} \to a^\dagger_j 
+\\
+{\color{pink}\text{create}(\bra{l})} \to {\color{pink}\text{create a hole on site }l} \to a_l
+$$
+</span>
+
+<span>
+$$
+{\color{pink}\text{annihilation}(\ket{l})} \to {\color{pink}\text{annihilation a particle on site }l} \to a_j
+\\
+{\color{pink}\text{annihilation}(\bra{j})} \to {\color{pink}\text{annihilation a hole on site }j} \to a^\dagger_j
+$$
+</span>
+
+<p>因此，这里直接代入到写出一种较为 general 的形式</p>
+<span>
+$$
+Ka_j^\dagger K^{-1} = a_l,  \quad Ka_l K^{-1} = a_j^\dagger , \\
+Ka_l^\dagger K^{-1} = a_j, \quad 
+Ka_j K^{-1} = a_l^\dagger
+$$
+</span>
+
+<p>值得注意的是，产生湮灭算符的下标在这里是不同的，也就是说并不是 $a_j \leftrightarrow a_i^\dagger$，你不得不小心谨慎。这一点是 $\Gamma$  操作导致的，你可以最初步的理解为能量交换。</p>
+</div></article></div></main><footer><div class="paginator"><a class="next" href="/2024/10/06/Spin-corr/">next</a></div><div class="copyright"><p>&copy; 2024 <a target="_blank" rel="noopener" href="https://9473.github.io/">Zhiyan Wang</a><br>Powered by <a href="https://hexo.io/" rel="noreferrer" target="_blank">Hexo</a></p></div></footer></div></div><script>var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+_gaq.push(['_trackPageview']);
+
+(function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script><script>document.addEventListener('DOMContentLoaded', function() {
+    Barba.Pjax.start()
+})</script></body></html>

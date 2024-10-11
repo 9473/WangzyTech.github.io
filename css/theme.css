@@ -200,7 +200,7 @@ header .nav-list-item a {
   line-height: 1.4;
 }
 
-/* .home.post-list {
+.home.post-list {
   margin: 2em 0;
   list-style: none;
 }
@@ -221,7 +221,7 @@ header .nav-list-item a {
 
 .home.post-list .read-more {
   color: #9e1900;
-} */
+}
 
 .archive .post-item {
   display: flex;
@@ -242,7 +242,7 @@ header .nav-list-item a {
 }
 .archive .post-info {
   width: 6em;
-  font-size: .9em;
+  font-size: 1.9em;
   color: #393e46;
 }
 

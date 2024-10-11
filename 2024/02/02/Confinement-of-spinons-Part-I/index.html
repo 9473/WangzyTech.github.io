@@ -1,86 +1,297 @@
-.post-block {
-  color: var(--hty-text-color);
-  margin: 0 1rem;
-  padding: 1rem;
-  background-color: var(--post-block-bg-color);
-mobile()
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
+<meta name="renderer" content="webkit">
+
+<title>Confinement of spinons Part.I | Wan Take</title>
+
+<meta name="format-detection" content="telephone=no"/>
+
+  <meta name="description" content="Welcome! This is my first post. Fig 1: Zero magnetic field state. Néel type. In the Ising limit, a local spin flip decomposes into two spinons;In the Heisenberg limit, it decomposes into a r...">
+
+
+
+  <meta name="keywords" content="iris">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="applicable-device"content="pc,mobile">
+
+
+
+  <link href="/dist/iris-20b518ec25.css" rel="stylesheet">
+
+<!--instant.page-->
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/3.0.0/instantpage.min.js" type="module" defer></script>
+
+<!--tiny-cache.js-->
+<script>var TinyCache=function(){"use strict";var o=window.localStorage;var r=document;function l(n){return new Error("Failed to load "+n.name+": "+n.url)}function i(n){return new Error("No such item or item is staled: "+n.name)}function f(n,t){var e=r.createElement("script");e.id=n.name,e.text=t,e.defer=!0,r.getElementsByTagName("head")[0].appendChild(e)}function m(n,t){var e=r.createElement("script");e.id=n.name,e.src=n.url,e.onload=function(){t(null)},e.onerror=function(){t(l(n))},r.getElementsByTagName("body")[0].appendChild(e)}function e(n,t,e){var r=function(n){var t,e=null;try{var r=o.getItem(n);r&&(e=JSON.parse(r))&&("string"!=typeof(t=e).name||"string"!=typeof t.url||"string"!=typeof t.content)&&(e=null)}catch(n){}return e}(""+n+t.name);r?r.url!==t.url||r.expire&&r.expire<(new Date).getTime()?e(i(t)):e(null,r.content):e(i(t))}function s(n,t,e){!function(n,t){try{o.setItem(n,JSON.stringify(t))}catch(n){}}(""+n+t.name,{content:e,expire:t.maxAge?(new Date).getTime()+1e3*t.maxAge:null,name:t.name,url:t.url})}return function(){function n(n){this.config={prefix:"TC:",timeout:6e3},function(n,t){for(var e in t)t.hasOwnProperty(e)&&(n[e]=t[e])}(this.config,n)}var t=n.prototype;return t.load=function(n,t){var e,r,o,i,u=this;if(!t)return new Promise(function(t,e){u.load(n,function(n){n?e(n):t()})});e=n.map(function(t){return function(n){u.loadScript(t,n)}}),r=t,o=[],i=e.length,e.forEach(function(n,e){n(function(n,t){o[e]=t,n&&r&&(r(n),r=null),0==--i&&r&&r(null,o)})})},t.remove=function(n){!function(n){try{localStorage.removeItem(n)}catch(n){}}(""+this.config.prefix+n.name)},t.loadScript=function(u,a){var c=this;e(this.config.prefix,u,function(n,t){var e,r,o,i;n?(e=u,r=c.config.timeout,o=function(n,t){t&&!n?(f(u,t),s(c.config.prefix,u,t),a(null)):m(u,a)},(i=new XMLHttpRequest).open("GET",e.url,!0),i.timeout=r,i.onload=function(){200<=i.status&&i.status<300||304===i.status?o(null,i.responseText):o(l(e))},i.ontimeout=i.onerror=function(){o(l(e))},i.send()):t?(f(u,t),a(null)):m(u,a)})},n}()}();</script>
+
+<script>
+(new TinyCache()).load([
+  { url: '/dist/iris-dfae13bc3a.js', name: 'iris' }
+])
+</script>
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+  <link rel="dns-prefetch" href="//giuem.disqus.com">
+
+
+
+
+  
+
+  
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+  
+  
+    <link rel="icon" type="image/png" href="/favicon-192x192.png">
+  
+  
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+
+
+  
+
+  <meta property="og:title" content="Confinement of spinons Part.I | Wan Take">
+<meta property="og:type" content="blog">
+<meta property="og:url" content="http://example.com/2024/02/02/Confinement-of-spinons-Part-I/">
+<meta property="og:image" content="/favicon-192x192.png">
+
+<meta property="og:description" content="Welcome! This is my first post. Fig 1: Zero magnetic field state. Néel type. In the Ising limit, a local spin flip decomposes into two spinons;In the Heisenberg limit, it decomposes into a r...">
+<meta property="og:article:tag" content="iris">
+<meta property="og:locale" content="en">
+
+
+
+  <meta property="article:published_time" content="Fri Feb 02 2024 19:27:35 GMT+0800">
+  <meta property="article:modified_time" content="Fri Feb 02 2024 19:43:42 GMT+0800">
+
+
+<meta name="twitter:card" content="summary">
+
+  
+
+
+  
+
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://example.com"
+    },
+    "headline": "Confinement of spinons Part.I",
+    
+    "datePublished": "2024-02-02T11:27:35.000Z",
+    "dateModified": "2024-02-02T11:43:42.273Z",
+    "author": {
+        "@type": "Person",
+        "name": "Wantake",
+        "image": {
+            "@type": "ImageObject",
+            "url": "avatar.png"
+        },
+        "description": "."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Wan Take",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/favicon-192x192.png"
+        }
+    },
+    "keywords": "iris",
+    "description": "Welcome! This is my first post. Fig 1: Zero magnetic field state. Néel type. In the Ising limit, a local spin flip decomposes into two spinons;In the Heisenberg limit, it decomposes into a r..."
 }
-.post-body {
-  padding: 0 5rem;
-tablet()
-mobile()
+</script>
+
+
+  
+<script>
+if ('serviceWorker' in navigator) {
+  
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      registrations.map(function(registration) {
+        registration.unregister()
+      })
+    })
+  
 }
-.post-meta {
-  font-size: 14px;
-  color: var(--hty-secondary-text-color);
-}
-.post-meta .icon {
-  margin-bottom: -1px;
-}
-.post-description {
-  font-weight: normal;
-  padding: 0.5rem;
-}
-.post-author {
-  display: flex;
-  justify-content: center;
-}
-.post-author .author-avatar {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 0;
-}
-.post-author .author-avatar img {
-  border-radius: 50%;
-  height: 1rem;
-  width: 1rem;
-  padding: 2px;
-  border: 2px solid #d3d3d3;
-}
-.post-author .author-name {
-  margin-left: 0.5rem;
-  font-size: 1rem;
-}
-.post-meta-item-icon {
-  display: inline-block;
-  color: var(--text-color, --hty-secondary-text-color);
-}
-.post-meta-divider {
-  height: 25px;
-  color: var(--hty-secondary-text-color);
-  margin: 0 0.5rem;
-}
-.post-eof {
-  margin: 50px auto;
-  width: 50%;
-  height: 1px;
-  background: $blue;
-  opacity: 0.1;
-}
-.post-copyright {
-  font-size: 0.9rem;
-  margin: 0.5rem 5rem 1rem 5rem;
-  padding: 0.5rem 1rem;
-  border-left: 4px solid #ff5252;
-  background-color: var(--hty-bg-color);
-  list-style: none;
-  word-break: break-all;
-  position: relative;
-  overflow: hidden;
-mobile()
-}
-.post-copyright::after {
-  position: absolute;
-  color: #fff;
-  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath fill='gray' d='M245.8 214.9l-33.2 17.3c-9.4-19.6-25.2-20-27.4-20-22.2 0-33.3 14.6-33.3 43.9 0 23.5 9.2 43.8 33.3 43.8 14.4 0 24.6-7 30.5-21.3l30.6 15.5a73.2 73.2 0 01-65.1 39c-22.6 0-74-10.3-74-77 0-58.7 43-77 72.6-77 30.8-.1 52.7 11.9 66 35.8zm143 0l-32.7 17.3c-9.5-19.8-25.7-20-27.9-20-22.1 0-33.2 14.6-33.2 43.9 0 23.5 9.2 43.8 33.2 43.8 14.5 0 24.7-7 30.5-21.3l31 15.5c-2 3.8-21.3 39-65 39-22.7 0-74-9.9-74-77 0-58.7 43-77 72.6-77C354 179 376 191 389 214.8zM247.7 8C104.7 8 0 123 0 256c0 138.4 113.6 248 247.6 248C377.5 504 496 403 496 256 496 118 389.4 8 247.6 8zm.8 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.5 85.5-203.3 203.8-203.3A201.7 201.7 0 01451.3 256c0 121.7-99.7 202.9-202.9 202.9z'/%3E%3C/svg%3E");
-  content: ' ';
-  height: 10rem;
-  width: 10rem;
-  right: -2rem;
-  top: -2rem;
-  opacity: 0.1;
-}
-.tag-name {
-  padding: 0 0.1rem;
-}
+</script>
+
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+  <body data-instant-intensity="viewport">
+    
+
+<header class="header header__no-hero">
+  <div class="header-wrapper">
+    <div class="header__left">
+      
+      <div class="header-logo">
+        <a href="/">Wan Take</a>
+      </div>
+      
+    </div>
+    <div class="header__right">
+      
+<nav class="nav">
+  <a id="nav-toggle" class="nav-toggle"><div></div></a>
+  <div class="nav-wrapper">
+    <ul>
+      
+        <li><a class="nav-link " href="/archives">Archive</a></li>
+      
+        <li><a class="nav-link " href="/about">About</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+    </div>
+  </div>
+</header>
+
+
+
+    <main class="main">
+      
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      Confinement of spinons Part.I
+    </h1>
+    <section class="post-meta">
+      <time datetime="2024-02-02T11:27:35.000Z">
+  <i class="far fa-calendar" aria-hidden></i>
+  2024-02-02
+</time>
+
+    </section>
+  </header>
+  <aside class="post-aside">
+  
+  <section class="post-toc">
+    <header class="post-toc-title">
+      Contents
+    </header>
+    
+  </section>
+
+
+</aside>
+
+  <section class="post-content">
+    <p>Welcome! This is my first post. </p>
+<p>Fig 1: Zero magnetic field state. Néel type. </p>
+<p><img src="/2024/02/02/Confinement-of-spinons-Part-I/p1.png" alt="Fig 1"></p>
+<p>In the Ising limit, a local spin flip decomposes into two spinons;</p>
+<p>In the Heisenberg limit, it decomposes into a rapidly converging series of states containing two, four and higher even numbers of such spinons. </p>
+<p><strong>spin-1&#x2F;2 Heisenberg antiferromagnetic chain</strong></p>
+<blockquote>
+<p>Its exact ground state is a macroscopic singlet entangling all spins in the chain. Its elementary excitations, called <u>spinons</u>, are fractional spin-1&#x2F;2 quasiparticles created and detected in pairs by neutron scattering.</p>
+</blockquote>
+<p>The gapless fractionalized excitations are called spinons. The elementary excitation, the spinon, carries spin-1&#x2F;2 and can be pictorially associated with an individually propagating domain wall. </p>
+<p>In zero magnetic field the spins-1&#x2F;2 entangle into a macroscopic singlet <math xmlns="http://www.w3.org/1998/Math/MathML">  <msub>    <mrow>      <mover>        <mi>S</mi>        <mo stretchy="false">&#x2192;</mo>      </mover>    </mrow>    <mrow>      <mi>t</mi>      <mi>o</mi>      <mi>t</mi>    </mrow>  </msub>  <mo>&#x3D;</mo>  <mn>0</mn></math>      The inelastically scattered neutron provokes  <math xmlns="http://www.w3.org/1998/Math/MathML">  <msub>    <mrow>      <mover>        <mi>S</mi>        <mo stretchy="false">&#x2192;</mo>      </mover>    </mrow>    <mrow>      <mi>t</mi>      <mi>o</mi>      <mi>t</mi>    </mrow>  </msub>  <mo>&#x3D;</mo>  <mn>1</mn></math> excitations, which we first imagine, in the Ising limit, as a local spin flip surrounded by two domain walls(kink). And then, these domain walls delocalize owing to the terms <math xmlns="http://www.w3.org/1998/Math/MathML">  <mo stretchy="false">(</mo>  <msup>    <mi>S</mi>    <mo>+</mo>  </msup>  <msup>    <mi>S</mi>    <mo>&#x2212;</mo>  </msup>  <mo>+</mo>  <msup>    <mi>S</mi>    <mo>&#x2212;</mo>  </msup>  <msup>    <mi>S</mi>    <mo>+</mo>  </msup>  <mo stretchy="false">)</mo></math> and propagate individually. </p>
+<p>More important,     approaching the Heisenberg limit, the local spin flip can no longer be represented by two spinons alone, but rather decomposes in a rapidly converging series of states containing two, four and higher even numbers of spinons.    The picture shows two- and four-spinons which are main contribution of elementary excitation.</p>
+<p>Whereas each spinon has a discrete energy-momentum relation, the excitation spectrum is composed of <strong>spinon pairs</strong> (and higher even numbered spinon states with <math xmlns="http://www.w3.org/1998/Math/MathML">  <msub>    <mrow>      <mover>        <mi>S</mi>        <mo stretchy="false">&#x2192;</mo>      </mover>    </mrow>    <mrow>      <mi>t</mi>      <mi>o</mi>      <mi>t</mi>    </mrow>  </msub>  <mo>&#x3D;</mo>  <mn>1</mn></math>, and will therefore be continuous.        Two-spinons.  A localized spin flip exactly projects onto a state with two spinons. As these domain walls are localized, the state immediately after the spin flip can, be represented as a combination of two-spinon states with  <u>a broad momentum distribution</u> :  a spinon has the (0 ~  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x3C0;</mi></math>) momentum and another spinon must be (<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x3C0;</mi></math> ~  0), since spinons separate two sections of the macroscopic singlet ground state wavefunction that are phase-shifted by <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x3C0;</mi></math>. </p>
+<p>Domain wall pair excitations have then a finite threshold energy and are  <u>bound or confined</u>  by the magnetic field.</p>
+<p><u>Fully polarized state</u></p>
+<p>is identical to the classical ground state, which if we neglect all commutation relations of spin operators.  Thus, dispersion and intensity of the low-energy excitation spectrum are correctly described, by linear spin-wave theory, and for which, the elementary quasiparticles are non-interacting magnons.</p>
+<p>Fig 2: Fully polarized state. Gound state and “single-flip” excitation.</p>
+<p><img src="/2024/02/02/Confinement-of-spinons-Part-I/p2.png" alt="Fig 2"></p>
+<p>The creation of a magnon by inelastic scattering of a neutron can be imagined as a single spin flip.  The Zeeman energy prevents any growth of the flipped section.(middle)</p>
+<p>This magnon can classically be visualized as a spin wave(left), a coherent precession of the local spin expectation value around the field direction.</p>
+<p>Domain wall propagation is achieved through S+S- term in Hamiltonian.(right)</p>
+<p>The magnon in the fully polarized state can be understood as a firmly bound domain wall pair that propagates and delocalizes as a single entity.  This results in a <strong>discrete</strong> energy-momentum dispersion relation of the magnon.</p>
+<p>Confinement of spinons</p>
+<blockquote>
+<p>Domain wall pair excitations have then a finite threshold energy and are <u>bound or confined</u> by the magnetic field.</p>
+</blockquote>
+<p>Now we are going to talk about “Confinement”.</p>
+<p>Confinement is a process by which particles with fractional quantum numbers bind together to form quasiparticles with integer quantum numbers. </p>
+<p>At sufficiently low temperatures the weak coupling between chains can, induce an attractive interaction between pairs of spinons, that increases with their separation and thus <strong>leads to confinement</strong>.</p>
+
+  </section>
+  <footer class="post-meta">
+  
+
+  
+
+</footer>
+
+  <div class="post-end" data-text="End"></div>
+</article>
+
+  
+<section>
+  
+<div id="disqus_thread"></div>
+  
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://example.com/2024/02/02/Confinement-of-spinons-Part-I/';
+      this.page.identifier = 'Confinement-of-spinons-Part-I';
+      this.page.title = 'Confinement of spinons Part.I';
+    };
+    if (!document.getElementById('disqus-embed')) {
+      var d = document, s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.id = 'disqus-embed';
+      s.async = true;
+      s.src = '//giuem.disqus.com/embed.js';
+      (d.head || d.body).appendChild(s);
+    }
+    if(typeof DISQUS == 'object'){
+      DISQUS.reset({
+          reload: true,
+          config: disqus_config
+      })
+    }
+  </script>
+  
+
+  
+</section>
+
+
+
+ 
+    </main>
+    <footer class="footer">
+  <div class="footer-wrapper">
+    <p class="copyright">
+      &copy; 
+      2015 -
+      2024
+      Wantake
+    </p>
+    <p class="theme">
+      Hexo Theme <a href="https://github.com/giuem/hexo-theme-iris" target="_blank" rel="noopener noreferrer">Iris</a> with <i class="fas fa-heart"></i>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,86 +1,352 @@
-.post-block {
-  color: var(--hty-text-color);
-  margin: 0 1rem;
-  padding: 1rem;
-  background-color: var(--post-block-bg-color);
-mobile()
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
+<meta name="renderer" content="webkit">
+
+<title>use hexo | Wan Take</title>
+
+<meta name="format-detection" content="telephone=no"/>
+
+  <meta name="description" content="配置环境安装了home-brew之后，安装 Hexo 所需要的 Git 和 Node.js12">
+
+
+
+  <meta name="keywords" content="iris">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="applicable-device"content="pc,mobile">
+
+
+
+  <link href="/dist/iris-20b518ec25.css" rel="stylesheet">
+
+<!--instant.page-->
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/3.0.0/instantpage.min.js" type="module" defer></script>
+
+<!--tiny-cache.js-->
+<script>var TinyCache=function(){"use strict";var o=window.localStorage;var r=document;function l(n){return new Error("Failed to load "+n.name+": "+n.url)}function i(n){return new Error("No such item or item is staled: "+n.name)}function f(n,t){var e=r.createElement("script");e.id=n.name,e.text=t,e.defer=!0,r.getElementsByTagName("head")[0].appendChild(e)}function m(n,t){var e=r.createElement("script");e.id=n.name,e.src=n.url,e.onload=function(){t(null)},e.onerror=function(){t(l(n))},r.getElementsByTagName("body")[0].appendChild(e)}function e(n,t,e){var r=function(n){var t,e=null;try{var r=o.getItem(n);r&&(e=JSON.parse(r))&&("string"!=typeof(t=e).name||"string"!=typeof t.url||"string"!=typeof t.content)&&(e=null)}catch(n){}return e}(""+n+t.name);r?r.url!==t.url||r.expire&&r.expire<(new Date).getTime()?e(i(t)):e(null,r.content):e(i(t))}function s(n,t,e){!function(n,t){try{o.setItem(n,JSON.stringify(t))}catch(n){}}(""+n+t.name,{content:e,expire:t.maxAge?(new Date).getTime()+1e3*t.maxAge:null,name:t.name,url:t.url})}return function(){function n(n){this.config={prefix:"TC:",timeout:6e3},function(n,t){for(var e in t)t.hasOwnProperty(e)&&(n[e]=t[e])}(this.config,n)}var t=n.prototype;return t.load=function(n,t){var e,r,o,i,u=this;if(!t)return new Promise(function(t,e){u.load(n,function(n){n?e(n):t()})});e=n.map(function(t){return function(n){u.loadScript(t,n)}}),r=t,o=[],i=e.length,e.forEach(function(n,e){n(function(n,t){o[e]=t,n&&r&&(r(n),r=null),0==--i&&r&&r(null,o)})})},t.remove=function(n){!function(n){try{localStorage.removeItem(n)}catch(n){}}(""+this.config.prefix+n.name)},t.loadScript=function(u,a){var c=this;e(this.config.prefix,u,function(n,t){var e,r,o,i;n?(e=u,r=c.config.timeout,o=function(n,t){t&&!n?(f(u,t),s(c.config.prefix,u,t),a(null)):m(u,a)},(i=new XMLHttpRequest).open("GET",e.url,!0),i.timeout=r,i.onload=function(){200<=i.status&&i.status<300||304===i.status?o(null,i.responseText):o(l(e))},i.ontimeout=i.onerror=function(){o(l(e))},i.send()):t?(f(u,t),a(null)):m(u,a)})},n}()}();</script>
+
+<script>
+(new TinyCache()).load([
+  { url: '/dist/iris-dfae13bc3a.js', name: 'iris' }
+])
+</script>
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+  <link rel="dns-prefetch" href="//giuem.disqus.com">
+
+
+
+
+  
+
+  
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+  
+  
+    <link rel="icon" type="image/png" href="/favicon-192x192.png">
+  
+  
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+
+
+  
+
+  <meta property="og:title" content="use hexo | Wan Take">
+<meta property="og:type" content="blog">
+<meta property="og:url" content="http://example.com/2024/02/02/use-hexo/">
+<meta property="og:image" content="/favicon-192x192.png">
+
+<meta property="og:description" content="配置环境安装了home-brew之后，安装 Hexo 所需要的 Git 和 Node.js12">
+<meta property="og:article:tag" content="iris">
+<meta property="og:locale" content="en">
+
+
+
+  <meta property="article:published_time" content="Fri Feb 02 2024 19:54:41 GMT+0800">
+  <meta property="article:modified_time" content="Wed Apr 03 2024 11:56:04 GMT+0800">
+
+
+<meta name="twitter:card" content="summary">
+
+  
+
+
+  
+
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://example.com"
+    },
+    "headline": "use hexo",
+    
+    "datePublished": "2024-02-02T11:54:41.000Z",
+    "dateModified": "2024-04-03T03:56:04.843Z",
+    "author": {
+        "@type": "Person",
+        "name": "Wantake",
+        "image": {
+            "@type": "ImageObject",
+            "url": "avatar.png"
+        },
+        "description": "."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Wan Take",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/favicon-192x192.png"
+        }
+    },
+    "keywords": "iris",
+    "description": "配置环境安装了home-brew之后，安装 Hexo 所需要的 Git 和 Node.js12"
 }
-.post-body {
-  padding: 0 5rem;
-tablet()
-mobile()
+</script>
+
+
+  
+<script>
+if ('serviceWorker' in navigator) {
+  
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      registrations.map(function(registration) {
+        registration.unregister()
+      })
+    })
+  
 }
-.post-meta {
-  font-size: 14px;
-  color: var(--hty-secondary-text-color);
-}
-.post-meta .icon {
-  margin-bottom: -1px;
-}
-.post-description {
-  font-weight: normal;
-  padding: 0.5rem;
-}
-.post-author {
-  display: flex;
-  justify-content: center;
-}
-.post-author .author-avatar {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 0;
-}
-.post-author .author-avatar img {
-  border-radius: 50%;
-  height: 1rem;
-  width: 1rem;
-  padding: 2px;
-  border: 2px solid #d3d3d3;
-}
-.post-author .author-name {
-  margin-left: 0.5rem;
-  font-size: 1rem;
-}
-.post-meta-item-icon {
-  display: inline-block;
-  color: var(--text-color, --hty-secondary-text-color);
-}
-.post-meta-divider {
-  height: 25px;
-  color: var(--hty-secondary-text-color);
-  margin: 0 0.5rem;
-}
-.post-eof {
-  margin: 50px auto;
-  width: 50%;
-  height: 1px;
-  background: $blue;
-  opacity: 0.1;
-}
-.post-copyright {
-  font-size: 0.9rem;
-  margin: 0.5rem 5rem 1rem 5rem;
-  padding: 0.5rem 1rem;
-  border-left: 4px solid #ff5252;
-  background-color: var(--hty-bg-color);
-  list-style: none;
-  word-break: break-all;
-  position: relative;
-  overflow: hidden;
-mobile()
-}
-.post-copyright::after {
-  position: absolute;
-  color: #fff;
-  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath fill='gray' d='M245.8 214.9l-33.2 17.3c-9.4-19.6-25.2-20-27.4-20-22.2 0-33.3 14.6-33.3 43.9 0 23.5 9.2 43.8 33.3 43.8 14.4 0 24.6-7 30.5-21.3l30.6 15.5a73.2 73.2 0 01-65.1 39c-22.6 0-74-10.3-74-77 0-58.7 43-77 72.6-77 30.8-.1 52.7 11.9 66 35.8zm143 0l-32.7 17.3c-9.5-19.8-25.7-20-27.9-20-22.1 0-33.2 14.6-33.2 43.9 0 23.5 9.2 43.8 33.2 43.8 14.5 0 24.7-7 30.5-21.3l31 15.5c-2 3.8-21.3 39-65 39-22.7 0-74-9.9-74-77 0-58.7 43-77 72.6-77C354 179 376 191 389 214.8zM247.7 8C104.7 8 0 123 0 256c0 138.4 113.6 248 247.6 248C377.5 504 496 403 496 256 496 118 389.4 8 247.6 8zm.8 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.5 85.5-203.3 203.8-203.3A201.7 201.7 0 01451.3 256c0 121.7-99.7 202.9-202.9 202.9z'/%3E%3C/svg%3E");
-  content: ' ';
-  height: 10rem;
-  width: 10rem;
-  right: -2rem;
-  top: -2rem;
-  opacity: 0.1;
-}
-.tag-name {
-  padding: 0 0.1rem;
-}
+</script>
+
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+  <body data-instant-intensity="viewport">
+    
+
+<header class="header header__no-hero">
+  <div class="header-wrapper">
+    <div class="header__left">
+      
+      <div class="header-logo">
+        <a href="/">Wan Take</a>
+      </div>
+      
+    </div>
+    <div class="header__right">
+      
+<nav class="nav">
+  <a id="nav-toggle" class="nav-toggle"><div></div></a>
+  <div class="nav-wrapper">
+    <ul>
+      
+        <li><a class="nav-link " href="/archives">Archive</a></li>
+      
+        <li><a class="nav-link " href="/about">About</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+    </div>
+  </div>
+</header>
+
+
+
+    <main class="main">
+      
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      use hexo
+    </h1>
+    <section class="post-meta">
+      <time datetime="2024-02-02T11:54:41.000Z">
+  <i class="far fa-calendar" aria-hidden></i>
+  2024-02-02
+</time>
+
+    </section>
+  </header>
+  <aside class="post-aside">
+  
+  <section class="post-toc">
+    <header class="post-toc-title">
+      Contents
+    </header>
+    <ol class="post-toc-inst"><li class="post-toc-inst-item post-toc-inst-level-2"><a class="post-toc-inst-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="post-toc-inst-number">1.</span> <span class="post-toc-inst-text">配置环境</span></a><ol class="post-toc-inst-child"><li class="post-toc-inst-item post-toc-inst-level-3"><a class="post-toc-inst-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="post-toc-inst-number">1.1.</span> <span class="post-toc-inst-text">常用指令</span></a></li></ol></li><li class="post-toc-inst-item post-toc-inst-level-2"><a class="post-toc-inst-link" href="#Update"><span class="post-toc-inst-number">2.</span> <span class="post-toc-inst-text">Update</span></a></li></ol>
+  </section>
+
+
+</aside>
+
+  <section class="post-content">
+    <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p>安装了home-brew之后，安装 Hexo 所需要的 Git 和 Node.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install git</span><br><span class="line">$ brew install node</span><br></pre></td></tr></table></figure>
+
+<p>检查是否安装成功:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br><span class="line">$ node -v</span><br><span class="line">$ git --version</span><br></pre></td></tr></table></figure>
+
+
+
+<p>安装 Hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>为Hexo创建一个初始源文件夹</p>
+<p>Cd in 想要的路径中, 执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>这里简单介绍一些hexo使用指令</p>
+<p>对于hexo创建一个 ~ blog的文件夹，那么blog默认为根目录，所谓的在根目录底下执行，就是在blog这个文件夹底下执行.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd .../blog</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><p>新建一篇博客</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo n &quot;name&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在根目录的 source 文件夹底下 _posts 中会出现你创建的 blog.md</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">❯ hexo n <span class="string">&quot;use anaconda&quot;</span></span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: ~/.../blog/source/_posts/use-anaconda.md</span><br></pre></td></tr></table></figure>
+
+
+
+<p>我们在根目录下预安装能够<u>加载本地图片</u>的插件</p>
+<p>在根目录下执行:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$npm install https://github.com/xcodebuild/hexo-asset-image.git --save</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在这个 .md文件中写完内容之后，保存，执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo g</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后部署：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+<p>可以在本地进行预览：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo s</span><br></pre></td></tr></table></figure>
+
+<p>将网址点开可以预览.</p>
+<h4 id="插入图片的问题"><a href="#插入图片的问题" class="headerlink" title="插入图片的问题"></a>插入图片的问题</h4><p>之前我们已经安装了插件，在 _posts 文件夹中会出现和文章名字相同的文件夹，将想要插入的图片复制到该文件夹中</p>
+<p>然后在Markdown环境下插入图片格式为：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Fig x</span>](<span class="link"> ./picture.png</span>)</span><br></pre></td></tr></table></figure>
+
+<p>注意，前面的 <code> ./</code> 一定不能省略，点前面有一个空格</p>
+<h4 id="公式显示的问题"><a href="#公式显示的问题" class="headerlink" title="公式显示的问题"></a>公式显示的问题</h4><p>目前找到的一个解决方式是使用 <a target="_blank" rel="noopener" href="https://www.latexlive.com/">https://www.latexlive.com</a> 网站转出为 MathML 的格式（Typora也可以转，但是会有很多换行而识别得破破烂烂）</p>
+<p>默认转出格式是另起一行居中</p>
+<p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">  <mi>a</mi>  <mo>+</mo>  <mi>b</mi>  <mo>+</mo>  <mi>c</mi></math></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;  &lt;mi&gt;a&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;b&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;c&lt;/mi&gt;&lt;/math&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果不想要居中，而是行间公式，把 <code> display=&quot;block&quot;</code> 删掉即可</p>
+<p>最后最好用Typora源代码模式检查一遍</p>
+<hr>
+<h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><p>(2024.4)</p>
+<p>重新搞了Latex识别的插件，现在可以直接使用”$$”来使用公式</p>
+<p>插入图片依旧使用上面说的指令，一定要记得，这是调用同名文件夹里的图片(图片一定要放到同名文件夹里)，所以Typora可能显示不出来图片，但是网站上可以读取.</p>
+<p>现在可以更改图片大小:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">&quot; ./p2.png&quot;</span> style=<span class="string">&quot;width: 20%; &quot;</span>&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>参考教程：</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/nuccch/p/17010471.html">https://www.cnblogs.com/nuccch/p/17010471.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/67f3281cfc01">https://www.jianshu.com/p/67f3281cfc01</a></p>
+
+  </section>
+  <footer class="post-meta">
+  
+
+  
+
+</footer>
+
+  <div class="post-end" data-text="End"></div>
+</article>
+
+  
+<section>
+  
+<div id="disqus_thread"></div>
+  
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://example.com/2024/02/02/use-hexo/';
+      this.page.identifier = 'use-hexo';
+      this.page.title = 'use hexo';
+    };
+    if (!document.getElementById('disqus-embed')) {
+      var d = document, s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.id = 'disqus-embed';
+      s.async = true;
+      s.src = '//giuem.disqus.com/embed.js';
+      (d.head || d.body).appendChild(s);
+    }
+    if(typeof DISQUS == 'object'){
+      DISQUS.reset({
+          reload: true,
+          config: disqus_config
+      })
+    }
+  </script>
+  
+
+  
+</section>
+
+
+
+ 
+    </main>
+    <footer class="footer">
+  <div class="footer-wrapper">
+    <p class="copyright">
+      &copy; 
+      2015 -
+      2024
+      Wantake
+    </p>
+    <p class="theme">
+      Hexo Theme <a href="https://github.com/giuem/hexo-theme-iris" target="_blank" rel="noopener noreferrer">Iris</a> with <i class="fas fa-heart"></i>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,86 +1,371 @@
-.post-block {
-  color: var(--hty-text-color);
-  margin: 0 1rem;
-  padding: 1rem;
-  background-color: var(--post-block-bg-color);
-mobile()
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
+<meta name="renderer" content="webkit">
+
+<title>熵数据处理日志 | Wan Take</title>
+
+<meta name="format-detection" content="telephone=no"/>
+
+  <meta name="description" content="这几天在用python处理比较大的数据文件，在这里写下处理数据的细节，算是一个处理数据的日志？每个bin按顺序输出每个核的数据，数据形式为对数由于我们是分配到了50个核上，因此，我们需要将数据处理，每50个数据分为一行，这样，每个核的数据就会横着排开，而竖着的将会是同一个核的数据。">
+
+
+
+  <meta name="keywords" content="iris">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="applicable-device"content="pc,mobile">
+
+
+
+  <link href="/dist/iris-20b518ec25.css" rel="stylesheet">
+
+<!--instant.page-->
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/3.0.0/instantpage.min.js" type="module" defer></script>
+
+<!--tiny-cache.js-->
+<script>var TinyCache=function(){"use strict";var o=window.localStorage;var r=document;function l(n){return new Error("Failed to load "+n.name+": "+n.url)}function i(n){return new Error("No such item or item is staled: "+n.name)}function f(n,t){var e=r.createElement("script");e.id=n.name,e.text=t,e.defer=!0,r.getElementsByTagName("head")[0].appendChild(e)}function m(n,t){var e=r.createElement("script");e.id=n.name,e.src=n.url,e.onload=function(){t(null)},e.onerror=function(){t(l(n))},r.getElementsByTagName("body")[0].appendChild(e)}function e(n,t,e){var r=function(n){var t,e=null;try{var r=o.getItem(n);r&&(e=JSON.parse(r))&&("string"!=typeof(t=e).name||"string"!=typeof t.url||"string"!=typeof t.content)&&(e=null)}catch(n){}return e}(""+n+t.name);r?r.url!==t.url||r.expire&&r.expire<(new Date).getTime()?e(i(t)):e(null,r.content):e(i(t))}function s(n,t,e){!function(n,t){try{o.setItem(n,JSON.stringify(t))}catch(n){}}(""+n+t.name,{content:e,expire:t.maxAge?(new Date).getTime()+1e3*t.maxAge:null,name:t.name,url:t.url})}return function(){function n(n){this.config={prefix:"TC:",timeout:6e3},function(n,t){for(var e in t)t.hasOwnProperty(e)&&(n[e]=t[e])}(this.config,n)}var t=n.prototype;return t.load=function(n,t){var e,r,o,i,u=this;if(!t)return new Promise(function(t,e){u.load(n,function(n){n?e(n):t()})});e=n.map(function(t){return function(n){u.loadScript(t,n)}}),r=t,o=[],i=e.length,e.forEach(function(n,e){n(function(n,t){o[e]=t,n&&r&&(r(n),r=null),0==--i&&r&&r(null,o)})})},t.remove=function(n){!function(n){try{localStorage.removeItem(n)}catch(n){}}(""+this.config.prefix+n.name)},t.loadScript=function(u,a){var c=this;e(this.config.prefix,u,function(n,t){var e,r,o,i;n?(e=u,r=c.config.timeout,o=function(n,t){t&&!n?(f(u,t),s(c.config.prefix,u,t),a(null)):m(u,a)},(i=new XMLHttpRequest).open("GET",e.url,!0),i.timeout=r,i.onload=function(){200<=i.status&&i.status<300||304===i.status?o(null,i.responseText):o(l(e))},i.ontimeout=i.onerror=function(){o(l(e))},i.send()):t?(f(u,t),a(null)):m(u,a)})},n}()}();</script>
+
+<script>
+(new TinyCache()).load([
+  { url: '/dist/iris-dfae13bc3a.js', name: 'iris' }
+])
+</script>
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+  <link rel="dns-prefetch" href="//giuem.disqus.com">
+
+
+
+
+  
+
+  
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+  
+  
+    <link rel="icon" type="image/png" href="/favicon-192x192.png">
+  
+  
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+
+
+  
+
+  <meta property="og:title" content="熵数据处理日志 | Wan Take">
+<meta property="og:type" content="blog">
+<meta property="og:url" content="http://example.com/2024/04/16/%E7%86%B5%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%97%A5%E5%BF%97/">
+<meta property="og:image" content="/favicon-192x192.png">
+
+<meta property="og:description" content="这几天在用python处理比较大的数据文件，在这里写下处理数据的细节，算是一个处理数据的日志？每个bin按顺序输出每个核的数据，数据形式为对数由于我们是分配到了50个核上，因此，我们需要将数据处理，每50个数据分为一行，这样，每个核的数据就会横着排开，而竖着的将会是同一个核的数据。">
+<meta property="og:article:tag" content="iris">
+<meta property="og:locale" content="en">
+
+
+
+  <meta property="article:published_time" content="Tue Apr 16 2024 10:08:23 GMT+0800">
+  <meta property="article:modified_time" content="Tue Apr 16 2024 10:09:14 GMT+0800">
+
+
+<meta name="twitter:card" content="summary">
+
+  
+
+
+  
+
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://example.com"
+    },
+    "headline": "熵数据处理日志",
+    
+    "datePublished": "2024-04-16T02:08:23.000Z",
+    "dateModified": "2024-04-16T02:09:14.196Z",
+    "author": {
+        "@type": "Person",
+        "name": "Wantake",
+        "image": {
+            "@type": "ImageObject",
+            "url": "avatar.png"
+        },
+        "description": "."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Wan Take",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/favicon-192x192.png"
+        }
+    },
+    "keywords": "iris",
+    "description": "这几天在用python处理比较大的数据文件，在这里写下处理数据的细节，算是一个处理数据的日志？每个bin按顺序输出每个核的数据，数据形式为对数由于我们是分配到了50个核上，因此，我们需要将数据处理，每50个数据分为一行，这样，每个核的数据就会横着排开，而竖着的将会是同一个核的数据。"
 }
-.post-body {
-  padding: 0 5rem;
-tablet()
-mobile()
+</script>
+
+
+  
+<script>
+if ('serviceWorker' in navigator) {
+  
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      registrations.map(function(registration) {
+        registration.unregister()
+      })
+    })
+  
 }
-.post-meta {
-  font-size: 14px;
-  color: var(--hty-secondary-text-color);
-}
-.post-meta .icon {
-  margin-bottom: -1px;
-}
-.post-description {
-  font-weight: normal;
-  padding: 0.5rem;
-}
-.post-author {
-  display: flex;
-  justify-content: center;
-}
-.post-author .author-avatar {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 0;
-}
-.post-author .author-avatar img {
-  border-radius: 50%;
-  height: 1rem;
-  width: 1rem;
-  padding: 2px;
-  border: 2px solid #d3d3d3;
-}
-.post-author .author-name {
-  margin-left: 0.5rem;
-  font-size: 1rem;
-}
-.post-meta-item-icon {
-  display: inline-block;
-  color: var(--text-color, --hty-secondary-text-color);
-}
-.post-meta-divider {
-  height: 25px;
-  color: var(--hty-secondary-text-color);
-  margin: 0 0.5rem;
-}
-.post-eof {
-  margin: 50px auto;
-  width: 50%;
-  height: 1px;
-  background: $blue;
-  opacity: 0.1;
-}
-.post-copyright {
-  font-size: 0.9rem;
-  margin: 0.5rem 5rem 1rem 5rem;
-  padding: 0.5rem 1rem;
-  border-left: 4px solid #ff5252;
-  background-color: var(--hty-bg-color);
-  list-style: none;
-  word-break: break-all;
-  position: relative;
-  overflow: hidden;
-mobile()
-}
-.post-copyright::after {
-  position: absolute;
-  color: #fff;
-  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath fill='gray' d='M245.8 214.9l-33.2 17.3c-9.4-19.6-25.2-20-27.4-20-22.2 0-33.3 14.6-33.3 43.9 0 23.5 9.2 43.8 33.3 43.8 14.4 0 24.6-7 30.5-21.3l30.6 15.5a73.2 73.2 0 01-65.1 39c-22.6 0-74-10.3-74-77 0-58.7 43-77 72.6-77 30.8-.1 52.7 11.9 66 35.8zm143 0l-32.7 17.3c-9.5-19.8-25.7-20-27.9-20-22.1 0-33.2 14.6-33.2 43.9 0 23.5 9.2 43.8 33.2 43.8 14.5 0 24.7-7 30.5-21.3l31 15.5c-2 3.8-21.3 39-65 39-22.7 0-74-9.9-74-77 0-58.7 43-77 72.6-77C354 179 376 191 389 214.8zM247.7 8C104.7 8 0 123 0 256c0 138.4 113.6 248 247.6 248C377.5 504 496 403 496 256 496 118 389.4 8 247.6 8zm.8 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.5 85.5-203.3 203.8-203.3A201.7 201.7 0 01451.3 256c0 121.7-99.7 202.9-202.9 202.9z'/%3E%3C/svg%3E");
-  content: ' ';
-  height: 10rem;
-  width: 10rem;
-  right: -2rem;
-  top: -2rem;
-  opacity: 0.1;
-}
-.tag-name {
-  padding: 0 0.1rem;
-}
+</script>
+
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+  <body data-instant-intensity="viewport">
+    
+
+<header class="header header__no-hero">
+  <div class="header-wrapper">
+    <div class="header__left">
+      
+      <div class="header-logo">
+        <a href="/">Wan Take</a>
+      </div>
+      
+    </div>
+    <div class="header__right">
+      
+<nav class="nav">
+  <a id="nav-toggle" class="nav-toggle"><div></div></a>
+  <div class="nav-wrapper">
+    <ul>
+      
+        <li><a class="nav-link " href="/archives">Archive</a></li>
+      
+        <li><a class="nav-link " href="/about">About</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+    </div>
+  </div>
+</header>
+
+
+
+    <main class="main">
+      
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      熵数据处理日志
+    </h1>
+    <section class="post-meta">
+      <time datetime="2024-04-16T02:08:23.000Z">
+  <i class="far fa-calendar" aria-hidden></i>
+  2024-04-16
+</time>
+
+    </section>
+  </header>
+  <aside class="post-aside">
+  
+  <section class="post-toc">
+    <header class="post-toc-title">
+      Contents
+    </header>
+    
+  </section>
+
+
+</aside>
+
+  <section class="post-content">
+    <p>这几天在用python处理比较大的数据文件，在这里写下处理数据的细节，算是一个处理数据的日志？</p>
+<h4 id="每个bin按顺序输出每个核的数据，数据形式为对数"><a href="#每个bin按顺序输出每个核的数据，数据形式为对数" class="headerlink" title="每个bin按顺序输出每个核的数据，数据形式为对数"></a>每个bin按顺序输出每个核的数据，数据形式为对数</h4><p>由于我们是分配到了50个核上，因此，我们需要将数据处理，每50个数据分为一行，这样，每个核的数据就会横着排开，而竖着的将会是同一个核的数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">per_bin</span>(<span class="params">x</span>):</span><br><span class="line">    datanew = x.reshape(-<span class="number">1</span>,<span class="number">50</span>) <span class="comment">#total rank = 50</span></span><br><span class="line">    <span class="keyword">return</span> datanew</span><br><span class="line"></span><br><span class="line">data = np.loadtxt(<span class="string">&#x27;Your path&#x27;</span>) <span class="comment">#here input path</span></span><br><span class="line">datanew = per_bin(data) </span><br><span class="line"></span><br><span class="line">bindata = np.zeros(<span class="number">10</span>) <span class="comment"># bin = 10</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    bindata[i] = np.<span class="built_in">sum</span>(datanew[i,:]) <span class="comment"># sum rank for each bin</span></span><br><span class="line"></span><br><span class="line">bindata = bindata.reshape(-<span class="number">1</span>,<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">mean = np.mean(bindata, axis=<span class="number">1</span>)</span><br><span class="line">std = np.std(bindata, axis=<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(mean,std)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="使用了-MPI-Gather-集中到-my-rank-0-上的数据处理"><a href="#使用了-MPI-Gather-集中到-my-rank-0-上的数据处理" class="headerlink" title="使用了 MPI_Gather 集中到 my_rank&#x3D;0 上的数据处理"></a>使用了 MPI_Gather 集中到 my_rank&#x3D;0 上的数据处理</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">data = np.loadtxt(<span class="string">&#x27;&#x27;</span>) <span class="comment">#here input path</span></span><br><span class="line"><span class="built_in">print</span>(data.size) <span class="comment"># must equals corenumber x corenumber x bin</span></span><br><span class="line"></span><br><span class="line">bindata = np.zeros(<span class="number">10</span>) <span class="comment"># bin = 10</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    bindata[i] = np.<span class="built_in">sum</span>(data[i]) <span class="comment"># sum rank for each bin</span></span><br><span class="line"></span><br><span class="line">bindata = bindata.reshape(-<span class="number">1</span>,<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(bindata)</span><br><span class="line"></span><br><span class="line">mean = np.mean(bindata, axis=<span class="number">1</span>)</span><br><span class="line">std = np.std(bindata, axis=<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(mean,std)</span><br></pre></td></tr></table></figure>
+
+<p>当然，这是最理想的情况，在不太理想的情况时候输出的可能很多都是NaN，比如像下面这样:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[[nan nan nan nan nan nan nan nan nan nan]]</span><br><span class="line">[nan] [nan]</span><br></pre></td></tr></table></figure>
+
+<p>这当然是因为每个bin里有些数据是NaN，然后累加造成NaN，那么求均值和误差自然也是NaN.</p>
+<p>(在第一种处理方法的各种试探下，我们已经得知是rank49NaN）</p>
+<p>预计是每个bin的rank49的数据出现了问题，因此对数据做处理进行拆解可以使用:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.savetxt(<span class="string">&#x27;savepath/bin1.dat&#x27;</span>,data[<span class="number">1</span>]) <span class="comment">#将第一个bin的数据单独提炼出来保存</span></span><br></pre></td></tr></table></figure>
+
+<p>这样可以看这个bin的数据到底是哪个出现了NaN</p>
+<p>有点麻烦的是，需要把总数据 enrg_total_mp.dat 先细分成10个bin，然后给每个bin的最后那个数据替换成单独跑出来的可用数据，然后再用python把10个bin按顺序缝合在一个数据文件里。由于数据文本太大，里面有很多冗余的 0，因此还要先把所有0数据剔除掉.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">data = np.loadtxt(<span class="string">&#x27;&#x27;</span>) <span class="comment">#here input path</span></span><br><span class="line">np.savetxt(<span class="string">&#x27;../bin1.dat&#x27;</span>,data[<span class="number">0</span>])</span><br><span class="line">np.savetxt(<span class="string">&#x27;../bin2.dat&#x27;</span>,data[<span class="number">1</span>])</span><br><span class="line">np.savetxt(<span class="string">&#x27;../bin3.dat&#x27;</span>,data[<span class="number">2</span>])</span><br><span class="line">np.savetxt(<span class="string">&#x27;../bin4.dat&#x27;</span>,data[<span class="number">3</span>])</span><br><span class="line">np.savetxt(<span class="string">&#x27;../bin5.dat&#x27;</span>,data[<span class="number">4</span>])</span><br><span class="line">np.savetxt(<span class="string">&#x27;../bin6.dat&#x27;</span>,data[<span class="number">5</span>])</span><br><span class="line">np.savetxt(<span class="string">&#x27;../bin7.dat&#x27;</span>,data[<span class="number">6</span>])</span><br><span class="line">np.savetxt(<span class="string">&#x27;../bin8.dat&#x27;</span>,data[<span class="number">7</span>])</span><br><span class="line">np.savetxt(<span class="string">&#x27;../bin9.dat&#x27;</span>,data[<span class="number">8</span>])</span><br><span class="line">np.savetxt(<span class="string">&#x27;../bin10.dat&#x27;</span>,data[<span class="number">9</span>])</span><br></pre></td></tr></table></figure>
+
+<p>但是这么做太麻烦了，我们可以写一个循环，代码优化为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    np.savetxt(<span class="string">f&#x27;../bin<span class="subst">&#123;i + <span class="number">1</span>&#125;</span>.dat&#x27;</span>, data[i])</span><br></pre></td></tr></table></figure>
+
+<p>替换掉NaN数据后</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">result = []</span><br><span class="line">bin1data = np.loadtxt(<span class="string">&#x27;../bin1.dat&#x27;</span>)</span><br><span class="line">bin2data = np.loadtxt(<span class="string">&#x27;../bin2.dat&#x27;</span>)</span><br><span class="line">bin3data = np.loadtxt(<span class="string">&#x27;../bin3.dat&#x27;</span>)</span><br><span class="line">bin4data = np.loadtxt(<span class="string">&#x27;../bin4.dat&#x27;</span>)</span><br><span class="line">bin5data = np.loadtxt(<span class="string">&#x27;../bin5.dat&#x27;</span>)</span><br><span class="line">bin6data = np.loadtxt(<span class="string">&#x27;../bin6.dat&#x27;</span>)</span><br><span class="line">bin7data = np.loadtxt(<span class="string">&#x27;../bin7.dat&#x27;</span>)</span><br><span class="line">bin8data = np.loadtxt(<span class="string">&#x27;../bin8.dat&#x27;</span>)</span><br><span class="line">bin9data = np.loadtxt(<span class="string">&#x27;../bin9.dat&#x27;</span>)</span><br><span class="line">bin10data = np.loadtxt(<span class="string">&#x27;../bin10.dat&#x27;</span>)</span><br><span class="line">result.extend(bin1data)</span><br><span class="line">result.extend(bin2data)</span><br><span class="line">result.extend(bin3data)</span><br><span class="line">result.extend(bin4data)</span><br><span class="line">result.extend(bin5data)</span><br><span class="line">result.extend(bin6data)</span><br><span class="line">result.extend(bin7data)</span><br><span class="line">result.extend(bin8data)</span><br><span class="line">result.extend(bin9data)</span><br><span class="line">result.extend(bin10data)</span><br></pre></td></tr></table></figure>
+
+<p>相当笨拙的批量导入的代码对吧？同样的，我们优化一下:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">11</span>):</span><br><span class="line">    bin_data = np.loadtxt(<span class="string">f&#x27;../bin<span class="subst">&#123;i&#125;</span>.dat&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>但是这样相当于在重复覆盖 <code>bin_data</code> . 除此之外，我们发现，我们在这里就可以移除0元素.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    bin_data = np.loadtxt(<span class="string">f&#x27;.../bin<span class="subst">&#123;i + <span class="number">1</span>&#125;</span>.dat&#x27;</span>)</span><br><span class="line">    bin_data = remove_zeros(bin_data)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[0.6157868669403181, 0.6069826740235577, ..., -0.46142682339620744, nan]</span><br></pre></td></tr></table></figure>
+
+<p>可以看到这会儿最后的nan还没替换掉.</p>
+<p>移除0之后我们需要将rank49的每个bin均值替换掉这里的NaN，指定替换掉数组的某个元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 替换指定索引处的元素</span></span><br><span class="line">array[index_to_replace] = new_value</span><br></pre></td></tr></table></figure>
+
+<p>我们进行预处理rank49之后，赋值给对应的bin：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">index_to_replace = <span class="number">49</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    bin_data = np.loadtxt(<span class="string">f&#x27;.../bin<span class="subst">&#123;i + <span class="number">1</span>&#125;</span>.dat&#x27;</span>) <span class="comment">#批量导入</span></span><br><span class="line">    bin_data = remove_zeros(bin_data) <span class="comment">#移除所有0</span></span><br><span class="line">    bin_data[index_to_replace] = binrankdata[i] <span class="comment">#替换指定的NaN</span></span><br><span class="line">    <span class="built_in">print</span>(bin_data)</span><br></pre></td></tr></table></figure>
+
+<p>这样就完成所有替换了. </p>
+<p>code总结在这里:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Load data</span></span><br><span class="line">data = np.loadtxt(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(data.size) <span class="comment"># check是不是10个完整的bin</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    np.savetxt(<span class="string">f&#x27;.../bin<span class="subst">&#123;i + <span class="number">1</span>&#125;</span>.dat&#x27;</span>, data[i])</span><br><span class="line"></span><br><span class="line"><span class="comment"># load rank49 data    </span></span><br><span class="line">rankdata = np.loadtxt(<span class="string">&#x27;&#x27;</span>) <span class="comment"># here input path</span></span><br><span class="line"><span class="built_in">print</span>(data.size) <span class="comment">#check是不是10个完整的bin</span></span><br><span class="line"></span><br><span class="line">binrankdata = np.zeros(<span class="number">10</span>) <span class="comment"># bin = 10</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    binrankdata[i] = np.<span class="built_in">sum</span>(data[i]) <span class="comment"># sum rank for each bin</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">remove_zeros</span>(<span class="params">arr</span>):</span><br><span class="line">    <span class="keyword">return</span> [x <span class="keyword">for</span> x <span class="keyword">in</span> arr <span class="keyword">if</span> x != <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">index_to_replace = <span class="number">49</span></span><br><span class="line">result = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    bin_data = np.loadtxt(<span class="string">f&#x27;../bin<span class="subst">&#123;i + <span class="number">1</span>&#125;</span>.dat&#x27;</span>)</span><br><span class="line">    bin_data = remove_zeros(bin_data)</span><br><span class="line">    bin_data[index_to_replace] = binrankdata[i]</span><br><span class="line">		result.extend(bin_data)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(result))</span><br><span class="line">np.savetxt(<span class="string">&#x27;../AAA.dat&#x27;</span>,result)</span><br></pre></td></tr></table></figure>
+
+<p>我们如何使用这个文件呢？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">renyi = np.loadtxt(<span class="string">&#x27;../AAA.dat&#x27;</span>)</span><br><span class="line"></span><br><span class="line">datanew = renyi.reshape(-<span class="number">1</span>,<span class="number">50</span>) </span><br><span class="line"></span><br><span class="line">bindata = np.zeros(<span class="number">10</span>) <span class="comment"># bin = 10</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    bindata[i] = np.<span class="built_in">sum</span>(datanew[i,:]) <span class="comment"># sum rank for each bin</span></span><br><span class="line"></span><br><span class="line">bindata = bindata.reshape(-<span class="number">1</span>,<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">mean = np.mean(bindata, axis=<span class="number">1</span>)</span><br><span class="line">std = np.std(bindata, axis=<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(mean,std)</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h4 id="从输出数据文件中分离数据组"><a href="#从输出数据文件中分离数据组" class="headerlink" title="从输出数据文件中分离数据组"></a>从输出数据文件中分离数据组</h4><p>导入数据之后可能要先进行数据的分离</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">data = np.loadtxt(<span class="string">&#x27;.../res.dat&#x27;</span>) <span class="comment"># 秋裤的输出数据文件</span></span><br><span class="line"><span class="comment"># if data = Jr, Jr_ratio, Wratio</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 分离四组数据</span></span><br><span class="line">data1 = [x[<span class="number">0</span>] <span class="keyword">for</span> x <span class="keyword">in</span> data]</span><br><span class="line">data2 = [x[<span class="number">1</span>] <span class="keyword">for</span> x <span class="keyword">in</span> data]</span><br><span class="line">data3 = [x[<span class="number">2</span>] <span class="keyword">for</span> x <span class="keyword">in</span> data]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在这里预先按50核reshape了jr,wratio</span></span><br><span class="line">data1 = np.array(data1).reshape(-<span class="number">1</span>,<span class="number">50</span>)</span><br><span class="line">np.savetxt(<span class="string">&#x27;.../jr.dat&#x27;</span>,data1) </span><br><span class="line">data3 = np.array(data3).reshape(-<span class="number">1</span>,<span class="number">50</span>)</span><br><span class="line">np.savetxt(<span class="string">&#x27;.../Wratio.dat&#x27;</span>,data3)</span><br></pre></td></tr></table></figure>
+
+<p>这段代码使用了列表推导式来遍历 <code>data</code> 列表中的每个三元组，并从中提取出对应位置的元素，然后将这些元素分别存储到 <code>data1</code>、<code>data2</code> 和 <code>data3</code> 中。</p>
+<p>具体来说，<code>[x[0] for x in data]</code> 中的列表推导式遍历 <code>data</code> 列表中的每个元素 <code>x</code>，并提取出其中的第一个元素（索引为0的元素），然后将这些第一个元素构成一个新的列表赋值给 <code>data1</code>。同样的方式，<code>[x[1] for x in data]</code> 和 <code>[x[2] for x in data]</code> 分别将三元组中的第二个和第三个元素提取出来，分别存储到 <code>data2</code> 和 <code>data3</code> 中</p>
+<hr>
+<h4 id="将100w个数据点按每个核的顺序排列并且每个bin中只提取一个数据"><a href="#将100w个数据点按每个核的顺序排列并且每个bin中只提取一个数据" class="headerlink" title="将100w个数据点按每个核的顺序排列并且每个bin中只提取一个数据"></a>将100w个数据点按每个核的顺序排列并且每个bin中只提取一个数据</h4><p>继续处理上面保存的数据文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = np.loadtxt(<span class="string">&#x27;.../jr.dat&#x27;</span>) <span class="comment">#导入jr</span></span><br><span class="line"><span class="built_in">print</span>(data.size) <span class="comment">#可以看一下数据组大小，比如10w份的话这里的数据组大小应该是100w</span></span><br><span class="line"><span class="built_in">print</span>(data[<span class="number">1</span>]) <span class="comment">#可以看一下50个核每个核的第2个数据</span></span><br><span class="line"><span class="built_in">print</span>(data[<span class="number">10</span>]) <span class="comment">#可以看一下50个核每个核的第11个数据</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[1.00000000e+00 8.18722565e-01 6.70306639e-01 5.48795171e-01</span><br><span class="line"> 4.49310990e-01 3.67861046e-01 3.01176140e-01 2.46579702e-01</span><br><span class="line"> 2.01880366e-01 1.65284011e-01 1.35321749e-01 1.10790970e-01</span><br><span class="line"> 9.07070671e-02 7.42639226e-02 6.08015492e-02 4.97796004e-02</span><br><span class="line"> 4.07556821e-02 3.33675966e-02 2.73188043e-02 2.23665215e-02</span><br><span class="line"> 1.83119759e-02 1.49924279e-02 1.22746390e-02 1.00495239e-02</span><br><span class="line"> 8.22777202e-03 6.73626261e-03 5.51513020e-03 4.51536155e-03</span><br><span class="line"> 3.69682839e-03 3.02667682e-03 2.47800861e-03 2.02880157e-03</span><br><span class="line"> 1.66102562e-03 1.35991916e-03 1.11339650e-03 9.11562841e-04</span><br><span class="line"> 7.46317068e-04 6.11026624e-04 5.00261285e-04 4.09575203e-04</span><br><span class="line"> 3.35328461e-04 2.74540978e-04 2.24772893e-04 1.84026640e-04</span><br><span class="line"> 1.50666763e-04 1.23354278e-04 1.00992931e-04 8.26851918e-05</span><br><span class="line"> 6.76962323e-05 5.54244330e-05]</span><br></pre></td></tr></table></figure>
+
+<p>此时我们发现数据组print出来的结果，一个索引对应了50个数,这是因为我们之前是reshape之后保存的.  这样的输出结果，其实是因为 <code>print(data[1])</code> 就是 <code>print(data[1,:])</code> .</p>
+<p>显然上面的方式我们会看到多个核的数据，如果只想查看一个核的数据，它的数据是列数据：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20000</span>): <span class="comment">#10w的情况下每个核跑了2000x10bin个数据</span></span><br><span class="line">    <span class="built_in">print</span>(data[i,<span class="number">0</span>]) <span class="comment">#查看第一列(第0列)</span></span><br></pre></td></tr></table></figure>
+
+<p>这样就可以查看第一个核跑了对应的哪些jr.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">1.0</span><br><span class="line">1.0</span><br><span class="line">1.0</span><br><span class="line">1.0</span><br><span class="line">1.0</span><br><span class="line">1.0</span><br><span class="line">1.0</span><br><span class="line">1.0</span><br><span class="line">1.0</span><br><span class="line">1.0</span><br><span class="line">0.9999</span><br><span class="line">0.9999</span><br><span class="line">0.9999</span><br><span class="line">0.9999</span><br><span class="line">0.9999</span><br><span class="line">0.9999</span><br><span class="line">0.9999</span><br><span class="line">0.9999</span><br><span class="line">0.9999</span><br><span class="line">0.9999</span><br><span class="line">0.9998000100000001</span><br><span class="line">0.9998000100000001</span><br><span class="line">0.9998000100000001</span><br><span class="line">0.9998000100000001</span><br><span class="line">...</span><br><span class="line">0.8188044457101201</span><br><span class="line">0.8188044457101201</span><br><span class="line">0.8188044457101201</span><br><span class="line">0.8188044457101201</span><br></pre></td></tr></table></figure>
+
+<p>可以看到第二个核的第一个数据确实承接第一个核的最后一个数据. 0.818804 -&gt; 0.8187225</p>
+<p>现在，我们利用第一节内循环的思想，单独提取每个核的那一列数据，并且将数据按核的顺序排列成一维数组:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">result = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50</span>):</span><br><span class="line">    datax = [x[i] <span class="keyword">for</span> x <span class="keyword">in</span> data]</span><br><span class="line">    result.extend(datax)</span><br></pre></td></tr></table></figure>
+
+<p><code>.extend()</code>这个函数会将括号内的东西加到<code>result</code>的末尾，在这里，就是逐列提取然后排到末尾.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#rank0</span><br><span class="line">... #bin=1</span><br><span class="line">... </span><br><span class="line">... #bin=2</span><br><span class="line">...</span><br><span class="line">... #bin=10</span><br><span class="line"></span><br><span class="line">... #bin=1</span><br><span class="line">...</span><br><span class="line">... #bin=2</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">#rank1</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>我们最后还希望的是取10个bin里的某个数就可以，因为jr将作为横坐标，10个bin的数值是一模一样的。所以:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">new_data = data[::<span class="number">10</span>] <span class="comment">#每10个数据取一个数据保存到新的数组</span></span><br><span class="line">np.savetxt(<span class="string">&#x27;.../realjr.dat&#x27;</span>,new_data)</span><br></pre></td></tr></table></figure>
+
+<p>这样就可以查看第一个核跑了对应的哪些jr.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.0</span><br><span class="line">0.9999</span><br><span class="line">0.9998000100000001</span><br><span class="line">...</span><br><span class="line">0.8188044457101201</span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>总结一下这里的code:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#处理j2</span></span><br><span class="line">data = np.loadtxt(<span class="string">&#x27;.../jr.dat&#x27;</span>)</span><br><span class="line"></span><br><span class="line">result = [] <span class="comment">#准备一个空数组用来保存所有核按顺序排列的数据</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50</span>):</span><br><span class="line">    datax = [x[i] <span class="keyword">for</span> x <span class="keyword">in</span> data]</span><br><span class="line">    result.extend(datax)</span><br><span class="line">    </span><br><span class="line">new_data = result[::<span class="number">10</span>] <span class="comment">#每10个数据取一个数据保存到新的数组</span></span><br><span class="line">np.savetxt(<span class="string">&#x27;.../realjr.dat&#x27;</span>,new_data)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="将100w个数据点按10个bin分好且bin内每个核的顺序排列"><a href="#将100w个数据点按10个bin分好且bin内每个核的顺序排列" class="headerlink" title="将100w个数据点按10个bin分好且bin内每个核的顺序排列"></a>将100w个数据点按10个bin分好且bin内每个核的顺序排列</h4><p>对于 wratio 的数据，最后我们想对10个bin做统计，而bin内部，这些核的数据是要相乘的！</p>
+<p>通过以下的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">data = np.loadtxt(<span class="string">&#x27;.../Wratio.dat&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(data.size)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化结果数组 这是两个中转数组</span></span><br><span class="line">result = np.zeros((<span class="number">20000</span>, <span class="number">50</span>)) <span class="comment"># here 2000x10bin=2w</span></span><br><span class="line">temp = np.zeros((<span class="number">2000</span>, <span class="number">50</span>)) <span class="comment">#10w 50core gives 2000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):        </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2000</span>):</span><br><span class="line">        temp[i] = data[i*<span class="number">10</span>+j] <span class="comment">#注意到这里每隔10个数据，因为10bin</span></span><br><span class="line">    result[j*<span class="number">2000</span>:(j+<span class="number">1</span>)*<span class="number">2000</span>,:] = temp[:,:]</span><br></pre></td></tr></table></figure>
+
+<p>这一步我们调换了核内部的数据顺序，使得不再是一个数据连续10个bin排列，而是10个bin每个bin内部数据连续排列.  外部循环访问每个数据的第1,2,3,..10个bin数据点，内部循环则是将这些散落的数据点排到同一个一维数组 <code>temp</code>.</p>
+<p>我们可以得到:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#rank0                  #rank1                  #rank2</span><br><span class="line">#第一个数据 #bin=1</span><br><span class="line">#第二个数据</span><br><span class="line">...</span><br><span class="line">#第一个数据 #bin=2</span><br><span class="line">#第二个数据</span><br><span class="line"></span><br><span class="line">..</span><br><span class="line">..				#bin=10</span><br><span class="line">..</span><br></pre></td></tr></table></figure>
+
+<p>但这还不算我们想要的，我们现在已经对每个核内部做了调整。我们希望把所有核的整合到一起。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ttemp = [] <span class="comment">#创建一个空数组，这是一个中转数组</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50</span>):</span><br><span class="line">        datax = [x[i] <span class="keyword">for</span> x <span class="keyword">in</span> result[j*<span class="number">2000</span>:(j+<span class="number">1</span>)*<span class="number">2000</span>,:]]</span><br><span class="line">        ttemp.extend(datax)</span><br><span class="line"></span><br><span class="line">np.savetxt(<span class="string">&#x27;.../Wratio.dat&#x27;</span>,ttemp)</span><br></pre></td></tr></table></figure>
+
+<p>这样我们就获得了一个想要Wratio的数据按照每个bin进行排序的文件.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> #bin=1</span><br><span class="line">... #rank0</span><br><span class="line">... </span><br><span class="line">... #rank1</span><br><span class="line">...</span><br><span class="line">... #rank49</span><br><span class="line"></span><br><span class="line">#bin=2</span><br><span class="line">... #rank0</span><br><span class="line">...</span><br><span class="line">... #rank1</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>总结一下code:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 处理Zblank</span></span><br><span class="line">data = np.loadtxt(<span class="string">&#x27;.../Zblank.dat&#x27;</span>) <span class="comment">#这一步需要的数据文件一定要是预先reshape(-1,50)过的</span></span><br><span class="line"><span class="built_in">print</span>(data.size) <span class="comment">#可以看一下数据组大小，比如10w份的话这里的数据组大小应该是100w</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line"><span class="comment"># 初始化结果数组</span></span><br><span class="line">result = np.zeros((<span class="number">20000</span>, <span class="number">50</span>))</span><br><span class="line">temp = np.zeros((<span class="number">2000</span>, <span class="number">50</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):        </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2000</span>):</span><br><span class="line">        temp[i] = data[i*<span class="number">10</span>+j]</span><br><span class="line">    result[j*<span class="number">2000</span>:(j+<span class="number">1</span>)*<span class="number">2000</span>,:] = temp[:,:]</span><br><span class="line">        </span><br><span class="line"><span class="built_in">print</span>(result[<span class="number">0</span>:<span class="number">2000</span>,<span class="number">0</span>])    </span><br><span class="line"></span><br><span class="line">ttemp = []</span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50</span>):</span><br><span class="line">        datax = [x[i] <span class="keyword">for</span> x <span class="keyword">in</span> result[j*<span class="number">2000</span>:(j+<span class="number">1</span>)*<span class="number">2000</span>,:]]</span><br><span class="line">        ttemp.extend(datax)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(ttemp))</span><br><span class="line">np.savetxt(<span class="string">&#x27;.../testZblank.dat&#x27;</span>,ttemp)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提取中转文件</span></span><br><span class="line">data = np.loadtxt(<span class="string">&#x27;.../testZblank.dat&#x27;</span>) <span class="comment">#===Zblank input</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 切片成10份</span></span><br><span class="line">slices = np.array_split(data, <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算每份内部元素相乘后的结果</span></span><br><span class="line">Zblank = [np.prod(<span class="built_in">slice</span>) <span class="keyword">for</span> <span class="built_in">slice</span> <span class="keyword">in</span> slices] <span class="comment">#===Zblank</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="number">2</span>*np.log(Zblank))</span><br></pre></td></tr></table></figure>
+
+<hr>
+
+  </section>
+  <footer class="post-meta">
+  
+
+  
+
+</footer>
+
+  <div class="post-end" data-text="End"></div>
+</article>
+
+  
+<section>
+  
+<div id="disqus_thread"></div>
+  
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://example.com/2024/04/16/%E7%86%B5%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%97%A5%E5%BF%97/';
+      this.page.identifier = '熵数据处理日志';
+      this.page.title = '熵数据处理日志';
+    };
+    if (!document.getElementById('disqus-embed')) {
+      var d = document, s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.id = 'disqus-embed';
+      s.async = true;
+      s.src = '//giuem.disqus.com/embed.js';
+      (d.head || d.body).appendChild(s);
+    }
+    if(typeof DISQUS == 'object'){
+      DISQUS.reset({
+          reload: true,
+          config: disqus_config
+      })
+    }
+  </script>
+  
+
+  
+</section>
+
+
+
+ 
+    </main>
+    <footer class="footer">
+  <div class="footer-wrapper">
+    <p class="copyright">
+      &copy; 
+      2015 -
+      2024
+      Wantake
+    </p>
+    <p class="theme">
+      Hexo Theme <a href="https://github.com/giuem/hexo-theme-iris" target="_blank" rel="noopener noreferrer">Iris</a> with <i class="fas fa-heart"></i>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>

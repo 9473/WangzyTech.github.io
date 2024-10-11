@@ -13,11 +13,11 @@ body[data-color-scheme="auto"], body[data-color-scheme="light"] {
 
     --border-color: #8882;
 
-    --link: #006fff;
+    --link: #FFC300;
 
     --blur: blur(32px);
 
-    --blue: #006fff;
+    --blue: #FFC300;
     --white-txt-on-blue-bg: #fff;
 
     --nav-bg: var(--white-opacity-8);
@@ -47,7 +47,7 @@ body[data-color-scheme="auto"], body[data-color-scheme="light"] {
 
         --border-color: #8884;
 
-        --link: #E05297;
+        --link: #B300B2;
 
         --blur: blur(32px);
 
@@ -81,7 +81,7 @@ body[data-color-scheme="dark"] {
 
     --border-color: #8884;
 
-    --link: #E05297;
+    --link: #B300B2;
 
     --blur: blur(32px);
 

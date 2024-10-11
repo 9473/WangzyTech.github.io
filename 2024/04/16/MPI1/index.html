@@ -1,86 +1,332 @@
-.post-block {
-  color: var(--hty-text-color);
-  margin: 0 1rem;
-  padding: 1rem;
-  background-color: var(--post-block-bg-color);
-mobile()
-}
-.post-body {
-  padding: 0 5rem;
-tablet()
-mobile()
-}
-.post-meta {
-  font-size: 14px;
-  color: var(--hty-secondary-text-color);
-}
-.post-meta .icon {
-  margin-bottom: -1px;
-}
-.post-description {
-  font-weight: normal;
-  padding: 0.5rem;
-}
-.post-author {
-  display: flex;
-  justify-content: center;
-}
-.post-author .author-avatar {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 0;
-}
-.post-author .author-avatar img {
-  border-radius: 50%;
-  height: 1rem;
-  width: 1rem;
-  padding: 2px;
-  border: 2px solid #d3d3d3;
-}
-.post-author .author-name {
-  margin-left: 0.5rem;
-  font-size: 1rem;
-}
-.post-meta-item-icon {
-  display: inline-block;
-  color: var(--text-color, --hty-secondary-text-color);
-}
-.post-meta-divider {
-  height: 25px;
-  color: var(--hty-secondary-text-color);
-  margin: 0 0.5rem;
-}
-.post-eof {
-  margin: 50px auto;
-  width: 50%;
-  height: 1px;
-  background: $blue;
-  opacity: 0.1;
-}
-.post-copyright {
-  font-size: 0.9rem;
-  margin: 0.5rem 5rem 1rem 5rem;
-  padding: 0.5rem 1rem;
-  border-left: 4px solid #ff5252;
-  background-color: var(--hty-bg-color);
-  list-style: none;
-  word-break: break-all;
-  position: relative;
-  overflow: hidden;
-mobile()
-}
-.post-copyright::after {
-  position: absolute;
-  color: #fff;
-  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath fill='gray' d='M245.8 214.9l-33.2 17.3c-9.4-19.6-25.2-20-27.4-20-22.2 0-33.3 14.6-33.3 43.9 0 23.5 9.2 43.8 33.3 43.8 14.4 0 24.6-7 30.5-21.3l30.6 15.5a73.2 73.2 0 01-65.1 39c-22.6 0-74-10.3-74-77 0-58.7 43-77 72.6-77 30.8-.1 52.7 11.9 66 35.8zm143 0l-32.7 17.3c-9.5-19.8-25.7-20-27.9-20-22.1 0-33.2 14.6-33.2 43.9 0 23.5 9.2 43.8 33.2 43.8 14.5 0 24.7-7 30.5-21.3l31 15.5c-2 3.8-21.3 39-65 39-22.7 0-74-9.9-74-77 0-58.7 43-77 72.6-77C354 179 376 191 389 214.8zM247.7 8C104.7 8 0 123 0 256c0 138.4 113.6 248 247.6 248C377.5 504 496 403 496 256 496 118 389.4 8 247.6 8zm.8 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.5 85.5-203.3 203.8-203.3A201.7 201.7 0 01451.3 256c0 121.7-99.7 202.9-202.9 202.9z'/%3E%3C/svg%3E");
-  content: ' ';
-  height: 10rem;
-  width: 10rem;
-  right: -2rem;
-  top: -2rem;
-  opacity: 0.1;
-}
-.tag-name {
-  padding: 0 0.1rem;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>MPI1 | Wan Take</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="幼儿园式使用MPI in Fortran 90初步在程序中加入MPI在你的 .f90 文件中，在主程序的开头，除了use module之后，引入MPI库   12include &#x27;mpif.h&#x27;integer:: processor_number, my_rank, ierr !定义变量  一定要定义这些变量，这些变量除了可以定义在这里也可以预先定义在全局变量的module中。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MPI1">
+<meta property="og:url" content="http://example.com/2024/04/16/MPI1/index.html">
+<meta property="og:site_name" content="Wan Take">
+<meta property="og:description" content="幼儿园式使用MPI in Fortran 90初步在程序中加入MPI在你的 .f90 文件中，在主程序的开头，除了use module之后，引入MPI库   12include &#x27;mpif.h&#x27;integer:: processor_number, my_rank, ierr !定义变量  一定要定义这些变量，这些变量除了可以定义在这里也可以预先定义在全局变量的module中。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-04-16T02:18:16.000Z">
+<meta property="article:modified_time" content="2024-04-16T02:20:56.349Z">
+<meta property="article:author" content="Wantake">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Wan Take" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Wan Take</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-MPI1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/04/16/MPI1/" class="article-date">
+  <time class="dt-published" datetime="2024-04-16T02:18:16.000Z" itemprop="datePublished">2024-04-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      MPI1
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="幼儿园式使用MPI-in-Fortran-90"><a href="#幼儿园式使用MPI-in-Fortran-90" class="headerlink" title="幼儿园式使用MPI in Fortran 90"></a>幼儿园式使用MPI in Fortran 90</h1><h4 id="初步在程序中加入MPI"><a href="#初步在程序中加入MPI" class="headerlink" title="初步在程序中加入MPI"></a>初步在程序中加入MPI</h4><p>在你的 .f90 文件中，在主程序的开头，除了use module之后，引入MPI库  </p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span> <span class="string">&#x27;mpif.h&#x27;</span></span><br><span class="line"><span class="keyword">integer</span>:: processor_number, my_rank, ierr <span class="comment">!定义变量</span></span><br></pre></td></tr></table></figure>
+
+<p>一定要定义这些变量，这些变量除了可以定义在这里也可以<strong>预先定义在全局变量的module中</strong>。 </p>
+<p>在变量定义结束之后，一定要初始化MPI环境: After this, the MPI environment must be initialized with:(现在这些程序可以放在主程序变量命名后面以示MPI初始化.)  </p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">! Initialize MPI. This must be the first MPI call</span></span><br><span class="line"><span class="keyword">call</span> MPI_Init(ierr)</span><br><span class="line"><span class="comment">! Get the individual process rank</span></span><br><span class="line"><span class="keyword">call</span> MPI_Comm_rank(MPI_COMM_WORLD,my_rank,ierr)</span><br><span class="line"><span class="comment">! Get the number of processes</span></span><br><span class="line"><span class="keyword">call</span> MPI_Comm_size(MPI_COMM_WORLD,processor_number,ierr)</span><br></pre></td></tr></table></figure>
+
+<p><code>call MPI_Comm_rank</code> 用于获取当前进程的排名（或称为进程号）,  <code>processor_number</code> 相当于获取通信域中的进程总数目. 注意到，假如我们调用8个核，那么my_rank的值将会是:0,1,2,…7.   </p>
+<pre><code>*但是在一个简单的print示例中，我们发现进程并不是按顺序的([from](https://www.dartmouth.edu/~rc/classes/intro_mpi/running_mpich2_ex.html#top)):
+</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">t01:~&gt; mpiexec -n 8 hello_world_c</span><br><span class="line">Hello world from process 1 of 8</span><br><span class="line">Hello world from process 6 of 8</span><br><span class="line">Hello world from process 0 of 8</span><br><span class="line">Hello world from process 3 of 8</span><br><span class="line">Hello world from process 4 of 8</span><br><span class="line">Hello world from process 2 of 8</span><br><span class="line">Hello world from process 5 of 8</span><br><span class="line">Hello world from process 7 of 8</span><br></pre></td></tr></table></figure>
+
+<p>使它保持顺序执行，这一点在后面会有介绍.</p>
+<p>在主程序的最后, (通常是<code>call deallocate()</code> )的后面结束MPI进程:  </p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">! No more MPI calls after Finalize</span></span><br><span class="line"><span class="keyword">call</span> MPI_FINALIZE(ierr)</span><br></pre></td></tr></table></figure>
+<p><code>MPI_Finalize</code> is used to clean up the MPI environment. No more MPI calls can be made after this one.</p>
+<p>必须有MPI环境的结束.</p>
+<hr>
+<h4 id="命令行窗口中使用MPI"><a href="#命令行窗口中使用MPI" class="headerlink" title="命令行窗口中使用MPI:"></a>命令行窗口中使用MPI:</h4><p>先编译后运行:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mpif90 xxxx.f90 -o xxx</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mpirun -np N ./xxx</span><br></pre></td></tr></table></figure>
+
+<p>这里面的 N 就是你选择的核心数量.  不同的 MPI 编译的方式命令可能有些微的差别，在我们组里的工作站需要 <code>-o</code> 在 .f90 文件的后面.</p>
+<hr>
+<h3 id="进阶使用"><a href="#进阶使用" class="headerlink" title="进阶使用"></a>进阶使用</h3><h4 id="MPI-Wtime"><a href="#MPI-Wtime" class="headerlink" title="MPI_Wtime"></a>MPI_Wtime</h4><p>想要计算程序运行的总时间，可以增加这两个程序.</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (my_rank==<span class="number">0</span>) <span class="keyword">then</span></span><br><span class="line">	start_time = MPI_Wtime()</span><br><span class="line"><span class="keyword">endif</span></span><br><span class="line"></span><br><span class="line"><span class="comment">!执行一些操作</span></span><br><span class="line"><span class="comment">!操作结束以后</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (my_rank==<span class="number">0</span>) <span class="keyword">then</span></span><br><span class="line">	spend_time = MPI_Wtime()-start_time</span><br><span class="line">	<span class="built_in">write</span> (*,*) <span class="string">&quot;spend &quot;</span>, spend_time, <span class="string">&#x27; seconds.&#x27;</span></span><br><span class="line"><span class="keyword">endif</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>当然，事先肯定要先定义<code>start_time</code>, <code>spend_time</code>这些变量。</p>
+<h4 id="MPI-Bcast"><a href="#MPI-Bcast" class="headerlink" title="MPI_Bcast"></a>MPI_Bcast</h4><p>Broadcasts a message from the process with rank “root” to all other processes of the communicator</p>
+<p>将消息从排名为“root”的进程广播到通信器的所有其他进程  </p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">call</span> MPI_BCAST(buffer, <span class="built_in">count</span>, datatype, root, comm, ierr)</span><br></pre></td></tr></table></figure>
+
+<p>one sending to all and all ranks.  </p>
+<p>We sometimes need what is call a point-to-point communication. Calling <code>MPI_Send</code> and <code>MPI_Recv</code> will send and receive data to&#x2F;from a single receiver&#x2F;sender. 但在这里我就不看了.</p>
+<h4 id="MPI-Barrier"><a href="#MPI-Barrier" class="headerlink" title="MPI_Barrier"></a>MPI_Barrier</h4><p>阻塞. 顾名思义, until all processes都调用了它；the call returns at any process only after all members of the communicator have entered the call。</p>
+<p>可以看作是一个进程锁，将每个进程保持在一定的代码行，直到所有进程都到达了这条线</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Hello World from process 0 of 4</span><br><span class="line">Hello World from process 1 of 4</span><br><span class="line">Hello World from process 2 of 4</span><br><span class="line">Hello World from process 3 of 4</span><br></pre></td></tr></table></figure>
+
+<p>之前我们提到，进程不按顺序输出&#x2F;保存怎么办，只需要在循环中加入barrier，例如:</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">do</span> a = <span class="number">0</span>,processor_number,<span class="number">1</span></span><br><span class="line">   <span class="keyword">if</span> (a==my_rank) <span class="keyword">then</span></span><br><span class="line">      <span class="built_in">print</span>*,<span class="string">&quot;bin&quot;</span>,j,<span class="string">&quot;a==&quot;</span>,a,<span class="string">&quot;gives.&quot;</span> <span class="comment">!输出当下第几个bin是由第几个核所给的</span></span><br><span class="line">      <span class="keyword">call</span> writeresults(msteps,j) <span class="comment">!!</span></span><br><span class="line">   <span class="keyword">endif</span></span><br><span class="line">   </span><br><span class="line">   <span class="keyword">call</span> mpi_barrier(mpi_comm_world,ierr)</span><br><span class="line"><span class="keyword">enddo</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bin           9 a==           0 gives.</span><br><span class="line">bin           9 a==           2 gives.</span><br><span class="line">bin           9 a==           1 gives.</span><br><span class="line">bin           9 a==           3 gives.</span><br><span class="line">...</span><br><span class="line">bin           9 a==          48 gives.</span><br><span class="line">bin           9 a==          49 gives.</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="MPI-Gather"><a href="#MPI-Gather" class="headerlink" title="MPI_Gather"></a>MPI_Gather</h4><p>Gathers together values from a group of processes.</p>
+<p>这个routine从每个处理器收集数据到一个root上，最终的结果按照排名顺序存储。每个处理器发送相同数量的项目。接收到的项目数量是由单个处理器发送的数量决定的，而不是聚合大小，但接收缓冲区必须声明为足以容纳所有数据的大小。</p>
+<ul>
+<li>这些数据按照发送进程的排名顺序存储</li>
+<li>将所有进程的数据收集到根进程，只有根进程拥有所有数据</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">call</span> MPI_GATHER(<span class="keyword">data</span>,processor_number,MPI_datatype,recvdata,processor_number,MPI_datatype,root,MPI_COMM_WORLD, ierr)</span><br></pre></td></tr></table></figure>
+
+<p>注意到，上面这个代码的换行只是因为写不下了，在合适的编辑器里是放得下的.</p>
+<h3 id="遇到过的问题"><a href="#遇到过的问题" class="headerlink" title="遇到过的问题"></a>遇到过的问题</h3><h5 id="Dismatch"><a href="#Dismatch" class="headerlink" title="Dismatch"></a>Dismatch</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Rank mismatch between actual argument at (1) and actual argument at (2) ...&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>you may just need to add the following flag to the compilerfile or makefile that sets everything up. 只需要在编译的后面加入这个指令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ -fallow-argument-mismatch</span><br></pre></td></tr></table></figure>
+
+<p>例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mpif90 replica.f90 -o renyi -fallow-argument-mismatch</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="非正常终止"><a href="#非正常终止" class="headerlink" title="非正常终止"></a>非正常终止</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;-----------------------------------------------------------------------&quot;</span></span><br><span class="line"><span class="string">&quot;mpirun detected that one or more processes exited with non-zero status, thus causing</span></span><br><span class="line"><span class="string">&quot;</span>the job to be terminated. The first process to <span class="keyword">do</span> so was:</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;mpirun 检测到一个或多个进程以非零状态退出，从而导致作业终止。 这样做的第一个过程是：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &quot;</span>Process name: [[45820,1],15]</span><br><span class="line">  <span class="string">&quot;Exit code:    2     退出代码：2(MPI 的退出代码几乎没有任何意义)</span></span><br><span class="line"><span class="string">&quot;</span>-----------------------------------------------------------------------<span class="string">&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>分析原因: 释放一个未申请的变量, 主线程申请了的, 其它没有(Dongxi Liu)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;mpirun noticed that process rank 39 with PID 0 on node finestation exited on signal 6 (Aborted).&quot;</span></span><br><span class="line"><span class="string">&quot;mpirun 注意到 PID 为 0 的进程 39 在信号 6 上退出（已中止）。&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;--------------------------------------------------------------------------</span></span><br><span class="line"><span class="string">&quot;</span>Primary job  terminated normally, but 1 process returned</span><br><span class="line"><span class="string">&quot;a non-zero exit code. Per user-direction, the job has been aborted.</span></span><br><span class="line"><span class="string">&quot;</span>主要作业正常终止，但 1 个进程返回非零退出代码。根据用户方向，作业已中止。</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;--------------------------------------------------------------------------</span></span><br><span class="line"><span class="string">&quot;</span>double free or corruption (out) 双层释放或损坏</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;Program received signal SIGABRT: Process abort signal.&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h4 id="参考的网页教程"><a href="#参考的网页教程" class="headerlink" title="参考的网页教程:"></a>参考的网页教程:</h4><p><a target="_blank" rel="noopener" href="https://www.mpich.org/static/docs/v3.1.3/www3/MPI_Bcast.html">Bcast的使用</a> </p>
+<p><a target="_blank" rel="noopener" href="https://wvuhpc.github.io/Modern-Fortran/40-MPI/index.html">一个比较全面的使用教程示例</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.mpich.org/static/docs/latest/www3/MPI_Barrier.html">barrier的使用</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.dartmouth.edu/~rc/classes/intro_mpi/array_search_example1.html#top">一个可能还不错的教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://people.math.sc.edu/Burkardt/f_src/mpi/mpi.html">像是具有很多练习的教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://learning.rc.virginia.edu/files/MPI_Guide_Fortran.pdf">一个仅有命令的总结</a></p>
+<p>(虽然我没看)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/04/16/MPI1/" data-id="cm24woef40009lxlu1cq20ls1" data-title="MPI1" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/10/06/Spin-corr/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/04/16/%E7%86%B5%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%97%A5%E5%BF%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">熵数据处理日志</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/timeline/" rel="tag">timeline</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/timeline/" style="font-size: 10px;">timeline</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/10/06/Spin-corr/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/16/MPI1/">MPI1</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/16/%E7%86%B5%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%97%A5%E5%BF%97/">熵数据处理日志</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/03/Hexo%E7%BD%91%E7%AB%99%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B9%E6%97%A5%E5%BF%97/">Hexo网站修改字体修改日志</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/27/testlatex/">testlatex</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Wantake<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

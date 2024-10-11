@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Wan Take</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content=".">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wan Take">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Wan Take">
+<meta property="og:description" content=".">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Wantake">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Wan Take" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Wan Take</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-use-hexo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/02/use-hexo/" class="article-date">
+  <time class="dt-published" datetime="2024-02-02T11:54:41.000Z" itemprop="datePublished">2024-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/02/02/use-hexo/">use hexo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p>安装了home-brew之后，安装 Hexo 所需要的 Git 和 Node.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install git</span><br><span class="line">$ brew install node</span><br></pre></td></tr></table></figure>
+
+<p>检查是否安装成功:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br><span class="line">$ node -v</span><br><span class="line">$ git --version</span><br></pre></td></tr></table></figure>
+
+
+
+<p>安装 Hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>为Hexo创建一个初始源文件夹</p>
+<p>Cd in 想要的路径中, 执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>这里简单介绍一些hexo使用指令</p>
+<p>对于hexo创建一个 ~ blog的文件夹，那么blog默认为根目录，所谓的在根目录底下执行，就是在blog这个文件夹底下执行.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd .../blog</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><p>新建一篇博客</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo n &quot;name&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在根目录的 source 文件夹底下 _posts 中会出现你创建的 blog.md</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">❯ hexo n <span class="string">&quot;use anaconda&quot;</span></span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: ~/.../blog/source/_posts/use-anaconda.md</span><br></pre></td></tr></table></figure>
+
+
+
+<p>我们在根目录下预安装能够<u>加载本地图片</u>的插件</p>
+<p>在根目录下执行:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$npm install https://github.com/xcodebuild/hexo-asset-image.git --save</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在这个 .md文件中写完内容之后，保存，执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo g</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后部署：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+<p>可以在本地进行预览：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo s</span><br></pre></td></tr></table></figure>
+
+<p>将网址点开可以预览.</p>
+<h4 id="插入图片的问题"><a href="#插入图片的问题" class="headerlink" title="插入图片的问题"></a>插入图片的问题</h4><p>之前我们已经安装了插件，在 _posts 文件夹中会出现和文章名字相同的文件夹，将想要插入的图片复制到该文件夹中</p>
+<p>然后在Markdown环境下插入图片格式为：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Fig x</span>](<span class="link"> ./picture.png</span>)</span><br></pre></td></tr></table></figure>
+
+<p>注意，前面的 <code> ./</code> 一定不能省略，点前面有一个空格</p>
+<h4 id="公式显示的问题"><a href="#公式显示的问题" class="headerlink" title="公式显示的问题"></a>公式显示的问题</h4><p>目前找到的一个解决方式是使用 <a target="_blank" rel="noopener" href="https://www.latexlive.com/">https://www.latexlive.com</a> 网站转出为 MathML 的格式（Typora也可以转，但是会有很多换行而识别得破破烂烂）</p>
+<p>默认转出格式是另起一行居中</p>
+<p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">  <mi>a</mi>  <mo>+</mo>  <mi>b</mi>  <mo>+</mo>  <mi>c</mi></math></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;  &lt;mi&gt;a&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;b&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;c&lt;/mi&gt;&lt;/math&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果不想要居中，而是行间公式，把 <code> display=&quot;block&quot;</code> 删掉即可</p>
+<p>最后最好用Typora源代码模式检查一遍</p>
+<hr>
+<h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><p>(2024.4)</p>
+<p>重新搞了Latex识别的插件，现在可以直接使用”$$”来使用公式</p>
+<p>插入图片依旧使用上面说的指令，一定要记得，这是调用同名文件夹里的图片(图片一定要放到同名文件夹里)，所以Typora可能显示不出来图片，但是网站上可以读取.</p>
+<p>现在可以更改图片大小:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">&quot; ./p2.png&quot;</span> style=<span class="string">&quot;width: 20%; &quot;</span>&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>参考教程：</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/nuccch/p/17010471.html">https://www.cnblogs.com/nuccch/p/17010471.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/67f3281cfc01">https://www.jianshu.com/p/67f3281cfc01</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/02/02/use-hexo/" data-id="cm24woef7000ilxlu5l1c4d5l" data-title="use hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Confinement-of-spinons-Part-I" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/02/Confinement-of-spinons-Part-I/" class="article-date">
+  <time class="dt-published" datetime="2024-02-02T11:27:35.000Z" itemprop="datePublished">2024-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/02/02/Confinement-of-spinons-Part-I/">Confinement of spinons Part.I</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome! This is my first post. </p>
+<p>Fig 1: Zero magnetic field state. Néel type. </p>
+<p><img src="/2024/02/02/Confinement-of-spinons-Part-I/p1.png" alt="Fig 1"></p>
+<p>In the Ising limit, a local spin flip decomposes into two spinons;</p>
+<p>In the Heisenberg limit, it decomposes into a rapidly converging series of states containing two, four and higher even numbers of such spinons. </p>
+<p><strong>spin-1&#x2F;2 Heisenberg antiferromagnetic chain</strong></p>
+<blockquote>
+<p>Its exact ground state is a macroscopic singlet entangling all spins in the chain. Its elementary excitations, called <u>spinons</u>, are fractional spin-1&#x2F;2 quasiparticles created and detected in pairs by neutron scattering.</p>
+</blockquote>
+<p>The gapless fractionalized excitations are called spinons. The elementary excitation, the spinon, carries spin-1&#x2F;2 and can be pictorially associated with an individually propagating domain wall. </p>
+<p>In zero magnetic field the spins-1&#x2F;2 entangle into a macroscopic singlet <math xmlns="http://www.w3.org/1998/Math/MathML">  <msub>    <mrow>      <mover>        <mi>S</mi>        <mo stretchy="false">&#x2192;</mo>      </mover>    </mrow>    <mrow>      <mi>t</mi>      <mi>o</mi>      <mi>t</mi>    </mrow>  </msub>  <mo>&#x3D;</mo>  <mn>0</mn></math>      The inelastically scattered neutron provokes  <math xmlns="http://www.w3.org/1998/Math/MathML">  <msub>    <mrow>      <mover>        <mi>S</mi>        <mo stretchy="false">&#x2192;</mo>      </mover>    </mrow>    <mrow>      <mi>t</mi>      <mi>o</mi>      <mi>t</mi>    </mrow>  </msub>  <mo>&#x3D;</mo>  <mn>1</mn></math> excitations, which we first imagine, in the Ising limit, as a local spin flip surrounded by two domain walls(kink). And then, these domain walls delocalize owing to the terms <math xmlns="http://www.w3.org/1998/Math/MathML">  <mo stretchy="false">(</mo>  <msup>    <mi>S</mi>    <mo>+</mo>  </msup>  <msup>    <mi>S</mi>    <mo>&#x2212;</mo>  </msup>  <mo>+</mo>  <msup>    <mi>S</mi>    <mo>&#x2212;</mo>  </msup>  <msup>    <mi>S</mi>    <mo>+</mo>  </msup>  <mo stretchy="false">)</mo></math> and propagate individually. </p>
+<p>More important,     approaching the Heisenberg limit, the local spin flip can no longer be represented by two spinons alone, but rather decomposes in a rapidly converging series of states containing two, four and higher even numbers of spinons.    The picture shows two- and four-spinons which are main contribution of elementary excitation.</p>
+<p>Whereas each spinon has a discrete energy-momentum relation, the excitation spectrum is composed of <strong>spinon pairs</strong> (and higher even numbered spinon states with <math xmlns="http://www.w3.org/1998/Math/MathML">  <msub>    <mrow>      <mover>        <mi>S</mi>        <mo stretchy="false">&#x2192;</mo>      </mover>    </mrow>    <mrow>      <mi>t</mi>      <mi>o</mi>      <mi>t</mi>    </mrow>  </msub>  <mo>&#x3D;</mo>  <mn>1</mn></math>, and will therefore be continuous.        Two-spinons.  A localized spin flip exactly projects onto a state with two spinons. As these domain walls are localized, the state immediately after the spin flip can, be represented as a combination of two-spinon states with  <u>a broad momentum distribution</u> :  a spinon has the (0 ~  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x3C0;</mi></math>) momentum and another spinon must be (<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x3C0;</mi></math> ~  0), since spinons separate two sections of the macroscopic singlet ground state wavefunction that are phase-shifted by <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x3C0;</mi></math>. </p>
+<p>Domain wall pair excitations have then a finite threshold energy and are  <u>bound or confined</u>  by the magnetic field.</p>
+<p><u>Fully polarized state</u></p>
+<p>is identical to the classical ground state, which if we neglect all commutation relations of spin operators.  Thus, dispersion and intensity of the low-energy excitation spectrum are correctly described, by linear spin-wave theory, and for which, the elementary quasiparticles are non-interacting magnons.</p>
+<p>Fig 2: Fully polarized state. Gound state and “single-flip” excitation.</p>
+<p><img src="/2024/02/02/Confinement-of-spinons-Part-I/p2.png" alt="Fig 2"></p>
+<p>The creation of a magnon by inelastic scattering of a neutron can be imagined as a single spin flip.  The Zeeman energy prevents any growth of the flipped section.(middle)</p>
+<p>This magnon can classically be visualized as a spin wave(left), a coherent precession of the local spin expectation value around the field direction.</p>
+<p>Domain wall propagation is achieved through S+S- term in Hamiltonian.(right)</p>
+<p>The magnon in the fully polarized state can be understood as a firmly bound domain wall pair that propagates and delocalizes as a single entity.  This results in a <strong>discrete</strong> energy-momentum dispersion relation of the magnon.</p>
+<p>Confinement of spinons</p>
+<blockquote>
+<p>Domain wall pair excitations have then a finite threshold energy and are <u>bound or confined</u> by the magnetic field.</p>
+</blockquote>
+<p>Now we are going to talk about “Confinement”.</p>
+<p>Confinement is a process by which particles with fractional quantum numbers bind together to form quasiparticles with integer quantum numbers. </p>
+<p>At sufficiently low temperatures the weak coupling between chains can, induce an attractive interaction between pairs of spinons, that increases with their separation and thus <strong>leads to confinement</strong>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/02/02/Confinement-of-spinons-Part-I/" data-id="cm24woef20003lxlua52z41fl" data-title="Confinement of spinons Part.I" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/timeline/" rel="tag">timeline</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/timeline/" style="font-size: 10px;">timeline</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/10/06/Spin-corr/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/16/MPI1/">MPI1</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/16/%E7%86%B5%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%97%A5%E5%BF%97/">熵数据处理日志</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/03/Hexo%E7%BD%91%E7%AB%99%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B9%E6%97%A5%E5%BF%97/">Hexo网站修改字体修改日志</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/27/testlatex/">testlatex</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Wantake<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

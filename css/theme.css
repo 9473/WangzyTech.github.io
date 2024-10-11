@@ -230,7 +230,7 @@ header .nav-list-item a {
 }
 .archive .post-time,
 .archive .post-title-link {
-  font-size: 1rem;
+  font-size: 0.5rem;
 }
 .archive .post-title-link {
   color: #9e1900;
@@ -242,7 +242,7 @@ header .nav-list-item a {
 }
 .archive .post-info {
   width: 6em;
-  font-size: 1.9em;
+  font-size: 0.5em;
   color: #393e46;
 }
 

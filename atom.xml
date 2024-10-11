@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-10-11T19:22:08.126Z</updated>
+  <updated>2024-10-11T19:27:58.413Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于 Hexo</title>
+    <link href="http://example.com/2024/10/12/hexofinal/"/>
+    <id>http://example.com/2024/10/12/hexofinal/</id>
+    <published>2024-10-11T19:24:23.000Z</published>
+    <updated>2024-10-11T19:27:58.413Z</updated>
+    
+    <content type="html"><![CDATA[<p>折腾了一段时间了这个东西渲染Latex还是十足的傻叉。浪费的时间感觉不如打overleaf或者markdown，因此，后续在此网站上不再更新有很多公式或图片的文章，可能一个公式和图片都没有。可能会放一点代码记录。但不多。</p><p>关注我的物理笔记还是去我的Notion 👉<a href="https://www.notion.so/About-Me-4be70a53278f460982346e1650a78b5b%EF%BC%8C%E6%9C%89%E6%88%91%E8%AE%A4%E4%B8%BA%E6%9B%B4%E5%AE%8C%E7%9A%84%E5%80%BC%E5%BE%97%E6%94%BE%E5%87%BA%E6%9D%A5%E7%9A%84%E7%AC%94%E8%AE%B0%E6%88%91%E4%BC%9A%E6%94%BE%E5%87%BA%E6%9D%A5%E7%9A%84%E3%80%82%E6%88%96%E8%80%85%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%92%8C%E6%88%91%E5%BE%88%E7%86%9F%E7%9A%84%E8%AF%9D%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E6%89%BE%E6%88%91%E8%A6%81markdown%E6%88%96%E8%80%85pdf">https://www.notion.so/About-Me-4be70a53278f460982346e1650a78b5b，有我认为更完的值得放出来的笔记我会放出来的。或者如果你和我很熟的话可以直接找我要markdown或者pdf</a>.</p><p>10.12 凌晨 3:27</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;折腾了一段时间了这个东西渲染Latex还是十足的傻叉。浪费的时间感觉不如打overleaf或者markdown，因此，后续在此网站上不再更新有很多公式或图片的文章，可能一个公式和图片都没有。可能会放一点代码记录。但不多。&lt;/p&gt;
+&lt;p&gt;关注我的物理笔记还是去我的Notion</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Particle-hole symmetry, K-symmetry</title>

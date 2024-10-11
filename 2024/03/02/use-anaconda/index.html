@@ -1,343 +1,86 @@
-<!DOCTYPE html>
-<html class="offwhite-bg">
-  <!-- Head tag -->
-  <!DOCTYPE html>
-<head>
-  <!-- STATIC -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2">
-
-  <!-- VARIABLE -->
-  <!-- TITLE -->
-  
-  <title>use anaconda</title>
-  
-
-  <!-- AUTHOR -->
-  
-  <meta name="author" content="Wantake" />
-  
-
-  <!-- DESCRIPTION -->
-  
-  <meta name="description" content="." />
-  
-
-  <!-- KEYWORDS -->
-  
-
-  <!-- GOOGLE SITE VERIFICATION -->
-  
-  <meta name="google-site-verification" content="FHK_lhsTlcLbPDI5IkA4bjEvJ2R6JzO66YFIP83rNwg" />
-  
-
-  <!-- FAVICON -->
-  <link rel="icon" href="/favicon.ico">
-
-  <!-- CSS AND SCRIPTS -->
-  <!-- Bulma -->
-  
-<link rel="stylesheet" href="/css/bulma.min.css">
-
-  <!-- Custom Site CSS -->
-  
-<link rel="stylesheet" href="/css/main.css">
-
-  <!-- FontAwesome -->
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  
-<script src="/js/jquery-3.1.1.min.js"></script>
-
-  <!-- Custom Site JS -->
-  
-<script src="/js/main.js"></script>
-
-<meta name="generator" content="Hexo 7.0.0"></head>
-
-
-  <body>
-    <div id="app" class="columns is-gapless-mobile">
-      <div class="column is-full-mobile is-three-fifths-desktop is-offset-one-fifth-desktop">
-        <!-- Hero -->
-        <!DOCTYPE html>
-<section class="hero has-text-centered">
-  <div id="hero-override" class="hero-body">
-    <div class="container">
-      <h1 class="title">
-      
-      Wan Take
-      
-      </h1>
-      <h2 class="subtitle">
-      
-      
-      
-      </h2>
-    </div>
-  </div>
-</section>
-
-        <!-- Menu -->
-        <!DOCTYPE html>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarItems">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarItems" class="navbar-menu">
-    <div class="navbar-start">
-      
-      <a class="navbar-item" href="/">Home</a>
-      
-      <a class="navbar-item" href="/archives">Archives</a>
-      
-      <a class="navbar-item" href="/categories">Topics</a>
-      
-      <a class="navbar-item" href="/cv">CV</a>
-      
-      <a class="navbar-item" href="/projects">Projects</a>
-      
-      <a class="navbar-item" href="/ethos">Ethos</a>
-      
-      <a class="navbar-item" href="/about">About</a>
-      
-    </div>
-
-    
-    <div class="navbar-end">
-      <div id="search-form-wrap" class="navbar-item field">
-        <form class="control has-icons-left search-form">
-          <input class="input is-rounded search-field" type="search" placeholder=" Search website..." title="Search">
-          <span class="icon is-small is-left">
-          <i class="fas fa-search"></i>
-          </span>
-        </form>
-      </div>
-    </div>
-    <div class="ins-search">
-  <div class="ins-search-mask"></div>
-  <div class="ins-search-container">
-    <div class="ins-input-wrapper">
-      <input type="text" class="ins-search-input" placeholder="Type something..."/>
-      <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-    </div>
-    <div class="ins-section-wrapper">
-      <div class="ins-section-container"></div>
-    </div>
-  </div>
-</div>
-<script>
-(function (window) {
-  var INSIGHT_CONFIG = {
-    TRANSLATION: {
-      POSTS: 'Posts',
-      PAGES: 'Pages',
-      CATEGORIES: 'Categories',
-      UNTITLED: '(Untitled)',
-    },
-    ROOT_URL: '/',
-    CONTENT_URL: '/content.json',
-  };
-  window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-
-<script src="/js/insight.js"></script>
-
-
-    
-  </div>
-</nav>
-
-        <div id="wrapper" class="container">
-          <div class="columns">
-            <!-- Sidebar -->
-            
-            <!-- Main Body -->
-            <div class="column auto">
-              <!-- Article Contents -->
-<article class="article">
-  <h1 class="is-size-3 has-text-centered">
-    use anaconda
-  </h1>
-  
-  <h2 class="is-size-5 has-text-centered">
-    <time datetime="2024-03-02T02:23:34.000Z">March 2, 2024</time>
-  </h2>
-  
-  <section class="section">
-    <p>这里默认已经在电脑上下载了Anaconda (for Mac M1&#x2F;M2)</p>
-<p>先将anaconda配置到系统路径</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$echo &#x27;export PATH=&quot;~/anaconda3/bin:$PATH&quot;&#x27; &gt;&gt; ~/.bashrc</span><br><span class="line">$source ~/.bashrc</span><br></pre></td></tr></table></figure></div>
-
-<p>这里假设安装的是anaconda3版本</p>
-<p>通过</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda -v</span><br></pre></td></tr></table></figure></div>
-
-<p>查看安装结果、安装版本号</p>
-<hr>
-<p>题外话</p>
-<p>自从安装了zsh之后一直没用iTerm使用conda指令，昨天用conda指令突然发现</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zsh: command not found: conda</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>在网上查找解决方法，似乎是因为zsh里没有加入conda的path。</p>
-<p>解决方法有几种。</p>
-<p>第一种，在zsh中增加conda的path</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$vim ~/.zshrc</span><br><span class="line"></span><br><span class="line">按i进入编辑模式，在文件末尾添加:</span><br><span class="line">$export PATH=/Users/[your name]/anaconda3/bin:$PATH</span><br><span class="line"></span><br><span class="line">按Esc退出编辑模式, :wq 来退出</span><br><span class="line"></span><br><span class="line">$source ~/.zshrc</span><br><span class="line"></span><br><span class="line">重启zsh</span><br><span class="line">$exec /bin/zsh</span><br></pre></td></tr></table></figure></div>
-
-<p>我发现并没有操作成功，zsh仍然显示not found，可能我之后会知道原因。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/用户名/.zshrc:113: ... not found</span><br></pre></td></tr></table></figure></div>
-
-<p>第二种，是在系统自带的终端中设置</p>
-<p>设置 &#x3D;&gt; 通用 &#x3D;&gt; shell的打开方式：</p>
-<p>把</p>
-<p>​	“默认登陆shell”</p>
-<p>改成</p>
-<p>​	“命令（完整的路径）:</p>
-<p>​	&#x2F;bin&#x2F;bash”</p>
-<p>安装了zsh后默认是 &#x2F;bin&#x2F;zsh，改成&#x2F;bin&#x2F;bash相当于系统自带的终端不用zsh，就可以恢复到正常使用。</p>
-<p>iTerm依然用的是zsh.</p>
-<p>参考解决方式：</p>
-<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/18428374/in-mac-always-getting-zsh-command-not-found">https://stackoverflow.com/questions/18428374/in-mac-always-getting-zsh-command-not-found</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/13f5d20e61f8">https://www.jianshu.com/p/13f5d20e61f8</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/86688024">https://zhuanlan.zhihu.com/p/86688024</a></p>
-<p>可能有别的解决方法，但是我用第二种解决方法解决了，先这么用着。（第二种解决方法来自第一条链接）</p>
-<hr>
-<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><p>自路径配置成功之后，用户名前面会多一个(base)的字样，表明现在在conda的base环境下。在该环境下避免下载一些乱七八糟的东西以至于臃肿。</p>
-<p>新配置一个环境</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda create --name &lt;env_name&gt; &lt;package_names&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>比如说新建一个房间叫test，并且安装python3，可以有：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda create -n test python=3.11  numpy pandas</span><br></pre></td></tr></table></figure></div>
-
-<p>在这后面的表明同时把 numpy pandas 给装上了。</p>
-<p>在base下查看现在有哪些环境：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda info -e</span><br></pre></td></tr></table></figure></div>
-
-<p>正常情况下可以看到一个base，和刚才新建好的test</p>
-<p>在base下删除一个环境：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda remove -n &lt;env_name&gt; --all</span><br></pre></td></tr></table></figure></div>
-
-<p>就可以“一键删除”</p>
-<p>如何进入到test的环境，conda采用激活的命令</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda activate test</span><br></pre></td></tr></table></figure></div>
-
-<p>用户名前面的(base)变成(test)说明进入环境成功了</p>
-<p>查看该环境下有哪些安装包：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda list</span><br></pre></td></tr></table></figure></div>
-
-<p>在该环境下安装新的包：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda install &lt;package_name&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>或者用pip:</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$pip3 install &lt;package_name&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>​	给指定环境安装包只能用conda：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda install -n &lt;env_name&gt; &lt;package_name&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>卸载安装包：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$conda remove --name &lt;env_name&gt; &lt;package_name&gt;</span><br><span class="line">or</span><br><span class="line">$conda remove &lt;package_name&gt;</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>最后，退出该房间，回到base</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda deactivate</span><br></pre></td></tr></table></figure></div>
-
-<p>不用加后缀名.</p>
-<p>参考教程：</p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/81f1dd1afb84">https://www.jianshu.com/p/81f1dd1afb84</a></p>
-
-  </section>
-  
-  
-  <section>
-  <hr>
-  <nav class="level">
-    <div class="level-left">
-      
-      <div class="level-item">
-        <a href="/2024/02/18/DL1/">
-          <strong>Previous</strong>
-          <div>
-            DL1
-            <div>
-              February 18, 2024
-            </div>
-          </div>
-        </a>
-      </div>
-      
-    </div>
-    <div class="level-right">
-      
-      <div class="level-item has-text-right">
-        <a href="/2024/03/05/Bond-spin-basis-update/">
-          <strong>Next</strong>
-          <div>
-            Bond-spin basis update
-            <div>
-              March 5, 2024
-            </div>
-          </div>
-        </a>
-      </div>
-      
-    </div>
-  </nav>
-  </section>
-
-
-</article>
-
-
-            </div>
-          </div>
-        </div>
-        <!-- Footer -->
-        <!DOCTYPE html>
-<footer class="custom-footer has-text-centered is-size-6">
-  <div>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://www.linkedin.com/in/michaelthanh/">
-      <span class="icon">
-        <i class="fab fa-linkedin-in fa-lg"></i>
-      </span>
-    </a>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://github.com/mvxt">
-      <span class="icon">
-        <i class="fab fa-github fa-lg"></i>
-      </span>
-    </a>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://medium.com/@michael.thanh">
-      <span class="icon">
-        <i class="fab fa-medium-m fa-lg"></i>
-      </span>
-    </a>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://twitter.com/mikeyvxt">
-      <span class="icon">
-        <i class="fab fa-twitter fa-lg"></i>
-      </span>
-    </a>
-    
-  </div>
-  Copyright &copy; 2024 Michael Vinh Xuan Thanh. Site built with <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo.io</a> and <a target="_blank" rel="noopener" href="https://bulma.io/">Bulma</a>.
-</footer>
-
-        <!DOCTYPE html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-      </div>
-    </div>
-  </body>
-</html>
+.post-block {
+  color: var(--hty-text-color);
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: var(--post-block-bg-color);
+mobile()
+}
+.post-body {
+  padding: 0 5rem;
+tablet()
+mobile()
+}
+.post-meta {
+  font-size: 14px;
+  color: var(--hty-secondary-text-color);
+}
+.post-meta .icon {
+  margin-bottom: -1px;
+}
+.post-description {
+  font-weight: normal;
+  padding: 0.5rem;
+}
+.post-author {
+  display: flex;
+  justify-content: center;
+}
+.post-author .author-avatar {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+.post-author .author-avatar img {
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  padding: 2px;
+  border: 2px solid #d3d3d3;
+}
+.post-author .author-name {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+.post-meta-item-icon {
+  display: inline-block;
+  color: var(--text-color, --hty-secondary-text-color);
+}
+.post-meta-divider {
+  height: 25px;
+  color: var(--hty-secondary-text-color);
+  margin: 0 0.5rem;
+}
+.post-eof {
+  margin: 50px auto;
+  width: 50%;
+  height: 1px;
+  background: $blue;
+  opacity: 0.1;
+}
+.post-copyright {
+  font-size: 0.9rem;
+  margin: 0.5rem 5rem 1rem 5rem;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid #ff5252;
+  background-color: var(--hty-bg-color);
+  list-style: none;
+  word-break: break-all;
+  position: relative;
+  overflow: hidden;
+mobile()
+}
+.post-copyright::after {
+  position: absolute;
+  color: #fff;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath fill='gray' d='M245.8 214.9l-33.2 17.3c-9.4-19.6-25.2-20-27.4-20-22.2 0-33.3 14.6-33.3 43.9 0 23.5 9.2 43.8 33.3 43.8 14.4 0 24.6-7 30.5-21.3l30.6 15.5a73.2 73.2 0 01-65.1 39c-22.6 0-74-10.3-74-77 0-58.7 43-77 72.6-77 30.8-.1 52.7 11.9 66 35.8zm143 0l-32.7 17.3c-9.5-19.8-25.7-20-27.9-20-22.1 0-33.2 14.6-33.2 43.9 0 23.5 9.2 43.8 33.2 43.8 14.5 0 24.7-7 30.5-21.3l31 15.5c-2 3.8-21.3 39-65 39-22.7 0-74-9.9-74-77 0-58.7 43-77 72.6-77C354 179 376 191 389 214.8zM247.7 8C104.7 8 0 123 0 256c0 138.4 113.6 248 247.6 248C377.5 504 496 403 496 256 496 118 389.4 8 247.6 8zm.8 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.5 85.5-203.3 203.8-203.3A201.7 201.7 0 01451.3 256c0 121.7-99.7 202.9-202.9 202.9z'/%3E%3C/svg%3E");
+  content: ' ';
+  height: 10rem;
+  width: 10rem;
+  right: -2rem;
+  top: -2rem;
+  opacity: 0.1;
+}
+.tag-name {
+  padding: 0 0.1rem;
+}

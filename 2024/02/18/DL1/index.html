@@ -1,329 +1,86 @@
-<!DOCTYPE html>
-<html class="offwhite-bg">
-  <!-- Head tag -->
-  <!DOCTYPE html>
-<head>
-  <!-- STATIC -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2">
-
-  <!-- VARIABLE -->
-  <!-- TITLE -->
-  
-  <title>DL1</title>
-  
-
-  <!-- AUTHOR -->
-  
-  <meta name="author" content="Wantake" />
-  
-
-  <!-- DESCRIPTION -->
-  
-  <meta name="description" content="." />
-  
-
-  <!-- KEYWORDS -->
-  
-
-  <!-- GOOGLE SITE VERIFICATION -->
-  
-  <meta name="google-site-verification" content="FHK_lhsTlcLbPDI5IkA4bjEvJ2R6JzO66YFIP83rNwg" />
-  
-
-  <!-- FAVICON -->
-  <link rel="icon" href="/favicon.ico">
-
-  <!-- CSS AND SCRIPTS -->
-  <!-- Bulma -->
-  
-<link rel="stylesheet" href="/css/bulma.min.css">
-
-  <!-- Custom Site CSS -->
-  
-<link rel="stylesheet" href="/css/main.css">
-
-  <!-- FontAwesome -->
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  
-<script src="/js/jquery-3.1.1.min.js"></script>
-
-  <!-- Custom Site JS -->
-  
-<script src="/js/main.js"></script>
-
-<meta name="generator" content="Hexo 7.0.0"></head>
-
-
-  <body>
-    <div id="app" class="columns is-gapless-mobile">
-      <div class="column is-full-mobile is-three-fifths-desktop is-offset-one-fifth-desktop">
-        <!-- Hero -->
-        <!DOCTYPE html>
-<section class="hero has-text-centered">
-  <div id="hero-override" class="hero-body">
-    <div class="container">
-      <h1 class="title">
-      
-      Wan Take
-      
-      </h1>
-      <h2 class="subtitle">
-      
-      
-      
-      </h2>
-    </div>
-  </div>
-</section>
-
-        <!-- Menu -->
-        <!DOCTYPE html>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarItems">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarItems" class="navbar-menu">
-    <div class="navbar-start">
-      
-      <a class="navbar-item" href="/">Home</a>
-      
-      <a class="navbar-item" href="/archives">Archives</a>
-      
-      <a class="navbar-item" href="/categories">Topics</a>
-      
-      <a class="navbar-item" href="/cv">CV</a>
-      
-      <a class="navbar-item" href="/projects">Projects</a>
-      
-      <a class="navbar-item" href="/ethos">Ethos</a>
-      
-      <a class="navbar-item" href="/about">About</a>
-      
-    </div>
-
-    
-    <div class="navbar-end">
-      <div id="search-form-wrap" class="navbar-item field">
-        <form class="control has-icons-left search-form">
-          <input class="input is-rounded search-field" type="search" placeholder=" Search website..." title="Search">
-          <span class="icon is-small is-left">
-          <i class="fas fa-search"></i>
-          </span>
-        </form>
-      </div>
-    </div>
-    <div class="ins-search">
-  <div class="ins-search-mask"></div>
-  <div class="ins-search-container">
-    <div class="ins-input-wrapper">
-      <input type="text" class="ins-search-input" placeholder="Type something..."/>
-      <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-    </div>
-    <div class="ins-section-wrapper">
-      <div class="ins-section-container"></div>
-    </div>
-  </div>
-</div>
-<script>
-(function (window) {
-  var INSIGHT_CONFIG = {
-    TRANSLATION: {
-      POSTS: 'Posts',
-      PAGES: 'Pages',
-      CATEGORIES: 'Categories',
-      UNTITLED: '(Untitled)',
-    },
-    ROOT_URL: '/',
-    CONTENT_URL: '/content.json',
-  };
-  window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-
-<script src="/js/insight.js"></script>
-
-
-    
-  </div>
-</nav>
-
-        <div id="wrapper" class="container">
-          <div class="columns">
-            <!-- Sidebar -->
-            
-            <!-- Main Body -->
-            <div class="column auto">
-              <!-- Article Contents -->
-<article class="article">
-  <h1 class="is-size-3 has-text-centered">
-    DL1
-  </h1>
-  
-  <h2 class="is-size-5 has-text-centered">
-    <time datetime="2024-02-18T02:35:59.000Z">February 18, 2024</time>
-  </h2>
-  
-  <section class="section">
-    <h1 id="Directed-Loop-I"><a href="#Directed-Loop-I" class="headerlink" title="Directed Loop I"></a>Directed Loop I</h1><p>写在前面：本文是我最近想要写XXZ+hz+hx Model的思考，顺带着复习、回顾DL.  大量参考了Syljuåsen, O. F. 关于DL的两篇文章，即2003年的<em>The Directed‐Loop Algorithm</em>和2003年的<em>Directed loop updates for quantum lattice models</em>.  其中第一篇可以看作是他和Sandvik合作的DL原文献的简略版.</p>
-<h4 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h4><p>这里简单概述一下DL从何而来，以及为什么需要用到DL.</p>
-<p>环算法(Loop algorithms)在世界线(world-line)量子蒙特卡罗计算中的应用及其在解决特定问题上的局限性。首先，环算法显著提高了世界线量子蒙特卡罗计算的性能，可以将自相关时间减少几个数量级，但传统环更新(conventional loop updates)受限于特定模型和参数空间.    特别是，在构建环的时候无法考虑外部场，并且环的翻转取决于Metropolis接受&#x2F;拒绝步骤。在高场下，大环的接受概率很小，因此此方法仅在高温或非常弱的场下可行。[^ 1]     </p>
-<ul>
-<li>Loop algorithm目前有许多限制，依赖于具体的模型和模型的参数，在低温或者强场的情况下发挥不好.</li>
-</ul>
-<p>最近的蠕虫算法(worm algorithm)和SSE算符-环算法(operator-loop algorithm for stochastic series expansion (SSE))的泛化克服了这个问题，允许环自相交(selfintersect)(我也不太知道这个翻译准不准)和回溯(backtrack)，从而考虑了复杂的相互作用和外部场。</p>
-<p>SSE的早期应用中，local off-diagonal updates涉及同时将两个算符进行替换, 即$[1,b(p)][1,b(p’)] \longleftrightarrow [2,b(p)][2,b(p’)]$.   现在有DL，通过局域细致平衡条件，导致了始终接受的封闭loop的有效配置. [^ 2]</p>
-<h5 id="有向环-DL-可以看作是由-vertex类型-DL方程-loop构建方式-组成"><a href="#有向环-DL-可以看作是由-vertex类型-DL方程-loop构建方式-组成" class="headerlink" title="有向环(DL)可以看作是由 vertex类型+DL方程+loop构建方式 组成."></a>有向环(DL)可以看作是由 vertex类型+DL方程+loop构建方式 组成.</h5><p>在有向环(DL)方案中，细致平衡条件导致了一组耦合的方程，用于描述各种构建loop（或蠕虫）步骤的概率。这些有向环方程通常有无穷多解，因此需要进行优化。有向循环算法最初是为SSE（Stochastic Series Expansion）开发的，但在同一篇文章中也介绍了对离散和连续虚时间中的世界线的适应性。</p>
-<ul>
-<li><p>对于给定的$S&#x3D;1&#x2F;2$海森堡模型的SSE算法.     选择合适的参数使得对角算符只作用于自旋相反的算符，令另外两种vertex权重为零.   loop路过两次的算符将保持不变。由于所有bond算符的非零矩阵元都等于1&#x2F;2，新配置的权重与旧配置完全相同，因此loop flip总是可以接受的。这种类型的环是通过构建而避免自交(self-avoiding)的（环不能有相交）。因此，配置也可以被分解为它的所有环（每个自旋属于恰好一个环），它们以1&#x2F;2的概率独立于彼此翻转，就像经典的Swendsen-Wang算法.  但这种确定的loop明显依赖于$\Delta &#x3D; 1,h&#x3D;0$.  证明DL其实是比SSE更普适的算法</p>
-</li>
-<li><p>想象DL loop的构建可以想象这些vertex通过vertexlist连接，因为虚时间上自旋的“线”的信息是冗余的</p>
-</li>
-<li><p>这个不连续性不是在于起点翻不翻的vertex类型允许不允许，而是在于（起点和终点）这些腿现在将链接到具有不同自旋的腿。[^ 3] 换句话说，就是一个配置，如果某个格点在虚时间上的自旋不满足周期性边界条件，这样的配置是不被允许，不对配分函数产生贡献的</p>
-</li>
-</ul>
-<p>DL方程构建方式如下：首先，为通过vertex的所有可能路径分配未知权重$a$。所有这些路径权重在所有出口上（同一个入口）的总和必须等于裸vertex权重.[^ 4] 关键点还在于，**局部细致平衡(local detailed balance)**，要求构成彼此相反的vertex路径的权重必须相等，即，如果通过vertex k的路径i → e在翻转入口和出口自旋后导致vertex k’，那么通过k’的反向路径e → i会产生vertex k且路径权重相等[^ 5]</p>
-<p><strong>目前没有找到寻找最优解的严格方法</strong>，但已提出一些启发式的论点：合理的假设是，反弹过程的概率应该最小化，因为它们不完成任何vertex变化，并导致环构建过程回溯一步（有时在环构建过程中方向相反时回溯一步以上）。</p>
-<p>然而，DL的方程组实际上是给提供了追求无反弹（或者最优解）的数学框架，追求无反弹或者反弹很少的解，在于追求算法的自关联时间更少.  对于某些模型，<u>最小化反弹的解反而可能不是最优策略</u>.[^ 6] 因此，vertex和各路径权重拿到手之后，首要做的事也许不是思考怎么列方程，而是如何设计算符、如何构造一个loop，How to start? How to end?.</p>
-<hr>
-<p>Loop 的构建过程</p>
-<h4 id="link-discontinuities-链接不连续性"><a href="#link-discontinuities-链接不连续性" class="headerlink" title="link-discontinuities 链接不连续性"></a>link-discontinuities 链接不连续性</h4><p>改变入口腿或退出腿的状态，或者同时改变两者，将导致一个或两个“链接不连续性”，即属于同一链接的不同腿上的状态不同。具有链接不连续性的配置不会对分区函数产生贡献，因此必须重复该过程，直到配置不再存在链接不连续性。</p>
-<p>为了不引入更多的链接不连续性，下一个vertex入口腿的自旋状态受限于与之前退出腿的自旋状态相同，因此，前一个退出腿和当前入口腿之间的链接不连续性得以消除，然而，新退出腿的状态更改将引入新的链接不连续性，因此链接不连续性相当于是在路径前移动。</p>
-<ul>
-<li>出口腿自旋状态与下一个vertex的入口腿状态相同，且出口腿自旋翻转时，下一个vertex的入口腿自旋必须翻转</li>
-<li>不连续性不能产生于路径中间，路径中途没有不连续性</li>
-</ul>
-<p>因此，在 Syljuåsen, O. F. (2003) 这篇文章中提到，若是出口腿没有翻转，那么下一个vertex入口腿也就不用翻转[^ 7]</p>
-<p>当没有这样的守恒定律[^ 7]时，只因为尽管入口腿状态已经改变，退出腿状态没有改变时，一个链接不连续性可以消失，然后，如果在此步骤之前只有一个链接不连续性存在，可以终止该路径。这可以通过要求初始入口腿上没有链接不连续性来实现[^ 8][^ 9].</p>
-<p>由于文献中提了一嘴“要求入口腿没有链接不连续性”，我们这里就顺便讲一下Henelius, P. 2002这篇文章</p>
-<p><u>横场导致的非守恒定律.</u> ——以 Henelius, P. 2002 这篇文章为例</p>
-<p>现在可以有只翻转一个自旋的更新方式，要么是出口腿要么是入口腿. 注意到在上段中提到了“终止”的说法，显然这并不是单格点算符的特权.</p>
-<p>单个翻转顶点的引入或去除会改变链接不连续性的数量，如果选择以与无横场的方式相同的方式启动和结束循环，则循环可以在未纠正初始不连续性的情况下关闭（若终止腿无不连续性则闭合后无法和初始的不连续性湮灭，独留一个初始的不连续性）. 因此，Henelius, P. 继续设定，<u>起点是不翻转的</u>，这样开始一个loop。</p>
-<p>其后果就是，若起点是以不翻转开始的，那么出口在翻或不翻的选择下，选到翻，这个不连续性经由下一个vertex的入口处必须翻转，这样的话该不连续性湮灭，取决于下一个vertex的出口到底翻不翻，翻则不连续性传播；不翻则无不连续性，loop可以在终止了.  当遇到终点是翻转自旋回到原点的时候，意识到初始的vertex是还是单自旋翻转的vertex，此时我们决定跟随终点翻转传播不连续性至起点，将原来不翻转的起点给翻了，这样新出来一个不连续性和终点的不连续性互相湮灭. 这样的话，闭合的loop实际上和之前起点翻、终点翻的loop是没有区别的，<u>总的来说因为人为假设起点不翻，只是多了一种在中途停止的可能性”string”</u>.</p>
-<hr>
-<p>代码实现的部分讲解</p>
-<h4 id="Technical-details-技术细节"><a href="#Technical-details-技术细节" class="headerlink" title="Technical details 技术细节"></a>Technical details 技术细节</h4><h5 id="局部更新之对角更新"><a href="#局部更新之对角更新" class="headerlink" title="局部更新之对角更新"></a>局部更新之对角更新</h5><p>(和YZ聊了一下这么做应该是没问题的，之后再写进去)</p>
-<h5 id="Loop更新"><a href="#Loop更新" class="headerlink" title="Loop更新"></a>Loop更新</h5><p>从随机选一个腿开始</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="FORTRAN"><figure class="iseeu highlight /fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> <span class="comment">!select random vertex&#x27;s leg</span></span><br><span class="line">   v0=<span class="built_in">int</span>(ran()*(mm))*<span class="number">4</span>+<span class="built_in">int</span>(<span class="number">4.0</span>*ran())</span><br><span class="line">   <span class="keyword">if</span>(vertexlist(v0)&gt;=<span class="number">0</span>) <span class="keyword">exit</span></span><br><span class="line"><span class="keyword">enddo</span> <span class="comment">!end select</span></span><br></pre></td></tr></table></figure></div>
-
-<p>判断起点vertex是site vertex还是bond vertex，是后者的话当一端遇到site end时需要另起.</p>
-<p>我们将引入一个判断，如果是site start，记为-2，如果是bond start，记为-1.</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="FORTRAN"><figure class="iseeu highlight /fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">v3=-<span class="number">2</span></span><br><span class="line">   <span class="keyword">if</span>(<span class="built_in">mod</span>(opstring(v0/<span class="number">4</span>),<span class="number">4</span>)==<span class="number">1</span> .or. <span class="built_in">mod</span>(opstring(v0/<span class="number">4</span>),<span class="number">4</span>)==<span class="number">2</span>) v3=-<span class="number">1</span></span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>XXZ中的退出方式无非是两种</p>
-<img src="/Users/wtake1/Library/Application Support/typora-user-images/image-20240223144106026.png" alt="image-20240223144106026" style="zoom: 33%;">
-
-<p>以短箭头为出发点，(a)是通过v1&#x3D;vertexlist(v2)纵向连接，并发现v1&#x3D;v0来退出</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="FORTRAN"><figure class="iseeu highlight /fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>((v1==v0).and.(n/=<span class="number">1</span>)) <span class="keyword">then</span></span><br></pre></td></tr></table></figure></div>
-
-<p>(b)是通过v1连到了起点bond vertex之后，又一次执行了路径判断，发现v2 &#x3D; ir(ieor(v1,1)) &#x3D;&#x3D; v0来退出.</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="FORTRAN"><figure class="iseeu highlight /fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (v2==v0) <span class="keyword">exit</span></span><br></pre></td></tr></table></figure></div>
-
-<p>这在构建过程中已经实现.</p>
-<p>我们分别考察两种闭合方式中的自旋翻转和算符类型更改。</p>
-<p>![image-20240224173314052](&#x2F;Users&#x2F;wtake1&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20240224173314052.png)</p>
-<p>![image-20240224173329844](&#x2F;Users&#x2F;wtake1&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20240224173329844.png)</p>
-<p>在程序中我们是通过v2, v1&#x3D;vertexlist(v2)绕过边界来实现连接的“这一段”之间的自旋翻转的，因此，起点出发作为起点本身的自旋是没有翻转的，对于(a)相当于是最后一段的自旋翻转“推”到了起点，引起了起点的自旋翻转；对于(b)起点本来也没有翻转，</p>
-<p>程序主体:</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="FORTRAN"><figure class="iseeu highlight /fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> ...<span class="comment">!for MCStep</span></span><br><span class="line"><span class="comment">! 怎样算一个MC步由自己定义，目前来讲是通过fixed Loop number来退出:</span></span><br><span class="line">l = l+<span class="number">1</span> <span class="comment">! 完成的loop计数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> a random vertex<span class="string">&#x27;s leg v0</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">   v1=v0</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">do !for makeloop of v0</span></span><br><span class="line"><span class="string"> !now we deal with v1</span></span><br><span class="line"><span class="string">   i=v1/4 !add</span></span><br><span class="line"><span class="string">   op=opstring(i)</span></span><br><span class="line"><span class="string">   b=op/4 !this cant distinct the bond or site</span></span><br><span class="line"><span class="string">   </span></span><br><span class="line"><span class="string">   </span></span><br><span class="line"><span class="string">   !(a)种退出的情况: 一定在已经翻转v2,v1=vertexlist(v2)路段之后</span></span><br><span class="line"><span class="string">   if((v1==v0).and.(n/=1)) exit</span></span><br><span class="line"><span class="string">  	</span></span><br><span class="line"><span class="string">   </span></span><br><span class="line"><span class="string">   if(    ) then !进行v1所在vertex类型的判断</span></span><br><span class="line"><span class="string">   		!根据入口、概率决定去向</span></span><br><span class="line"><span class="string">   		v2 = ..</span></span><br><span class="line"><span class="string">   		v1 = vertexlist(v2)</span></span><br><span class="line"><span class="string">   		n = n+1</span></span><br><span class="line"><span class="string">   		</span></span><br><span class="line"><span class="string">   		!(b)种退出的情况</span></span><br><span class="line"><span class="string">   		if (v2==v0) exit</span></span><br><span class="line"><span class="string">   </span></span><br><span class="line"><span class="string">   ...</span></span><br><span class="line"><span class="string">   </span></span><br><span class="line"><span class="string">   </span></span><br><span class="line"><span class="string">   endif</span></span><br><span class="line"><span class="string">   </span></span><br><span class="line"><span class="string">   </span></span><br><span class="line"><span class="string">   </span></span><br><span class="line"><span class="string">   !翻转自旋</span></span><br><span class="line"><span class="string">   !在这里仅翻转对周期性边界上自旋会产生影响的路段</span></span><br><span class="line"><span class="string">   </span></span><br><span class="line"><span class="string">	  b=opstring(v2/4)/4 !这里假设b = op/4</span></span><br><span class="line"><span class="string">      </span></span><br><span class="line"><span class="string">      if (mod(v2,4)&gt;1) then !*判断v2在上面两条腿</span></span><br><span class="line"><span class="string">         if (v2&gt;v1) then</span></span><br><span class="line"><span class="string">            s1=bsites(mod(v2,4)-1,b) !* bsites(1,b) or bsites(2,b)</span></span><br><span class="line"><span class="string">            spin(s1)=-spin(s1) </span></span><br><span class="line"><span class="string">         endif</span></span><br><span class="line"><span class="string">      </span></span><br><span class="line"><span class="string">      else !*或者v2是下面两条腿</span></span><br><span class="line"><span class="string">         if (v2&lt;v1) then !*且v2在作为纵向跳转的v1的下面</span></span><br><span class="line"><span class="string">            s1=bsites(mod(v2,4)+1,b) !* 也就是 i or j</span></span><br><span class="line"><span class="string">            spin(s1)=-spin(s1) </span></span><br><span class="line"><span class="string">         endif</span></span><br><span class="line"><span class="string">      endif</span></span><br><span class="line"><span class="string"> enddo</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string"> if(l&gt;=20) exit !用来退出loop构造</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string"> enddo !for end MCStep</span></span><br><span class="line"><span class="string">   </span></span><br></pre></td></tr></table></figure></div>
-
-<p>现在我们知道程序中实际上未对v0所在的腿进行翻转的处理. 但依然在两种闭合方式下符合.</p>
-<p>仿照这样的处理方式，我们引入site算符，并且使用热浴解出的概率.</p>
-<p>[^ 1]: In particular, external fields cannot be taken into account when constructing a loop, and the loop-flip is then conditional upon a subsequent Metropolis accept&#x2F;reject step. The acceptance probability for large loops in a high field is small, and this approach is therefore feasible only at high temperatures or very weak fields.<br>[^ 2]: In the worm and SSE operator-loop algorithms, detailed balance is ensured by local probabilistic rules, and the resulting closed-loop configurations are always accepted.<br>[^ 3]: Two <em>link-discontinuities</em> (which are analogous to the source operators in the worm algorithm) are then created when the first entrance and exit spins are flipped, i.e., these legs will now be linked to legs <u>with different spins</u> . Configurations contributing to <em>Z</em> only contain links between same-spin legs. When the loop closes, the two discontinuities annihilate each other, and a new contributing configuration has then been generated.<br>[^ 4]: The probabilities for the different exit legs (<em>e</em> &#x3D; 1,…4), given the type of the vertex (<em>k</em> &#x3D; 1,…6) and an entrance leg (<em>i</em> &#x3D; 1,…4), are chosen such that detailed balance is satisfied. The sum of all these path weights over all exits <em>e</em> must equal the bare vertex weight. And the actual normalized exit probability is the path weight divided by the bare vertex weight.<br>[^ 5]: local detailed balance. The key observation leading to the directed-loop equations is that the weights for vertex-paths <em>i</em> → <em>e</em> that constitute each other’s reverses have to be equal: If the path <em>i</em> → <em>e</em> through vertex <em>k</em> leads to the vertex <em>k</em>′ when the entrance and exit spins have been flipped, then the reverse path <em>e</em> → <em>i</em> through <em>k</em>′ yields vertex <em>k</em></p>
-<p>[^ 6]: 一般来说，对于S &gt; 1&#x2F;2和软核玻色子，最小化反弹概率不会导致有向环方程的唯一解，因此还必须施加一些其他约束。还指出，最小化反弹并不一定是最佳策略[31]（从一开始就预料到这不一定是绝对正确的）。此外，对于S &gt; 1的海森堡模型，为了完全消除反弹，必须为在构建环时存在的不连续性（源）分配不等于1的乘法权重。<br>[^ 7]: 更详细的说，原文讨论的是守恒定律是vertex上下两条腿自旋之和必须相等，这是哈密顿量与$S^z$对易造成的. 既如此，一个vertex入口腿出口腿必须都翻转，形成一个“双自旋翻转”的vertex，不难立马想到，这样的更新方式会在起点产生一个链接不连续性，因此，这里的守恒定律说的是，由守恒定律导致入口腿出口腿都要改变状态时，<u>只有loop闭合才可以消除不连续</u>. When there is a conservation law such that the state change at the exit leg is determined by the state change at the entrance leg the link discontinuities will only vanish when the path closes forming a loop…. In contrast, when there is no such conservation law a link discontinuity can vanish just because an exit state is not changed, although the entrance state <em>was</em> changed.<br>[^ 8]: 当存在守恒定律时，这种起始条件是不可能的，因为不会产生新的配置，但在没有守恒定律的情况下，即使入口腿上没有状态改变，退出腿上的状态改变仍然可能发生.  以bond的角度视横场算符，The transverse field introduces vertices where the sum of the spins on the lower two legs is not equal to the sum on the upper two legs.（出现三上一下或三下一上，导致不对称）Thus the conservation law utilized in Sec. IV cannot be used and we must include the possibilities of a state change on just one leg, the entrance or the exit leg, keeping the state on the other legs unchanged.<br>[^ 9]: Henelius, P. 2002 这篇文章就做了 “起点自旋不翻转” 这样的修正. 初始入口腿上没有链接不连续性</p>
-
-  </section>
-  
-  
-  <section>
-  <hr>
-  <nav class="level">
-    <div class="level-left">
-      
-      <div class="level-item">
-        <a href="/2024/02/02/ED/">
-          <strong>Previous</strong>
-          <div>
-            ED
-            <div>
-              February 2, 2024
-            </div>
-          </div>
-        </a>
-      </div>
-      
-    </div>
-    <div class="level-right">
-      
-      <div class="level-item has-text-right">
-        <a href="/2024/03/02/use-anaconda/">
-          <strong>Next</strong>
-          <div>
-            use anaconda
-            <div>
-              March 2, 2024
-            </div>
-          </div>
-        </a>
-      </div>
-      
-    </div>
-  </nav>
-  </section>
-
-
-</article>
-
-
-            </div>
-          </div>
-        </div>
-        <!-- Footer -->
-        <!DOCTYPE html>
-<footer class="custom-footer has-text-centered is-size-6">
-  <div>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://www.linkedin.com/in/michaelthanh/">
-      <span class="icon">
-        <i class="fab fa-linkedin-in fa-lg"></i>
-      </span>
-    </a>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://github.com/mvxt">
-      <span class="icon">
-        <i class="fab fa-github fa-lg"></i>
-      </span>
-    </a>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://medium.com/@michael.thanh">
-      <span class="icon">
-        <i class="fab fa-medium-m fa-lg"></i>
-      </span>
-    </a>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://twitter.com/mikeyvxt">
-      <span class="icon">
-        <i class="fab fa-twitter fa-lg"></i>
-      </span>
-    </a>
-    
-  </div>
-  Copyright &copy; 2024 Michael Vinh Xuan Thanh. Site built with <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo.io</a> and <a target="_blank" rel="noopener" href="https://bulma.io/">Bulma</a>.
-</footer>
-
-        <!DOCTYPE html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-      </div>
-    </div>
-  </body>
-</html>
+.post-block {
+  color: var(--hty-text-color);
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: var(--post-block-bg-color);
+mobile()
+}
+.post-body {
+  padding: 0 5rem;
+tablet()
+mobile()
+}
+.post-meta {
+  font-size: 14px;
+  color: var(--hty-secondary-text-color);
+}
+.post-meta .icon {
+  margin-bottom: -1px;
+}
+.post-description {
+  font-weight: normal;
+  padding: 0.5rem;
+}
+.post-author {
+  display: flex;
+  justify-content: center;
+}
+.post-author .author-avatar {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+.post-author .author-avatar img {
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  padding: 2px;
+  border: 2px solid #d3d3d3;
+}
+.post-author .author-name {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+.post-meta-item-icon {
+  display: inline-block;
+  color: var(--text-color, --hty-secondary-text-color);
+}
+.post-meta-divider {
+  height: 25px;
+  color: var(--hty-secondary-text-color);
+  margin: 0 0.5rem;
+}
+.post-eof {
+  margin: 50px auto;
+  width: 50%;
+  height: 1px;
+  background: $blue;
+  opacity: 0.1;
+}
+.post-copyright {
+  font-size: 0.9rem;
+  margin: 0.5rem 5rem 1rem 5rem;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid #ff5252;
+  background-color: var(--hty-bg-color);
+  list-style: none;
+  word-break: break-all;
+  position: relative;
+  overflow: hidden;
+mobile()
+}
+.post-copyright::after {
+  position: absolute;
+  color: #fff;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath fill='gray' d='M245.8 214.9l-33.2 17.3c-9.4-19.6-25.2-20-27.4-20-22.2 0-33.3 14.6-33.3 43.9 0 23.5 9.2 43.8 33.3 43.8 14.4 0 24.6-7 30.5-21.3l30.6 15.5a73.2 73.2 0 01-65.1 39c-22.6 0-74-10.3-74-77 0-58.7 43-77 72.6-77 30.8-.1 52.7 11.9 66 35.8zm143 0l-32.7 17.3c-9.5-19.8-25.7-20-27.9-20-22.1 0-33.2 14.6-33.2 43.9 0 23.5 9.2 43.8 33.2 43.8 14.5 0 24.7-7 30.5-21.3l31 15.5c-2 3.8-21.3 39-65 39-22.7 0-74-9.9-74-77 0-58.7 43-77 72.6-77C354 179 376 191 389 214.8zM247.7 8C104.7 8 0 123 0 256c0 138.4 113.6 248 247.6 248C377.5 504 496 403 496 256 496 118 389.4 8 247.6 8zm.8 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.5 85.5-203.3 203.8-203.3A201.7 201.7 0 01451.3 256c0 121.7-99.7 202.9-202.9 202.9z'/%3E%3C/svg%3E");
+  content: ' ';
+  height: 10rem;
+  width: 10rem;
+  right: -2rem;
+  top: -2rem;
+  opacity: 0.1;
+}
+.tag-name {
+  padding: 0 0.1rem;
+}

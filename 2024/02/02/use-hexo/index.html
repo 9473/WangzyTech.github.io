@@ -1,345 +1,86 @@
-<!DOCTYPE html>
-<html class="offwhite-bg">
-  <!-- Head tag -->
-  <!DOCTYPE html>
-<head>
-  <!-- STATIC -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2">
-
-  <!-- VARIABLE -->
-  <!-- TITLE -->
-  
-  <title>use hexo</title>
-  
-
-  <!-- AUTHOR -->
-  
-  <meta name="author" content="Wantake" />
-  
-
-  <!-- DESCRIPTION -->
-  
-  <meta name="description" content="." />
-  
-
-  <!-- KEYWORDS -->
-  
-
-  <!-- GOOGLE SITE VERIFICATION -->
-  
-  <meta name="google-site-verification" content="FHK_lhsTlcLbPDI5IkA4bjEvJ2R6JzO66YFIP83rNwg" />
-  
-
-  <!-- FAVICON -->
-  <link rel="icon" href="/favicon.ico">
-
-  <!-- CSS AND SCRIPTS -->
-  <!-- Bulma -->
-  
-<link rel="stylesheet" href="/css/bulma.min.css">
-
-  <!-- Custom Site CSS -->
-  
-<link rel="stylesheet" href="/css/main.css">
-
-  <!-- FontAwesome -->
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  
-<script src="/js/jquery-3.1.1.min.js"></script>
-
-  <!-- Custom Site JS -->
-  
-<script src="/js/main.js"></script>
-
-<meta name="generator" content="Hexo 7.0.0"></head>
-
-
-  <body>
-    <div id="app" class="columns is-gapless-mobile">
-      <div class="column is-full-mobile is-three-fifths-desktop is-offset-one-fifth-desktop">
-        <!-- Hero -->
-        <!DOCTYPE html>
-<section class="hero has-text-centered">
-  <div id="hero-override" class="hero-body">
-    <div class="container">
-      <h1 class="title">
-      
-      Wan Take
-      
-      </h1>
-      <h2 class="subtitle">
-      
-      
-      
-      </h2>
-    </div>
-  </div>
-</section>
-
-        <!-- Menu -->
-        <!DOCTYPE html>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarItems">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarItems" class="navbar-menu">
-    <div class="navbar-start">
-      
-      <a class="navbar-item" href="/">Home</a>
-      
-      <a class="navbar-item" href="/archives">Archives</a>
-      
-      <a class="navbar-item" href="/categories">Topics</a>
-      
-      <a class="navbar-item" href="/cv">CV</a>
-      
-      <a class="navbar-item" href="/projects">Projects</a>
-      
-      <a class="navbar-item" href="/ethos">Ethos</a>
-      
-      <a class="navbar-item" href="/about">About</a>
-      
-    </div>
-
-    
-    <div class="navbar-end">
-      <div id="search-form-wrap" class="navbar-item field">
-        <form class="control has-icons-left search-form">
-          <input class="input is-rounded search-field" type="search" placeholder=" Search website..." title="Search">
-          <span class="icon is-small is-left">
-          <i class="fas fa-search"></i>
-          </span>
-        </form>
-      </div>
-    </div>
-    <div class="ins-search">
-  <div class="ins-search-mask"></div>
-  <div class="ins-search-container">
-    <div class="ins-input-wrapper">
-      <input type="text" class="ins-search-input" placeholder="Type something..."/>
-      <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-    </div>
-    <div class="ins-section-wrapper">
-      <div class="ins-section-container"></div>
-    </div>
-  </div>
-</div>
-<script>
-(function (window) {
-  var INSIGHT_CONFIG = {
-    TRANSLATION: {
-      POSTS: 'Posts',
-      PAGES: 'Pages',
-      CATEGORIES: 'Categories',
-      UNTITLED: '(Untitled)',
-    },
-    ROOT_URL: '/',
-    CONTENT_URL: '/content.json',
-  };
-  window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-
-<script src="/js/insight.js"></script>
-
-
-    
-  </div>
-</nav>
-
-        <div id="wrapper" class="container">
-          <div class="columns">
-            <!-- Sidebar -->
-            
-            <!-- Main Body -->
-            <div class="column auto">
-              <!-- Article Contents -->
-<article class="article">
-  <h1 class="is-size-3 has-text-centered">
-    use hexo
-  </h1>
-  
-  <h2 class="is-size-5 has-text-centered">
-    <time datetime="2024-02-02T11:54:41.000Z">February 2, 2024</time>
-  </h2>
-  
-  <section class="section">
-    <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p>安装了home-brew之后，安装 Hexo 所需要的 Git 和 Node.js</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install git</span><br><span class="line">$ brew install node</span><br></pre></td></tr></table></figure></div>
-
-<p>检查是否安装成功:</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br><span class="line">$ node -v</span><br><span class="line">$ git --version</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>安装 Hexo</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
-
-<p>为Hexo创建一个初始源文件夹</p>
-<p>Cd in 想要的路径中, 执行：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<p>这里简单介绍一些hexo使用指令</p>
-<p>对于hexo创建一个 ~ blog的文件夹，那么blog默认为根目录，所谓的在根目录底下执行，就是在blog这个文件夹底下执行.</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd .../blog</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><p>新建一篇博客</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo n &quot;name&quot;</span><br></pre></td></tr></table></figure></div>
-
-<p>在根目录的 source 文件夹底下 _posts 中会出现你创建的 blog.md</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">❯ hexo n <span class="string">&quot;use anaconda&quot;</span></span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: ~/.../blog/source/_posts/use-anaconda.md</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>我们在根目录下预安装能够<u>加载本地图片</u>的插件</p>
-<p>在根目录下执行:</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$npm install https://github.com/xcodebuild/hexo-asset-image.git --save</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>在这个 .md文件中写完内容之后，保存，执行：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo g</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>然后部署：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo d</span><br></pre></td></tr></table></figure></div>
-
-
-
-<p>可以在本地进行预览：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo s</span><br></pre></td></tr></table></figure></div>
-
-<p>将网址点开可以预览.</p>
-<h4 id="插入图片的问题"><a href="#插入图片的问题" class="headerlink" title="插入图片的问题"></a>插入图片的问题</h4><p>之前我们已经安装了插件，在 _posts 文件夹中会出现和文章名字相同的文件夹，将想要插入的图片复制到该文件夹中</p>
-<p>然后在Markdown环境下插入图片格式为：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="MARKDOWN"><figure class="iseeu highlight /markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Fig x</span>](<span class="link"> ./picture.png</span>)</span><br></pre></td></tr></table></figure></div>
-
-<p>注意，前面的 <code> ./</code> 一定不能省略，点前面有一个空格</p>
-<h4 id="公式显示的问题"><a href="#公式显示的问题" class="headerlink" title="公式显示的问题"></a>公式显示的问题</h4><p>目前找到的一个解决方式是使用 <a target="_blank" rel="noopener" href="https://www.latexlive.com/">https://www.latexlive.com</a> 网站转出为 MathML 的格式（Typora也可以转，但是会有很多换行而识别得破破烂烂）</p>
-<p>默认转出格式是另起一行居中</p>
-<p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">  <mi>a</mi>  <mo>+</mo>  <mi>b</mi>  <mo>+</mo>  <mi>c</mi></math></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;  &lt;mi&gt;a&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;b&lt;/mi&gt;  &lt;mo&gt;+&lt;/mo&gt;  &lt;mi&gt;c&lt;/mi&gt;&lt;/math&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>如果不想要居中，而是行间公式，把 <code> display=&quot;block&quot;</code> 删掉即可</p>
-<p>最后最好用Typora源代码模式检查一遍</p>
-<hr>
-<h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><p>(2024.4)</p>
-<p>重新搞了Latex识别的插件，现在可以直接使用”$$”来使用公式</p>
-<p>插入图片依旧使用上面说的指令，一定要记得，这是调用同名文件夹里的图片(图片一定要放到同名文件夹里)，所以Typora可能显示不出来图片，但是网站上可以读取.</p>
-<p>现在可以更改图片大小:</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">&quot; ./p2.png&quot;</span> style=<span class="string">&quot;width: 20%; &quot;</span>&gt;</span><br></pre></td></tr></table></figure></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p>参考教程：</p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/nuccch/p/17010471.html">https://www.cnblogs.com/nuccch/p/17010471.html</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/67f3281cfc01">https://www.jianshu.com/p/67f3281cfc01</a></p>
-
-  </section>
-  
-  
-  <section>
-  <hr>
-  <nav class="level">
-    <div class="level-left">
-      
-      <div class="level-item">
-        <a href="/2024/02/02/Confinement-of-spinons-Part-I/">
-          <strong>Previous</strong>
-          <div>
-            Confinement of spinons Part.I
-            <div>
-              February 2, 2024
-            </div>
-          </div>
-        </a>
-      </div>
-      
-    </div>
-    <div class="level-right">
-      
-      <div class="level-item has-text-right">
-        <a href="/2024/02/02/ED/">
-          <strong>Next</strong>
-          <div>
-            ED
-            <div>
-              February 2, 2024
-            </div>
-          </div>
-        </a>
-      </div>
-      
-    </div>
-  </nav>
-  </section>
-
-
-</article>
-
-
-            </div>
-          </div>
-        </div>
-        <!-- Footer -->
-        <!DOCTYPE html>
-<footer class="custom-footer has-text-centered is-size-6">
-  <div>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://www.linkedin.com/in/michaelthanh/">
-      <span class="icon">
-        <i class="fab fa-linkedin-in fa-lg"></i>
-      </span>
-    </a>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://github.com/mvxt">
-      <span class="icon">
-        <i class="fab fa-github fa-lg"></i>
-      </span>
-    </a>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://medium.com/@michael.thanh">
-      <span class="icon">
-        <i class="fab fa-medium-m fa-lg"></i>
-      </span>
-    </a>
-    
-    <a class="footer-social" target="_blank" rel="noopener" href="https://twitter.com/mikeyvxt">
-      <span class="icon">
-        <i class="fab fa-twitter fa-lg"></i>
-      </span>
-    </a>
-    
-  </div>
-  Copyright &copy; 2024 Michael Vinh Xuan Thanh. Site built with <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo.io</a> and <a target="_blank" rel="noopener" href="https://bulma.io/">Bulma</a>.
-</footer>
-
-        <!DOCTYPE html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-      </div>
-    </div>
-  </body>
-</html>
+.post-block {
+  color: var(--hty-text-color);
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: var(--post-block-bg-color);
+mobile()
+}
+.post-body {
+  padding: 0 5rem;
+tablet()
+mobile()
+}
+.post-meta {
+  font-size: 14px;
+  color: var(--hty-secondary-text-color);
+}
+.post-meta .icon {
+  margin-bottom: -1px;
+}
+.post-description {
+  font-weight: normal;
+  padding: 0.5rem;
+}
+.post-author {
+  display: flex;
+  justify-content: center;
+}
+.post-author .author-avatar {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+.post-author .author-avatar img {
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  padding: 2px;
+  border: 2px solid #d3d3d3;
+}
+.post-author .author-name {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+.post-meta-item-icon {
+  display: inline-block;
+  color: var(--text-color, --hty-secondary-text-color);
+}
+.post-meta-divider {
+  height: 25px;
+  color: var(--hty-secondary-text-color);
+  margin: 0 0.5rem;
+}
+.post-eof {
+  margin: 50px auto;
+  width: 50%;
+  height: 1px;
+  background: $blue;
+  opacity: 0.1;
+}
+.post-copyright {
+  font-size: 0.9rem;
+  margin: 0.5rem 5rem 1rem 5rem;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid #ff5252;
+  background-color: var(--hty-bg-color);
+  list-style: none;
+  word-break: break-all;
+  position: relative;
+  overflow: hidden;
+mobile()
+}
+.post-copyright::after {
+  position: absolute;
+  color: #fff;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath fill='gray' d='M245.8 214.9l-33.2 17.3c-9.4-19.6-25.2-20-27.4-20-22.2 0-33.3 14.6-33.3 43.9 0 23.5 9.2 43.8 33.3 43.8 14.4 0 24.6-7 30.5-21.3l30.6 15.5a73.2 73.2 0 01-65.1 39c-22.6 0-74-10.3-74-77 0-58.7 43-77 72.6-77 30.8-.1 52.7 11.9 66 35.8zm143 0l-32.7 17.3c-9.5-19.8-25.7-20-27.9-20-22.1 0-33.2 14.6-33.2 43.9 0 23.5 9.2 43.8 33.2 43.8 14.5 0 24.7-7 30.5-21.3l31 15.5c-2 3.8-21.3 39-65 39-22.7 0-74-9.9-74-77 0-58.7 43-77 72.6-77C354 179 376 191 389 214.8zM247.7 8C104.7 8 0 123 0 256c0 138.4 113.6 248 247.6 248C377.5 504 496 403 496 256 496 118 389.4 8 247.6 8zm.8 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.5 85.5-203.3 203.8-203.3A201.7 201.7 0 01451.3 256c0 121.7-99.7 202.9-202.9 202.9z'/%3E%3C/svg%3E");
+  content: ' ';
+  height: 10rem;
+  width: 10rem;
+  right: -2rem;
+  top: -2rem;
+  opacity: 0.1;
+}
+.tag-name {
+  padding: 0 0.1rem;
+}

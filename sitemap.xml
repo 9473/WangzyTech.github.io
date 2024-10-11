@@ -2,16 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/Aboutme/index.html</loc>
-    
-    <lastmod>2024-10-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2024/10/12/hexofinal/</loc>
+    <loc>http://example.com/2024/03/27/testlatex/</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -38,7 +29,16 @@
   </url>
   
   <url>
-    <loc>http://example.com/2024/03/27/testlatex/</loc>
+    <loc>http://example.com/Aboutme/index.html</loc>
+    
+    <lastmod>2024-10-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2024/10/12/hexofinal/</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -110,15 +110,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2024/04/16/%E7%86%B5%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%97%A5%E5%BF%97/</loc>
-    
-    <lastmod>2024-04-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2024/04/03/Hexo%E7%BD%91%E7%AB%99%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B9%E6%97%A5%E5%BF%97/</loc>
     
     <lastmod>2024-04-03</lastmod>
@@ -140,15 +131,6 @@
     <loc>http://example.com/2024/03/27/testpdf/</loc>
     
     <lastmod>2024-03-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2024/03/05/Bond-spin-basis-update/</loc>
-    
-    <lastmod>2024-03-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

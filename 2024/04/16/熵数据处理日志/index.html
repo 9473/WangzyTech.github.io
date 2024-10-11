@@ -1,147 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head prefix="og: https://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
   
-  <title>熵数据处理日志 - Wan Take</title>
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    <link rel='manifest' href='/manifest.json'>
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
+<meta name="renderer" content="webkit">
+
+<title>熵数据处理日志 | Wan Take</title>
+
+<meta name="format-detection" content="telephone=no"/>
+
+  <meta name="description" content="这几天在用python处理比较大的数据文件，在这里写下处理数据的细节，算是一个处理数据的日志？每个bin按顺序输出每个核的数据，数据形式为对数由于我们是分配到了50个核上，因此，我们需要将数据处理，每50个数据分为一行，这样，每个核的数据就会横着排开，而竖着的将会是同一个核的数据。">
+
+
+
+  <meta name="keywords" content="iris">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="applicable-device"content="pc,mobile">
+
+
+
+  <link href="/dist/iris-20b518ec25.css" rel="stylesheet">
+
+<!--instant.page-->
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/3.0.0/instantpage.min.js" type="module" defer></script>
+
+<!--tiny-cache.js-->
+<script>var TinyCache=function(){"use strict";var o=window.localStorage;var r=document;function l(n){return new Error("Failed to load "+n.name+": "+n.url)}function i(n){return new Error("No such item or item is staled: "+n.name)}function f(n,t){var e=r.createElement("script");e.id=n.name,e.text=t,e.defer=!0,r.getElementsByTagName("head")[0].appendChild(e)}function m(n,t){var e=r.createElement("script");e.id=n.name,e.src=n.url,e.onload=function(){t(null)},e.onerror=function(){t(l(n))},r.getElementsByTagName("body")[0].appendChild(e)}function e(n,t,e){var r=function(n){var t,e=null;try{var r=o.getItem(n);r&&(e=JSON.parse(r))&&("string"!=typeof(t=e).name||"string"!=typeof t.url||"string"!=typeof t.content)&&(e=null)}catch(n){}return e}(""+n+t.name);r?r.url!==t.url||r.expire&&r.expire<(new Date).getTime()?e(i(t)):e(null,r.content):e(i(t))}function s(n,t,e){!function(n,t){try{o.setItem(n,JSON.stringify(t))}catch(n){}}(""+n+t.name,{content:e,expire:t.maxAge?(new Date).getTime()+1e3*t.maxAge:null,name:t.name,url:t.url})}return function(){function n(n){this.config={prefix:"TC:",timeout:6e3},function(n,t){for(var e in t)t.hasOwnProperty(e)&&(n[e]=t[e])}(this.config,n)}var t=n.prototype;return t.load=function(n,t){var e,r,o,i,u=this;if(!t)return new Promise(function(t,e){u.load(n,function(n){n?e(n):t()})});e=n.map(function(t){return function(n){u.loadScript(t,n)}}),r=t,o=[],i=e.length,e.forEach(function(n,e){n(function(n,t){o[e]=t,n&&r&&(r(n),r=null),0==--i&&r&&r(null,o)})})},t.remove=function(n){!function(n){try{localStorage.removeItem(n)}catch(n){}}(""+this.config.prefix+n.name)},t.loadScript=function(u,a){var c=this;e(this.config.prefix,u,function(n,t){var e,r,o,i;n?(e=u,r=c.config.timeout,o=function(n,t){t&&!n?(f(u,t),s(c.config.prefix,u,t),a(null)):m(u,a)},(i=new XMLHttpRequest).open("GET",e.url,!0),i.timeout=r,i.onload=function(){200<=i.status&&i.status<300||304===i.status?o(null,i.responseText):o(l(e))},i.ontimeout=i.onerror=function(){o(l(e))},i.send()):t?(f(u,t),a(null)):m(u,a)})},n}()}();</script>
+
+<script>
+(new TinyCache()).load([
+  { url: '/dist/iris-dfae13bc3a.js', name: 'iris' }
+])
+</script>
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+  <link rel="dns-prefetch" href="//giuem.disqus.com">
+
+
+
+
   
 
   
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
   
   
-  <meta property="og:title" content="熵数据处理日志 - Wan Take" />
+    <link rel="icon" type="image/png" href="/favicon-192x192.png">
   
-  <meta property="og:type" content="article" />
   
-  <meta property="og:url" content="http://example.com/2024/04/16/%E7%86%B5%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%97%A5%E5%BF%97/index.html" />
-  
-  <meta property="og:image" content="/favicon.png" />
-  
-  <meta property="og:article:published_time" content="2024-04-16T02:08:23.000Z" />
-  
-  <meta property="og:article:author" content="Wantake" />
-  
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
 
-  
-<link rel="stylesheet" href="/css/var.css">
 
   
-<link rel="stylesheet" href="/css/main.css">
+
+  <meta property="og:title" content="熵数据处理日志 | Wan Take">
+<meta property="og:type" content="blog">
+<meta property="og:url" content="http://example.com/2024/04/16/%E7%86%B5%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%97%A5%E5%BF%97/">
+<meta property="og:image" content="/favicon-192x192.png">
+
+<meta property="og:description" content="这几天在用python处理比较大的数据文件，在这里写下处理数据的细节，算是一个处理数据的日志？每个bin按顺序输出每个核的数据，数据形式为对数由于我们是分配到了50个核上，因此，我们需要将数据处理，每50个数据分为一行，这样，每个核的数据就会横着排开，而竖着的将会是同一个核的数据。">
+<meta property="og:article:tag" content="iris">
+<meta property="og:locale" content="en">
+
+
+
+  <meta property="article:published_time" content="Tue Apr 16 2024 10:08:23 GMT+0800">
+  <meta property="article:modified_time" content="Tue Apr 16 2024 10:09:14 GMT+0800">
+
+
+<meta name="twitter:card" content="summary">
 
   
-<link rel="stylesheet" href="/css/typography.css">
+
 
   
-<link rel="stylesheet" href="/css/code-highlighting.css">
+
 
   
-<link rel="stylesheet" href="/css/components.css">
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://example.com"
+    },
+    "headline": "熵数据处理日志",
+    
+    "datePublished": "2024-04-16T02:08:23.000Z",
+    "dateModified": "2024-04-16T02:09:14.196Z",
+    "author": {
+        "@type": "Person",
+        "name": "Wantake",
+        "image": {
+            "@type": "ImageObject",
+            "url": "avatar.png"
+        },
+        "description": "."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Wan Take",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/favicon-192x192.png"
+        }
+    },
+    "keywords": "iris",
+    "description": "这几天在用python处理比较大的数据文件，在这里写下处理数据的细节，算是一个处理数据的日志？每个bin按顺序输出每个核的数据，数据形式为对数由于我们是分配到了50个核上，因此，我们需要将数据处理，每50个数据分为一行，这样，每个核的数据就会横着排开，而竖着的将会是同一个核的数据。"
+}
+</script>
+
 
   
-<link rel="stylesheet" href="/css/nav.css">
+<script>
+if ('serviceWorker' in navigator) {
+  
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      registrations.map(function(registration) {
+        registration.unregister()
+      })
+    })
+  
+}
+</script>
 
-  
-<link rel="stylesheet" href="/css/paginator.css">
 
-  
-<link rel="stylesheet" href="/css/footer.css">
-
-  
-<link rel="stylesheet" href="/css/post-list.css">
-
-  
-  
-<link rel="stylesheet" href="/css/rainbow-banner.css">
-
-  
-  
-  
-  
-  
-  
-<link rel="stylesheet" href="/css/post.css">
-
-  
-  
-  
-  
-  
-
-  
 <meta name="generator" content="Hexo 7.0.0"></head>
-    <body
-        data-color-scheme="auto"
-        data-uppercase-categories="true"
-        
-        data-rainbow-banner="true"
-        data-rainbow-banner-shown="auto"
-        data-rainbow-banner-month="6"
-        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
-        
-        data-config-root="/"
-        
-        
-    >
-        <nav id="theme-nav">
-    <div class="inner">
-        <a class="title" href="/">Wantake</a>
-        <div class="nav-arrow"></div>
-        <div class="nav-items">
-            <a class="nav-item nav-item-home" href="/">Home</a>
-            
-            
-            <a class="nav-item" href="/Aboutme">About me</a>
-            
-            
-            
-            <a class="nav-item" href="/note">Note</a>
-            
-            
-            
-            <a class="nav-item" href="/record">Record</a>
-            
-            
-            
-            <a class="nav-item" href="/smell">Smell</a>
-            
-            
-            
-            <a class="nav-item" href="/photo">Photos</a>
-            
-            
-            
-            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/9473" target="_blank" aria-label="GitHub">&nbsp;</a>
-            
-            
-            
-            <a class="nav-item" target="_blank" rel="noopener" href="https://tourmaline-sunscreen-c8f.notion.site/About-Me-4be70a53278f460982346e1650a78b5b?pvs=4">Notion</a>
-            
-            
-        </div>
+
+  <body data-instant-intensity="viewport">
+    
+
+<header class="header header__no-hero">
+  <div class="header-wrapper">
+    <div class="header__left">
+      
+      <div class="header-logo">
+        <a href="/">Wan Take</a>
+      </div>
+      
     </div>
+    <div class="header__right">
+      
+<nav class="nav">
+  <a id="nav-toggle" class="nav-toggle"><div></div></a>
+  <div class="nav-wrapper">
+    <ul>
+      
+        <li><a class="nav-link " href="/archives">Archive</a></li>
+      
+        <li><a class="nav-link " href="/about">About</a></li>
+      
+    </ul>
+  </div>
 </nav>
-        
-<article class="post">
-    <div class="meta">
-        
 
-        
 
-        <h2 class="title">熵数据处理日志</h2>
     </div>
+  </div>
+</header>
 
-    <div class="divider"></div>
 
-    <div class="content">
-        <p>这几天在用python处理比较大的数据文件，在这里写下处理数据的细节，算是一个处理数据的日志？</p>
+
+    <main class="main">
+      
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      熵数据处理日志
+    </h1>
+    <section class="post-meta">
+      <time datetime="2024-04-16T02:08:23.000Z">
+  <i class="far fa-calendar" aria-hidden></i>
+  2024-04-16
+</time>
+
+    </section>
+  </header>
+  <aside class="post-aside">
+  
+  <section class="post-toc">
+    <header class="post-toc-title">
+      Contents
+    </header>
+    
+  </section>
+
+
+</aside>
+
+  <section class="post-content">
+    <p>这几天在用python处理比较大的数据文件，在这里写下处理数据的细节，算是一个处理数据的日志？</p>
 <h4 id="每个bin按顺序输出每个核的数据，数据形式为对数"><a href="#每个bin按顺序输出每个核的数据，数据形式为对数" class="headerlink" title="每个bin按顺序输出每个核的数据，数据形式为对数"></a>每个bin按顺序输出每个核的数据，数据形式为对数</h4><p>由于我们是分配到了50个核上，因此，我们需要将数据处理，每50个数据分为一行，这样，每个核的数据就会横着排开，而竖着的将会是同一个核的数据。</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">per_bin</span>(<span class="params">x</span>):</span><br><span class="line">    datanew = x.reshape(-<span class="number">1</span>,<span class="number">50</span>) <span class="comment">#total rank = 50</span></span><br><span class="line">    <span class="keyword">return</span> datanew</span><br><span class="line"></span><br><span class="line">data = np.loadtxt(<span class="string">&#x27;Your path&#x27;</span>) <span class="comment">#here input path</span></span><br><span class="line">datanew = per_bin(data) </span><br><span class="line"></span><br><span class="line">bindata = np.zeros(<span class="number">10</span>) <span class="comment"># bin = 10</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    bindata[i] = np.<span class="built_in">sum</span>(datanew[i,:]) <span class="comment"># sum rank for each bin</span></span><br><span class="line"></span><br><span class="line">bindata = bindata.reshape(-<span class="number">1</span>,<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">mean = np.mean(bindata, axis=<span class="number">1</span>)</span><br><span class="line">std = np.std(bindata, axis=<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(mean,std)</span><br></pre></td></tr></table></figure></div>
 
@@ -245,104 +307,65 @@
 
 <hr>
 
-    </div>
+  </section>
+  <footer class="post-meta">
+  
 
+  
 
-
-    
-        
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-  });
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-
-    
-    
-
-    
-        
-        
-    
-</article>
-
-
-        <footer>
-    <div class="inner">
-        <div class="links">
-            
-            <div class="group">
-                <h2 class="title">Home</h2>
-                
-                <a href="/note" class="item">Note</a>
-                
-                <a href="/record" class="item">Record</a>
-                
-                <a href="/smell" class="item">Smell</a>
-                
-                <a href="/music, film and book" class="item">Music, Film and Books</a>
-                
-            </div>
-            
-            <div class="group">
-                <h2 class="title">Contact</h2>
-                
-                <a href="mailto:wangzhiyan@westlake.edu.cn" class="item">Email</a>
-                
-            </div>
-            
-        </div>
-        <span>&copy; 2024 Powered by <a href="http://hexo.io/" target="_blank">Hexo-cupertino</a> </span>
-        
-        
-            <br>
-            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
-                <label>
-                    <input type="radio" value="light">
-                    <span>Light</span>
-                </label>
-                <label>
-                    <input type="radio" value="dark">
-                    <span>Dark</span>
-                </label>
-                <label>
-                    <input type="radio" value="auto">
-                    <span>Auto</span>
-                </label>
-            </div>
-        
-    </div>
 </footer>
 
+  <div class="post-end" data-text="End"></div>
+</article>
 
-        
-<script src="/js/main.js"></script>
+  
+<section>
+  
+<div id="disqus_thread"></div>
+  
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://example.com/2024/04/16/%E7%86%B5%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%97%A5%E5%BF%97/';
+      this.page.identifier = '熵数据处理日志';
+      this.page.title = '熵数据处理日志';
+    };
+    if (!document.getElementById('disqus-embed')) {
+      var d = document, s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.id = 'disqus-embed';
+      s.async = true;
+      s.src = '//giuem.disqus.com/embed.js';
+      (d.head || d.body).appendChild(s);
+    }
+    if(typeof DISQUS == 'object'){
+      DISQUS.reset({
+          reload: true,
+          config: disqus_config
+      })
+    }
+  </script>
+  
 
-        
-        
-        
+  
+</section>
 
-        
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script>
-            window.addEventListener('load', () => {
-                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
-                ScrollReveal().reveal('.post-list-item .cover-img img')
-                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
-            })
-        </script>
-        
-    </body>
+
+
+ 
+    </main>
+    <footer class="footer">
+  <div class="footer-wrapper">
+    <p class="copyright">
+      &copy; 
+      2015 -
+      2024
+      Wantake
+    </p>
+    <p class="theme">
+      Hexo Theme <a href="https://github.com/giuem/hexo-theme-iris" target="_blank" rel="noopener noreferrer">Iris</a> with <i class="fas fa-heart"></i>
+    </p>
+  </div>
+</footer>
+
+  </body>
 </html>

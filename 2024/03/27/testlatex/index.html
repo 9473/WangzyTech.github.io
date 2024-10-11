@@ -1,256 +1,86 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>testlatex | Wan Take</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="在themes里配置好 mathjax 的环境之后，最好在 博客.md 的顶部追加： 12345---title: 文章标题date: 2020-09-02 20:11:42mathjax: true---  现在无论是居中公式: $$-\ln \langle  \frac{g(t_m)}{g(t_i)} \rangle_{\text{each rank}} \$$ $$\sum_{\text{r">
-<meta property="og:type" content="article">
-<meta property="og:title" content="testlatex">
-<meta property="og:url" content="http://example.com/2024/03/27/testlatex/index.html">
-<meta property="og:site_name" content="Wan Take">
-<meta property="og:description" content="在themes里配置好 mathjax 的环境之后，最好在 博客.md 的顶部追加： 12345---title: 文章标题date: 2020-09-02 20:11:42mathjax: true---  现在无论是居中公式: $$-\ln \langle  \frac{g(t_m)}{g(t_i)} \rangle_{\text{each rank}} \$$ $$\sum_{\text{r">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-03-27T03:56:22.000Z">
-<meta property="article:modified_time" content="2024-03-27T04:45:13.639Z">
-<meta property="article:author" content="Wantake">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Wan Take" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 7.0.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Wan Take</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main"><article id="post-testlatex" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/03/27/testlatex/" class="article-date">
-  <time class="dt-published" datetime="2024-03-27T03:56:22.000Z" itemprop="datePublished">2024-03-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      testlatex
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在themes里配置好 mathjax 的环境之后，最好在 博客.md 的顶部追加：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章标题</span><br><span class="line"><span class="built_in">date</span>: 2020-09-02 20:11:42</span><br><span class="line">mathjax: <span class="literal">true</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>现在无论是居中公式:</p>
-<p>$$<br>-\ln \langle  \frac{g(t_m)}{g(t_i)} \rangle_{\text{each rank}} \<br>$$</p>
-<p>$$<br>\sum_{\text{rank 0}}^{50} -\ln  \langle \frac{g(t_m)}{g(t_i)} \rangle &#x3D; -\ln \langle \frac{g(t_m)}{g(t_i)} \rangle_{\text{each bin}}<br>$$</p>
-<p>Finally, we will get 10 bin data.</p>
-<p>ZJR old MPI:<br>$$<br>\text{each rank } \prod_t \langle \frac{g(t+\delta)}{g(t)} \rangle \ \ -\text{enrg1} \<br>\text{all rank } \prod_r \langle \frac{g(t+\delta)}{g(t)} \rangle<br>$$</p>
-<hr>
-<p>Benchmark from…</p>
-<p>还是行内公式 都可以正常识别了.</p>
-<p>Two dimensional $L\times L&#x2F;2$ Heisenberg model, region A is chosen to be $L&#x2F;2 \times L&#x2F;2$ without corners. The temperatures are chosen to be $1&#x2F;T &#x3D; L$.</p>
-<p>The fitting result is:<br>$$<br>\color{yellow }{S^2(A) &#x3D; 0.092 L + 1.00\ln L -1.63}<br>$$<br>gives &#x3D;&#x3D;<strong>2.6145</strong>&#x3D;&#x3D; for $8 \times 16$ Lattice and &#x3D;&#x3D;<strong>1.18544</strong>&#x3D;&#x3D; for $4 \times 8$ Lattice.</p>
-<p>Reference:</p>
-<p><a target="_blank" rel="noopener" href="https://blog.xiangfa.org/2020/09/let-hexo-support-latex-formulas/">https://blog.xiangfa.org/2020/09/let-hexo-support-latex-formulas/</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/27/testlatex/" data-id="cm24woef5000clxlu377x87n1" data-title="testlatex" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2024/04/03/Hexo%E7%BD%91%E7%AB%99%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B9%E6%97%A5%E5%BF%97/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Hexo网站修改字体修改日志
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2024/03/27/testpdf/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">testpdf</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/timeline/" rel="tag">timeline</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/timeline/" style="font-size: 10px;">timeline</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/10/06/Spin-corr/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2024/04/16/MPI1/">MPI1</a>
-          </li>
-        
-          <li>
-            <a href="/2024/04/16/%E7%86%B5%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%97%A5%E5%BF%97/">熵数据处理日志</a>
-          </li>
-        
-          <li>
-            <a href="/2024/04/03/Hexo%E7%BD%91%E7%AB%99%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B9%E6%97%A5%E5%BF%97/">Hexo网站修改字体修改日志</a>
-          </li>
-        
-          <li>
-            <a href="/2024/03/27/testlatex/">testlatex</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 Wantake<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+.post-block {
+  color: var(--hty-text-color);
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: var(--post-block-bg-color);
+mobile()
+}
+.post-body {
+  padding: 0 5rem;
+tablet()
+mobile()
+}
+.post-meta {
+  font-size: 14px;
+  color: var(--hty-secondary-text-color);
+}
+.post-meta .icon {
+  margin-bottom: -1px;
+}
+.post-description {
+  font-weight: normal;
+  padding: 0.5rem;
+}
+.post-author {
+  display: flex;
+  justify-content: center;
+}
+.post-author .author-avatar {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+.post-author .author-avatar img {
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  padding: 2px;
+  border: 2px solid #d3d3d3;
+}
+.post-author .author-name {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+.post-meta-item-icon {
+  display: inline-block;
+  color: var(--text-color, --hty-secondary-text-color);
+}
+.post-meta-divider {
+  height: 25px;
+  color: var(--hty-secondary-text-color);
+  margin: 0 0.5rem;
+}
+.post-eof {
+  margin: 50px auto;
+  width: 50%;
+  height: 1px;
+  background: $blue;
+  opacity: 0.1;
+}
+.post-copyright {
+  font-size: 0.9rem;
+  margin: 0.5rem 5rem 1rem 5rem;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid #ff5252;
+  background-color: var(--hty-bg-color);
+  list-style: none;
+  word-break: break-all;
+  position: relative;
+  overflow: hidden;
+mobile()
+}
+.post-copyright::after {
+  position: absolute;
+  color: #fff;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath fill='gray' d='M245.8 214.9l-33.2 17.3c-9.4-19.6-25.2-20-27.4-20-22.2 0-33.3 14.6-33.3 43.9 0 23.5 9.2 43.8 33.3 43.8 14.4 0 24.6-7 30.5-21.3l30.6 15.5a73.2 73.2 0 01-65.1 39c-22.6 0-74-10.3-74-77 0-58.7 43-77 72.6-77 30.8-.1 52.7 11.9 66 35.8zm143 0l-32.7 17.3c-9.5-19.8-25.7-20-27.9-20-22.1 0-33.2 14.6-33.2 43.9 0 23.5 9.2 43.8 33.2 43.8 14.5 0 24.7-7 30.5-21.3l31 15.5c-2 3.8-21.3 39-65 39-22.7 0-74-9.9-74-77 0-58.7 43-77 72.6-77C354 179 376 191 389 214.8zM247.7 8C104.7 8 0 123 0 256c0 138.4 113.6 248 247.6 248C377.5 504 496 403 496 256 496 118 389.4 8 247.6 8zm.8 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.5 85.5-203.3 203.8-203.3A201.7 201.7 0 01451.3 256c0 121.7-99.7 202.9-202.9 202.9z'/%3E%3C/svg%3E");
+  content: ' ';
+  height: 10rem;
+  width: 10rem;
+  right: -2rem;
+  top: -2rem;
+  opacity: 0.1;
+}
+.tag-name {
+  padding: 0 0.1rem;
+}

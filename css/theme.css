@@ -3,7 +3,7 @@ body {
   font-size: calc(10% + 0.8vw);
   line-height: 1.6;
   background-color: #fff;
-  font-family: 'Computer modern Roman','Times new Roman',sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+  font-family: 'Times new Roman',sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     "Helvetica Neue";
   max-width: 914px;
 	/* text-align: justify; */
@@ -11,7 +11,7 @@ body {
 }
 
 .wrap {
-  width: 60%;
+  width: 80%;
   max-width: 45em;
   margin: 0 auto;
 }
@@ -200,7 +200,7 @@ header .nav-list-item a {
   line-height: 1.4;
 }
 
-.home.post-list {
+/* .home.post-list {
   margin: 2em 0;
   list-style: none;
 }
@@ -221,7 +221,7 @@ header .nav-list-item a {
 
 .home.post-list .read-more {
   color: #9e1900;
-}
+} */
 
 .archive .post-item {
   display: flex;

@@ -12,7 +12,7 @@ body[data-color-scheme="auto"], body[data-color-scheme="light"] {
     --black-4: rgb(102, 102, 102);
 
     --border-color: #8882;
-
+    
     --link: #06c;
 
     --blur: blur(32px);

@@ -1,3 +1,4 @@
+http://example.com/pub/index.html
 http://example.com/2024/10/06/Spin-corr/
 http://example.com/note/index.html
 http://example.com/music,%20film%20and%20book/index.html

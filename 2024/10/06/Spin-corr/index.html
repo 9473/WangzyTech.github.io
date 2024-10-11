@@ -30,13 +30,23 @@
 </ol>
 <h2 id="Spin-correlation-function"><a href="#Spin-correlation-function" class="headerlink" title="Spin correlation function"></a>Spin correlation function</h2><h3 id="As-order-parameter"><a href="#As-order-parameter" class="headerlink" title="As order parameter."></a>As order parameter.</h3><p><strong>1D Heisenberg chain.</strong>  </p>
 <p>The spin correlation function has <strong>power-law decay</strong>:</p>
-<p>$$C(r) &#x3D; \langle \vec{S}<em>i \cdot \vec{S}</em>{i+r} \rangle \sim (-1)^{r} \frac{1}{r}$$</p>
+<span>
+$$
+C(r) = \langle \vec{S}_i \cdot \vec{S}_{i+r} \rangle \sim (-1)^{r} \frac{1}{r}
+$$
+</span>
+
 <p>for large $r$ ,  where the sign means odd and even oscillations:  $r_{\text{even}} &#x3D; 2,4,6,…, r_{\text{odd}}&#x3D; 1,3,5,…$ .  And this oscillation should be symmetric about zero.</p>
 <p>Since choose plot $(-1)^r \cdot r \cdot C(r)$, it should be converge to a constant $\to 0.25$ when $r \to \infty$.    （$0.25 &#x3D; 1&#x2F;4$ is contributed by spin $S &#x3D; 1&#x2F;2$）.  The graph<span style="color: blue;">[ See ref.2 absolute value of the spin correlation on Page 100 Fig 34 ]</span> shows the longest-distance correlation.  Odd-even grid points still oscillate.<span style="color: blue;">[ See ref.2 mentioned about <strong>this oscillations</strong> on Page 100, reference is also provided: J. Voit, Rep. Prog. Phys. 58 977 (1995) which is about Luttinger liquid ]</span>.</p>
 <p>If the system has <strong>gapped excitations</strong>, its ground state correlation is <strong>exponentially decaying</strong>. <span style="color: blue;">[ See ref.2 mentioned: Haldane Chain on Page 14, even number coupled chains on Page 15 ]</span></p>
 <p><strong>Néel(order) - VBS(order) transition</strong><span style="color: blue;">[ See ref.2: Neel-VBS transition of J-Q model on Page 22 ]</span></p>
 <p>For the longest distance, while $r_{max} &#x3D; L&#x2F;2$ on the periodic $L\times L$ lattice, in the VBS phase($J&#x2F;Q \to 0$) it should be</p>
-<p>$$<br>C(r&#x3D;L&#x2F;2) \to 0, L\to \infty<br>$$</p>
+<span>
+$$
+C(r=L/2) \to 0, L\to \infty 
+$$
+</span>
+
 <p>In Neel phase correlation is finite(because of long-range order).  Another correlation is mentioned: dimer correlation which should vanish in Neel phase when $L \to \infty$. </p>
 <p>This is similar to Dimerization transition.(But different model)</p>
 <p><strong>Dimerization Transition.</strong> <span style="color: blue;">[ See ref.2: next-near-neighbor interation Heibenberg model on Page 101-104 ]</span></p>
@@ -56,9 +66,35 @@ $$
 <p>where $d$ is the space dimension in Classic system and $d \to d+1$ in Quantum system.<span style="color: blue;">[ See ref.2 mentioned the $d$-dimension lattice with time dimension mapped to $d+1$ spatial dimension, the only thing needed to do for quantum phase transition is directly replacing the $d$  $\to d+1$ of the scaling, on Page 54 ]</span>, which means, $C \sim r^{-(1+\eta)}$ in a usually 2D quantum critical point.</p>
 <h2 id="Imaginary-time-correlation"><a href="#Imaginary-time-correlation" class="headerlink" title="Imaginary time correlation"></a>Imaginary time correlation</h2><p>[Hui Shao, A. W. Sandvik.  <a target="_blank" rel="noopener" href="http://arxiv.org/pdf/2202.09870">arxiv.org&#x2F;pdf&#x2F;2202.09870</a>]</p>
 <p>For the real time correlation:</p>
-<p>\begin{equation}<br>G(t) &#x3D; \langle S(t)S(0)\rangle<br>\end{equation}</p>
-<p>Notice, $t &#x3D; 0$ is right means reacting first. While using Heisenberg picture $O(t) &#x3D; e^{iHt} O(t&#x3D;0) e^{-iHt}$, it becomes,<br>$$<br>G(t) &#x3D; \langle e^{iHt} S e^{-iHt}S\rangle<br>$$<br>to imaginary time $it \to \tau$,<br>$$<br>G(\tau &#x3D; it) &#x3D; \langle e^{H\tau} S e^{-H\tau}S\rangle<br>$$<br><span style="color: red;">be careful, $+\tau$ is on the left and $-\tau$ is on the right.</span>  </p>
-<p>The dynamic spin structure factor $S(q,\omega)$ can be measured, e.g., by magnetic inelastic neutron scattering as the cross section for momentum $(q)$ and energy $(\omega)$ transfer. So according to,<br>$$<br>G(\tau) &#x3D; \int d\tau S(\omega)e^{-\omega \tau }<br>$$</p>
+<span>
+$$
+G(t) = \langle S(t)S(0)\rangle
+$$
+</span>
+
+
+<p>Notice, $t &#x3D; 0$ is right means reacting first. While using Heisenberg picture $O(t) &#x3D; e^{iHt} O(t&#x3D;0) e^{-iHt}$, it becomes,</p>
+<span>
+$$
+G(t) = \langle e^{iHt} S e^{-iHt}S\rangle
+$$
+</span>
+
+<p>to imaginary time $it \to \tau$, </p>
+<span>
+$$
+G(\tau = it) = \langle e^{H\tau} S e^{-H\tau}S\rangle
+$$
+</span>
+
+<p><span style="color: red;">be careful, $+\tau$ is on the left and $-\tau$ is on the right.</span>  </p>
+<p>The dynamic spin structure factor $S(q,\omega)$ can be measured, e.g., by magnetic inelastic neutron scattering as the cross section for momentum $(q)$ and energy $(\omega)$ transfer. So according to,</p>
+<span>
+$$
+G(\tau) = \int d\tau S(\omega)e^{-\omega \tau }
+$$
+</span>
+
 <p>we can obtain $S(\omega) \to G(\tau)$.   QMC also can and only can measure $G(\tau)$.   But more valuable is $G(\tau) \to S(\omega)$ which needs <strong>Stochastic analytic continuation</strong>(SAC).</p>
 <p>The imaginary time correlation itself does not seem to have much information and behavior that needs to be discussed.</p>
 <hr>

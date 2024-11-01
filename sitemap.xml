@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2024/10/06/Spin-corr/</loc>
+    <loc>http://example.com/pub/index.html</loc>
     
-    <lastmod>2024-10-12</lastmod>
+    <lastmod>2024-11-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/pub/index.html</loc>
+    <loc>http://example.com/2024/10/06/Spin-corr/</loc>
     
     <lastmod>2024-10-12</lastmod>
     
@@ -166,7 +166,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2024-10-12</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
